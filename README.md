@@ -1,5 +1,5 @@
 ## edn6103 – Web sémantique pour l’édition
-
+ 
 [https://admission.umontreal.ca/cours-et-horaires/cours/edn-6103/](https://admission.umontreal.ca/cours-et-horaires/cours/edn-6103/)
 
 Architecture du Web (protocoles, ressources, représentation). Format RDF et syntaxes de sérialisation. Ontologie et vocabulaires. Langage d'interrogation SPARQL. Applications du Web sémantique et du Web de données.
