@@ -2,8 +2,8 @@
 title: Plan de cours
 toc: oui
 impression: oui
-date: 2022-03
-description: "Architecture du Web (protocoles, ressources, représentation). Format RDF et syntaxes de sérialisation. Ontologie et vocabulaires. Langage d'interrogation SPARQL. Applications du Web sémantique et du Web de données."
+date: 2023-05
+description: "Atelier sur les principes du Web sémantique et des données ouvertes liées. Architecture du Web (protocoles, ressources, représentation). Format RDF et syntaxes de sérialisation. Ontologie et vocabulaires. Langage d’interrogation SPARQL. Applications du Web sémantique et du Web de données."
 ---
 
 - Cours optionnel, 1 crédit
@@ -19,7 +19,9 @@ description: "Architecture du Web (protocoles, ressources, représentation). For
 
 Les métadonnées occupent une place cruciale dans l’environnement numérique. Depuis plusieurs années, les institutions patrimoniales et culturelles  ont largement investi les technologies du web sémantique. Les grandes  masses de données désormais disponibles sous forme de données liées  ouvrent la voie à de nombreuses applications dans le domaine culturel et de  l’édition numérique.
 
-Cet atelier est consacré aux applications du web sémantique dans le domaine de l’édition numérique et culturel. Il propose une introduction aux  principes et  aux technologies du web sémantique et du web de données. En s’appuyant  sur des projets réels, une attention particulière sera accordée à la  pratique et notamment à l’écriture de requêtes en utilisant le protocole et le langage de requêtes SPARQL.
+Cet atelier est consacré aux applications du web sémantique dans le domaine des humanités numériques, de l’édition numérique et de la culture.
+Il propose une introduction aux principes et aux technologies du web sémantique et du web de données.
+En s’appuyant sur des projets réels, une attention particulière sera accordée à la pratique et notamment à l’écriture de requêtes en utilisant le protocole et le langage de requêtes SPARQL.
 
 L’atelier ne nécessite aucun pré-requis technique et s’adresse à des étudiantes ou des étudiants sans formation informatique préalable. Toutes les notions seront introduites et expliquées en cours.
 
