@@ -8,7 +8,7 @@
       <p>{{ .Site.Params.descriptionlongue }}</p>
     </section>
     <section>
-      <h3>Séance 1 — Samedi 12 mars 2022</h3>
+      <h1>Séance 1 — Mardi 23 mai 2023</h1>
       <ul class="posts">
         {{ range (.Paginate ( where .Site.RegularPages "Section" "posts" ).ByWeight).Pages }}
           {{ if isset .Params "invisible" }}
@@ -28,13 +28,33 @@
     </section>
       <hr>
     <section>
-      <h3>Séance 2 — Samedi 26 mars 2022</h3>
+      <h1>Séance 2 — Mercredi 24 mai 2023</h1>
       <ul class="posts">
         {{ range (.Paginate ( where .Site.RegularPages "Section" "posts" ).ByWeight).Pages }}
           {{ if isset .Params "invisible" }}
           {{ else }}
           {{ if ne .Kind "section" }}
           {{ if eq .Params.seance 2 }}
+          <li itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+            <a href="{{ .Permalink }}" title="{{ .Title }}" itemprop="name url">{{ .Title }}</a>
+            <hr>
+            <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time>
+          </li>
+          {{ end }}
+          {{ end }}
+          {{ end }}
+        {{ end }}
+      </ul>
+    </section>
+    <hr>
+    <section>
+      <h1>Séance 3 — Vendredi 26 mai 2023</h1>
+      <ul class="posts">
+        {{ range (.Paginate ( where .Site.RegularPages "Section" "posts" ).ByWeight).Pages }}
+          {{ if isset .Params "invisible" }}
+          {{ else }}
+          {{ if ne .Kind "section" }}
+          {{ if eq .Params.seance 3 }}
           <li itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
             <a href="{{ .Permalink }}" title="{{ .Title }}" itemprop="name url">{{ .Title }}</a>
             <hr>

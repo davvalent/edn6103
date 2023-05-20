@@ -7,18 +7,18 @@
   <section>
 
       {{ if eq .Type "posts" }}
-      <h2 itemprop="name headline">{{ .Title }}</h2>
+      <h1 itemprop="name headline">{{ .Title }}</h1>
       <p class="meta">
         <time itemprop="datePublished" datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "2006-01-02" .Date }}</time> — <a href="impression.html">Version imprimable</a>
-        </p>
+      </p>
       {{ end }}
       
       {{ if eq .Type "pages" }}
-      <h2 itemprop="name headline">{{ .Title }}</h2>
+      <h1 itemprop="name headline">{{ .Title }}</h1>
       {{ if .Params.impression }}
       <p class="meta">
         <a href="impression.html">Version imprimable</a>
-        </p>
+      </p>
       {{ end }}
       {{ end }}
 

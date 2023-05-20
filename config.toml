@@ -19,6 +19,9 @@ minify = false
     endLevel = 2
     ordered = false
     startLevel = 2
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 
 [taxonomies]
