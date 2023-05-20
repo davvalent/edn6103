@@ -1,21 +1,29 @@
-## edn6103 – Web sémantique pour l’édition
- 
-[https://admission.umontreal.ca/cours-et-horaires/cours/edn-6103/](https://admission.umontreal.ca/cours-et-horaires/cours/edn-6103/)
+# hnu6054 – Humanités numériques : Web sémantique et données
 
-Architecture du Web (protocoles, ressources, représentation). Format RDF et syntaxes de sérialisation. Ontologie et vocabulaires. Langage d'interrogation SPARQL. Applications du Web sémantique et du Web de données.
+## Description
 
-## Diapositives
+[https://admission.umontreal.ca/cours-et-horaires/cours/hnu-6054/](https://admission.umontreal.ca/cours-et-horaires/cours/hnu-6054/)
+
+Atelier sur les principes du Web sémantique et des données ouvertes liées.
+
+Cet atelier remplace le cours EDN 6103 – Web sémantique pour l'édition numérique, dont la description était rédigée en ces termes :
+
+> Architecture du Web (protocoles, ressources, représentation). Format RDF et syntaxes de sérialisation. Ontologie et vocabulaires. Langage d'interrogation SPARQL. Applications du Web sémantique et du Web de données.
+
+https://admission.umontreal.ca/cours-et-horaires/cours/edn-6103/
+
+# Diapositives
 
 - [première séance](edn6103-01.html)
 - [deuxième et troisième séances](edn6103-02.html)
 
-## Présentation
+# Présentation
 
 Les métadonnées occupent une place cruciale dans l’environnement numérique. Depuis plusieurs années, les institutions patrimoniales et culturelles notamment ont largement investi les technologies du web sémantique. Les grandes masses de données désormais disponibles sous forme de données liées ouvre la voie à de nombreuses applications dans le domaine de l’édition numérique.
 
 Cet atelier est consacré aux applications du web sémantique dans le domaine de l’édition numérique. Il offre une introduction aux principes et aux technologies du web sémantique et du web de données. En s’appuyant sur des projets réels, une attention particulière sera accordée à la pratique et notamment à l’écriture de requêtes en utilisant le protocole et le langage de requête SPARQL.
 
-## Objectifs
+# Objectifs
 
 - Objectif général : initier les étudiants aux principes du Web sémantique et des données ouvertes liées (Linked Open Data).
 - Objectifs spécifiques : Au terme du cours, l’étudiant sera en mesure
@@ -24,18 +32,18 @@ Cet atelier est consacré aux applications du web sémantique dans le domaine de
   - de réaliser des requêtes SPARQL simples
   - d’identifier les applications du Web sémantique et du Web de données dans le domaine de l’édition et de la culture
 
-## Démarche pédagogique
+# Démarche pédagogique
 
 Le programme des séances est conçu selon un parcours progressif. Partant d’une présentation générale de l’architecture du web et des enjeux relatifs à la production de données ouvertes et liées on envisage leur application au domaine culturel.
 
 Le cours se déroule en deux séances intensives qui associent étroitement la théorie et son application à la pratique.
 
-## Lectures et travail personnel
+# Lectures et travail personnel
 
 Outre une [bibliographie sommaire](bibliographie.md), plusieurs lectures sont proposées avec le cours. Ces références seront indiquées pour chaque séance dans le [plan de cours](edn6103.md). 
 Merci d’avoir lu et étudié ces publications avant les sessions afin de pouvoir en discuter. À cet effet, il est recommandé de prendre des notes pendant vos lectures, et de les apporter en cours.
 
-## Évaluation
+# Évaluation
 
 1. Travail pratique (chez soi)     exploration de Persée (40%)
 
@@ -45,16 +53,16 @@ Merci d’avoir lu et étudié ces publications avant les sessions afin de pouvo
 
    [Détails du TP02](edn6103-tp02.md)
 
-### Participation
+## Participation
 
 La participation au cours est requise et une feuille de présence circulera à chaque séance.
 Dans l’éventualité où vous deviez rencontrer des difficultés pour remplir ces obligations, vous êtes priés de bien vouloir immédiatement prendre contact avec le professeur.
 
-## Intégrité, fraude et plagiat
+# Intégrité, fraude et plagiat
 
 Ce cours observe la politique de l’Université de Montréal sur l’intégrité dans les études qui est consultable à cette adresse : http://www.integrite.umontreal.ca. Il est du devoir de chaque étudiant de la connaître et de s’y conformer.
 
-## Accommodements
+# Accommodements
 
 En accord avec la Politique-cadre sur l’intégration des personnes en situation de handicap, des mesures d’accommodement peuvent être mises en place pour les cours et les examens.
 Pour pouvoir en bénéficier, vous devez tout d’abord vous inscrire au service de soutien aux étudiants en situation de handicap (SESH) qui évaluera vos besoins.
