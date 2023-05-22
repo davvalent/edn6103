@@ -4,7 +4,7 @@ title = "Exercice 2 : Analyse d’un projet utilisant les technologies du web s�
 date = "2022-03-11"
 description = "Exercice 2 : Le travail final porte sur l’analyse d’un projet utilisant les technologies du web sémantique ou du Linked Open Data et la production de requêtes SPARQL."
 seance = 2
-weight = 3
+weight = 4
 +++
 Travail final, à rendre le **11 avril 2022** (60% de la note totale).
 
@@ -52,6 +52,7 @@ L’idéal serait de présenter des requêtes fonctionnelles mais vous ne serez 
 - The Smithsonian American Art Museum https://americanart.si.edu/about/lod cf. https://triplydb.com/smithsonian/american-art-museum/sparql/american-art-museum
 - Auckland Museum https://api.aucklandmuseum.com
 - Vocabulaires du Getty http://vocab.getty.edu/sparql
+NOMENCLATURE https://page.nomenclature.info/integration.app
 
 Douglas McCarthy, Andrea Wallace. 2018. Survey of GLAM open access policy and practice. http://bit.ly/OpenGLAMsurvey
 

@@ -1,10 +1,10 @@
 +++
 author = "Emmanuel"
 title = "TP RDFs"
-date = "2022-03-10T11:00:00-04:00"
+date = "2023-05-22"
 description = "Découverte de RDF et de la manipulation de ces fichiers"
-weight = 3
-seance = 1
+weight = 1
+seance = 2
 +++
 Téléchargez (clic droit puis "Enregistrer la cible du lien sous" ou équivalent) le fichier suivant [exercices/CBWC-RDF-S.ttl](/exercices/CBWC-RDF-S.ttl).
 

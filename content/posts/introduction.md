@@ -1,7 +1,7 @@
 +++
 author = "Emmanuel"
 title = "Introduction : architecture du web et web sémantique"
-date = "2022-03-11"
+date = "2023-05-18"
 weight = 1
 description = "Introduction : architecture du web et web sémantique"
 seance = 1
@@ -9,23 +9,22 @@ layout = "diapo"
 diapo = "seance-01.html"
 toc = "oui"
 impression = "oui"
-
 +++
-## Introduction
+# Introduction
 
 - Accueil des participants
 - Présentation des intervenants
 - Conditions matérielles de la formation (matériel informatique, pauses, etc.)
 
-Les technologies du web sémantique et l’approche du web de données liées désignent une combinaison de techniques d’outils et de standards qui permettent de transformer le world wide web d’un web de documents à un web de données. Lorsque cette approche est appliquée au monde des bibliothèques, des archives et des musées, les données liées transforment la manière dont nous pouvons découvrir, analyser, et visualiser les contenus culturels et scientifiques.
+Les technologies du web sémantique et l’approche du web de données liées désignent une combinaison de techniques d’outils et de standards qui permettent de transformer le world wide web d’un web de documents à un web de données. Lorsque cette approche est appliquée au monde des bibliothèques, des archives, des musées, et plus largement au domaine des humanités numériques, les données liées transforment la manière dont nous pouvons découvrir, analyser, et visualiser les contenus culturels et scientifiques.
 
-Les données ouvertes et liées (Linked Open Data LOD) permettent aux institutions patrimoniales et culturelles de publier et de partager des informations sur leur collections en ouvrant d’infinies possibilités de réutilisations et d’enrichissements et afin d’augmenter leur visibilité.
+Les données ouvertes et liées (Linked Open Data LOD) permettent aux institutions patrimoniales et culturelles de publier et de partager des informations sur leur collections, aux projets de recherche des informations sur les objets de la recherche, en ouvrant d’infinies possibilités de réutilisations et d’enrichissements et afin d’augmenter leur visibilité.
 
 Cependant, les acteurs du monde culturels sont confrontés à plusieurs enjeux dans l’appropriation de ces technologies :
 
-- bien sûr, l’adoption de ces technologies et de ces standards nécessite des compétences techniques particulières. Pour autant, ce n’est pas le seul enjeu pour les institutions ou les acteurs du secteur culturel.
-- En effet, partager les données des collections suppose l’adoption de politiques d’ouverture de données adaptées
-- cette démarche présente également des enjeux relatifs à l’autorité des institutions. Dans un contexte distribué, il y a un changement d’échelle qui n’est pas sans impact sur les collection.
+- bien sûr, l’adoption de ces technologies et de ces standards nécessite des compétences techniques particulières; pour autant, ce n’est pas le seul enjeu pour les institutions ou les acteurs du secteur culturel.
+- En effet, partager les données des collections suppose l’adoption de politiques d’ouverture de données adaptées.
+- Cette démarche présente également des enjeux relatifs à l’autorité des institutions. Dans un contexte distribué, il y a un changement d’échelle qui n’est pas sans impact sur les collections.
 
 
 ## Présentation du plan de cours
@@ -35,9 +34,9 @@ Cependant, les acteurs du monde culturels sont confrontés à plusieurs enjeux d
 - Présentation de l’évaluation
 - Présentation des ressources
 
-### La question des métadonnées dans le secteur de l’édition
+### Données et métadonnées dans les humanités numériques et dans l’édition
 
-Comme de nombreux secteurs d’activité numérique, le monde de l’édition est directement concerné par la question des métadonnées. Ces métadonnées désignent des informations descriptives sur les contenus qui peuvent être utilisées à de nombreuses fins dans un éco-système numérique :
+Comme de nombreux secteurs d’activité numérique, le monde de l’édition est directement concerné par la question des métadonnées. Ces métadonnées désignent des informations descriptives sur les contenus qui peuvent être utilisées à de nombreuses fins dans un écosystème numérique :
 
 - pour gérer des informations administratives sur les fichiers
 - pour assister les processus de production
@@ -45,6 +44,8 @@ Comme de nombreux secteurs d’activité numérique, le monde de l’édition es
 - pour personnaliser et recommander des produits aux utilisateurs
 - pour collecter des données d’utilisation
 - etc.
+
+Dans les humanités numériques, on cherche plus souvent à décrire les objets de la recherche, qui peuvent être des documents, mais aussi des objets que l’on cherche à reconstituer à travers une représentation formelle. Par exemple, on pourrait décrire des bâtiments ou des objets muséaux afin d’utiliser ces représentation pour tenter de répondre à des questionnements.
 
 Les choix de structuration de données sont déterminés par l’exploitation visée. En d’autres termes, ce sont les objectifs d’un projet de numérisation ou d’un projet de recherche qui déterminent ce qui doit être décrit, explicité, et discrétisé.
 
@@ -61,7 +62,7 @@ Dublin Core n’est pas un standard du monde de l’édition à proprement parle
 
 Au cours de cet atelier, nous allons particulièrement nous intéresser à un ensemble de technologies promues et standardisées par le [W3C](https://www.w3.org/) (un organisme en charge de la standardisation du web) pour publier des données et assurer leur interopérabilité que l’on désigne globalement sous l’appellation de **technologies du web sémantique**.
 
-Nous parlerons également de données ouvertes et liées, ou Linked Open Data (LOD), pour désigner une manière d’utiliser la plateforme du word wide web afin de publier et connecter ces données entre elles sur le réseau.
+Nous parlerons également de **données ouvertes et liées**, ou Linked Open Data (LOD), pour désigner une manière d’utiliser la plateforme du word wide web afin de publier et connecter ces données entre elles sur le réseau.
 
 ### Une introduction au web sémantique et au LOD
 
@@ -75,7 +76,7 @@ Avec ce cours, il s’agit notamment d’essayer de démystifier un domaine souv
 
 ### De nombreuses initiatives en cours dans le domaine culturel
 
-Le projet du web sémantique et du web de données ouvertes et liées et un projet porté depuis le milieu de la première décennie des années 2000 par le fondateur du world wide web, Tim Berners Lee (cf. lectures pour la séance). [Solid](https://solidproject.org/), le projet sur lequel travaille actuellement Tim Berners Lee repose très largement sur l’application de ces technologies.
+Le projet du web sémantique et du web de données ouvertes et liées et un projet porté depuis le milieu de la première décennie des années 2000 par le fondateur du world wide web, Tim Berners-Lee (cf. lectures pour la séance). [Solid](https://solidproject.org/), le projet sur lequel travaille actuellement Tim Berners-Lee repose très largement sur l’application de ces technologies.
 
 Toutefois, au terme de plus d’une décennie d’expérimentation, la promesse du web sémantique est loin d’être entièrement tenue. Ce projet n’a certainement pas connu le succès fulgurant qu’a rencontré le premier web dont on fêtait récemment les trente ans.
 
@@ -106,9 +107,9 @@ Au terme du cours, l’étudiante ou l’étudiant sera en mesure
 
 ## Démarche pédagogique
 
-Le programme des séances est conçu selon un parcours progressif. Partant  d’une présentation générale de l’architecture du web et des enjeux  relatifs à la production de données ouvertes et liées on envisage leur application au domaine culturel.
+Le programme des séances est conçu selon un parcours progressif. Partant  d’une présentation générale de l’architecture du web et des enjeux relatifs à la production de données ouvertes et liées on envisage leur application au domaine culturel.
 
-Le cours se déroule en quatre séances intensives (sur deux journées) qui associent étroitement la théorie et son application à la pratique.
+Le cours se déroule en six séances intensives (sur trois journées) qui associent étroitement la théorie et son application à la pratique.
 
 ### Quels pré-requis ?
 
@@ -126,7 +127,7 @@ Le cours se déroule en quatre séances intensives (sur deux journées) qui asso
 - TP RDF
 - Présentation Exercice pour la séance suivante
 
-#### Lectures
+### Lectures
 
 - Tim Berners Lee, James Hendler, et Ora Lassila. « The Semantic Web. » *The Scientific American,* 17 May 2001. http://www.scientificamerican.com/article.cfm?id=the-semantic-web [traduction française par Elisabeth Lacombe et Jo Link-Pezet, voir fichier]
 - Jonathan Blaney. Introduction to the Principles of Linked Open Data. The Programming Historian. 2017. https://doi.org/10.46430/phen0068
@@ -192,7 +193,7 @@ Recommandation pour la suite du cours
 
 Depuis la publication de l’article de Tim Berners Lee (que vous aviez à lire pour aujourd’hui), le W3C et d’autres acteurs promeuvent un web sémantique et un espace informationnel lié sur le web dénommé *Linked Open Data*. 
 
-Ce Linked Open Data prend une forme consistante dans plusieurs domaines et notamment dans le domaine culturel. Les technologies à la base de cet espace informationnel numérique sont celles du web sémantiques et reposent très largement sur le cadre de description RDF.
+Ce Linked Open Data prend une forme consistante dans plusieurs domaines et notamment dans le domaine culturel. Les technologies à la base de cet espace informationnel numérique sont celles du web sémantique et reposent très largement sur le cadre de description RDF.
 
 - Qu’est-ce que le Web sémantique ?
 - Que recouvre la notion de données ouvertes et liées (Linked Open Data) ?
@@ -200,7 +201,7 @@ Ce Linked Open Data prend une forme consistante dans plusieurs domaines et notam
 
 <!-- sep -->
 
-## 1. L’architecture du web
+# 1. L’architecture du web
 
 Avant d’aborder le cadre de description RDF et les principes du web sémantique, il me semble d’abord nécessaire de revenir avec vous sur l’architecture du web. En effet, les technologies du web sémantique et du web de données liées sont pour l’essentiel des applications de l’architecture du web. Il est donc important de bien avoir à l’esprit ses principes de conception généraux pour bien comprendre l’utilisation de ces technologies.
 
@@ -211,32 +212,32 @@ Avant d’aborder le cadre de description RDF et les principes du web sémantiqu
 
 ### Le projet initial du web
 
-Le world wide web trouve ses origines dans le contexte du Centre d’étude et de recherche nucléaire (CERN) où travaillait Tim Berners Lee dans les années 80. 
+Le world wide web trouve ses origines dans le contexte du Centre d’étude et de recherche nucléaire (CERN) où travaillait Tim Berners-Lee dans les années 1980. 
 
-Tim Berners Lee. *A proposal*. 1989. http://info.cern.ch/Proposal.html = fête les 30 ans en 2019.
+Tim Berners Lee. *A proposal*. 1989. http://info.cern.ch/Proposal.html : la propostion initiale de Berners-Lee fête ses **30 ans** en 2019.
 
 **Le rêve du web était de créer une plateforme de collaboration et de communication collaborative qui permette de partager de l’information en établissant un espace informationnel universel pour l’information et les services.**
 
 - conçu comme une bibliothèque virtuelle
 - un système de gestion de l’information pour partager des ressources informationnelles sur un réseau entre des chercheurs
 
-Les ressources en ligne (*on line*) sont accessibles via une adresse unique, l’Universal Resource Locator (URL). Ces documents peuvent être référencés entre eux via des liens hypertextuels.
+Les ressources en ligne (*on line*) sont accessibles via une adresse unique, l’Universal Resource Locator (**URL**). Ces documents peuvent être référencés entre eux via des liens hypertextuels.
 
 Un WWW à la fois en lecture et en écriture : *A CRUD Web !* (CRUD *create*, *read*, *update*, *delete*).
 
 ### Caractéristiques
 
-- Utilise TCP/IP
-- Protocole d’échange,
+- utilise TCP/IP
 - manière d’identifier les resources
-- et hypertexte
+- protocole d’échange
+- hypertexte
 
 ### La notion d’hypertexte
 
 - terme proposé par Ted Nelson dans le cadre du [projet Xanadu](https://www.xanadu.net/)
-- décrit un texte non séquentiel qui comporte des embranchements et permet le choix du lecteur
-- à la différence du texte imprimé, il est destiné àêtre utilisé avec un dispositif interactif
-- il est ouvert, fluide, mutable et peut être connectéà d’autres hypertexte par des « liens »
+- décrit un texte non séquentiel qui comporte des embranchements et permet au lecteur de choisir son cheminement de lecture 
+- à la différence du texte imprimé, il est destiné à être utilisé avec un dispositif interactif
+- il est ouvert, fluide, mutable et peut être connecté à d’autres hypertextes par des « liens »
 - hypermedia
 
 
@@ -246,39 +247,29 @@ Un WWW à la fois en lecture et en écriture : *A CRUD Web !* (CRUD *create*, *
 
 {{< image src="baran_schema.jpg" alt="vue du réseau" >}}
 
-Paul Baran (1926-2011). « Centralized, Decentralized and Distributed networks » in On Distributed Communications. I. Introduction to distributed communications networks, Memorandum RM-3420-PR, août 1964. https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf
-
-Paul Baran (1926-2011), RAND Corporation
-
-https://www.rand.org/about/history/baran.html
-
-Paul Baran (1926-2011). « Centralized, Decentralized and Distributed networks » in On Distributed Communications. I. Introduction to distributed communications networks, Memorandum RM-3420-PR, août 1964. https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf
-
+- Paul Baran (1926-2011). « Centralized, Decentralized and Distributed networks » in *On Distributed Communications. I. Introduction to distributed communications networks*, Memorandum RM-3420-PR, août 1964. https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf
+- *Paul Baran and the Origins of the Internet*. https://www.rand.org/about/history/baran.html
 
 {{< image src="tim-vint-back.jpg" alt="" >}}
 
 
 {{< image src="tim-vint-front.jpg" alt="" >}}
 
+Tim Berners Lee, Vint Cerf © W3C
+
 ## Internet ≠ le web
 
-Tim Berners Lee, Vint Cerf © W3C
-
-Tim Berners Lee, Vint Cerf © W3C
-
-internet n’est pas le web
+Internet n’est pas le web.
 
 - un réseau de réseaux
-
 - basé sur le protocole TCP/IP
-
 - le web est une des applications d’internet
 
 (mails, transfert de fichiers, internet des objets, etc.)
 
 ## Internet et le World wide web
 
-L’omniprésence des moteurs de recherche nous fait parfois oublier qu’ils sont des outils relativement récents. Afin de comprendre leur fonctionnement, il est important de les comprendre dans le contexte plus large de l’internet et du Web.
+L’omniprésence des moteurs de recherche nous fait parfois oublier qu’ils sont des outils relativement récents. Afin de comprendre leur fonctionnement, il est important de les examiner dans le contexte plus large de l’internet et du Web.
 
 | Fonctionnalités      | Dates | Concepteurs                       |
 |:-------------------|-----|---------------------------------|
@@ -288,7 +279,7 @@ L’omniprésence des moteurs de recherche nous fait parfois oublier qu’ils s
 | Navigateurs web      | 1993  | Marc Andreessen                   |
 | Moteurs de recherche | 1998  | Sergey Brin & Larry Page          |
 
-Couches fonctionnelles derrière les moteurs de recherche sur base de <http://en.wikipedia.org/wiki/Web_search_engine/>
+Couches fonctionnelles derrière les moteurs de recherche sur base de http://en.wikipedia.org/wiki/Web_search_engine
 
 Présentation chronologique même si l’articulation des différentes couches est plutôt fonctionnelle. Par exemple, si les développements théoriques concernant l’hypertexte datent de la fin des années 60, il se greffe d’un point de vue fonctionnel sur Internet avec le web.
 
@@ -327,14 +318,14 @@ La notion de **protocole technique** : ensemble de spécifications qui définit 
 
 ## **TCP/IP**, le protocole de transport
 
-**TCP/IP** ensemble des protocoles utilisés pour le transfert des données sur internet (début des années 80’s)
+**TCP/IP** est un ensemble de protocoles utilisés pour le transfert des données sur internet (début des années 1980).
 
 Un nom qui réfère à deux protocoles distincts :
 
-- **TCP** Transmission Control Protocol**
-- **IP** Internet Protocol**
+- **TCP** Transmission Control Protocol
+- **IP** Internet Protocol
 
-  adoptés le 1^er^ janvier 1983 par le réseau Arpanet
+Adoptés le 1<sup>er</sup> janvier 1983 par le réseau Arpanet
 
 
 ## Internet
@@ -346,32 +337,33 @@ Un nom qui réfère à deux protocoles distincts :
 
 FTP, Imap, pop, SMTP, HTTP, P2P, VoIP (Voice over IP), etc.
 
-#### Protocoles
+### Protocoles
 
 - **HTTP (HyperText Transfer Protocol)**
-  protocole de transfert hypertexte pour naviguer sur le web (HTTPS pour la version sécurisée)
+<br>protocole de transfert hypertexte pour naviguer sur le web (HTTPS pour la version sécurisée)
 - **FTP (File Transfer Protocol)**
-  protocole destiné au transfert de fichiers informatiques
+<br>protocole destiné au transfert de fichiers informatiques
 - **SMTP (Simple Mail Transfer Protocol)**
-  protocole utilisé pour transférer le courrier électronique vers les serveurs de messagerie
+<br>protocole utilisé pour transférer le courrier électronique vers les serveurs de messagerie
 - **IMAP (Internet Message ac cess Protocol)** 
-  protocole utilisé pour consulter son courrier électronique sur un serveur de messagerie
+<br>protocole utilisé pour consulter son courrier électronique sur un serveur de messagerie
 
 
 ## Le World Wide Web (www)
 
-Destiné à mettre à disposition des ressources pour les partager. Un système où chacun peut publier.
+Destiné à mettre à disposition des ressources pour les partager. Un système où tout le monde peut publier.
 
 **Une application de l’internet**
 
 - HTTP HyperText Transfer Protocol une manière d’accéder aux ressources 
 - URI pour désigner les ressources
-- HTML information de représentation, Hypertexte pour naviguer entre des ressources
-- Interprétation par les navigateurs
+- HTML information de représentation
+  - Hypertexte pour naviguer entre des ressources
+  - Interprétation par les navigateurs web
 
-Destiné à mettre à disposition des ressources pour les partager.
+Destiné à mettre des ressources à disposition  pour les partager.
 
-Réseau de communication décentralisé et non-hiérarchique. Plusieurs applications du réseau des réseaux. Courriels, transfère de fichiers, world wide web, téléphonie sur IP.
+Réseau de communication décentralisé et non-hiérarchique. Plusieurs applications du réseau des réseaux. Courriels, transfert de fichiers, world wide web, téléphonie sur IP.
 
 Une architecture client-serveur.
 
@@ -384,25 +376,27 @@ World Wide Web, 3 composants principaux
 - utilisation de HTML (HyperText Markup Language) langage de représentation et d’hypertexte
 
 
-## Resources, Représentations et Identifiants
+## Resources, représentations et identifiants
 
 - Toute information pouvant être nommée peut être une **ressource**
 - Une ressource peut recevoir plusieurs **représentations**
 - Les ressources peuvent être **identifiées** sur le web.
 
-Axioms of Web Architecture: 3, https://www.w3.org/DesignIssues/Generic
+*Axioms of Web Architecture: 3*, https://www.w3.org/DesignIssues/Generic
 
-A Short History of "Resource" in web architecture. https://www.w3.org/DesignIssues/TermResource.html
+*A Short History of "Resource" in web architecture*. https://www.w3.org/DesignIssues/TermResource.html
 
-> L’abstraction principale de l’information dans REST est la ressource. **Toute information pouvant être nommée peut être une ressource** : un document ou une image, un service temporel (par exemple «le temps d’aujourd’hui à Marseille»), une collection d’autres ressources, un objet réel (par exemple une personne), etc. En d’autres termes, tout concept pouvant être la cible d’une référence hypertexte d’un auteur doit entrer dans la définition d’une ressource. C’est une correspondance conceptuelle à un ensemble d’entités et ce n’est pas l’entité correspondant à cette association à un moment particulier dans le temps.
+### Les ressources
+
+> L’abstraction principale de l’information dans REST est la ressource. **Toute information pouvant être nommée peut être une ressource** : un document ou une image, un service météorologique (par exemple «le temps d’aujourd’hui à Marseille»), une collection d’autres ressources, un objet réel (par exemple une personne), etc. En d’autres termes, tout concept pouvant être la cible d’une référence hypertexte d’un auteur doit entrer dans la définition d’une ressource. C’est une correspondance conceptuelle à un ensemble d’entités et ce n’est pas l’entité correspondant à cette association à un moment particulier dans le temps.
 
 Une telle définition permet de généraliser de nombreuses sources d’information sans les distinguer ni par leur type ni par leur mise en œuvre. Ensuite elle permet de lier tardivement la référence et sa représentation. Enfin, elle permet de mettre en exergue un concept plutôt qu’une représentation donnée à ce concept.
 
 Cela implique de donner un identifiant pour identifier des ressources impliquées dans une interaction entre composants. C’est l’autorité responsable de l’assignation d’un identifiant à la ressource qui est responsable du maintien de sa validité. C’est en ce sens que REST s’appuie plutôt sur les auteurs.
 
-#### Les représentations
+### Les représentations
 
-> Les composant REST effectue des actions sur une ressource en utilisant une représentation pour capturer l’état courant ou prévu de cette ressource et en transférant cette représentation entre composants.
+> Les composants REST effectuent des actions sur une ressource en utilisant une représentation pour capturer l’état courant ou prévu de cette ressource et en transférant cette représentation entre composants.
 
 Une représentation se compose de données et de métadonnées qui les décrivent. Le format de données d’une représentation est connu comme étant un type de média.
 
@@ -451,7 +445,7 @@ scheme authority   port    path      query    fragment
 - **IRI** – Internationalized Resource Identifiers ([RFC3987](https://www.ietf.org/rfc/rfc3987))
   - Non-ASCII chars don’t need to be encoded.
 
-Les IRIs sont des identifiants, ceux-ci peuvent être signifiants ou noms.
+Les IRIs sont des identifiants, ceux-ci peuvent être signifiants ou non.
 
 Bonnes pratiques :
 
@@ -459,7 +453,7 @@ Bonnes pratiques :
 - Choisir un système de nommage extensible et pérenne
 - Garantir l’unicité, en excluant toute ambiguïté
 
-Plusieurs manière de gérer les identifiants
+Plusieurs manière de gérer les identifiants :
 
 - utilisation de systèmes normalisés (DOI, URN, ARK)
 - utilisation d’IRI et mise en place de règles de gestion (une problématique d’organisation qui nécessite des processus et des moyens)
@@ -489,14 +483,10 @@ HTTP est un protocole pour le transfert de représentations d’un serveur à un
 ## HTTP définit un nombre limité de méthodes
 
 - [`GET`](https://tools.ietf.org/html/rfc7231#section-4.3.1) transfère une représentation
-
 - [`HEAD`](https://tools.ietf.org/html/rfc7231#section-4.3.2) transfère seulement le statut et les entêtes
-
 - [`POST`](https://tools.ietf.org/html/rfc7231#section-4.3.3) performe une opération spéciale à une ressource
-
-- [`PUT`](https://tools.ietf.org/html/rfc7231#section-4.3.4) rumple les représentations
-
-- [`DELETE`](https://tools.ietf.org/html/rfc7231#section-4.3.5) supprime les représentations
+- [`PUT`](https://tools.ietf.org/html/rfc7231#section-4.3.4) remplace ou crée une représentation
+- [`DELETE`](https://tools.ietf.org/html/rfc7231#section-4.3.5) supprime une représentation
 
 
 On considère qu’une méthode HTTP est [safe](https://tools.ietf.org/html/rfc7231#section-4.2.1) si elle est seulement en lecture. Le client ne demande pas alors de changement d’état de la ressource. GET et HEAD sont des méthodes sûres.
@@ -562,15 +552,11 @@ content-type: text/html; charset=UTF-8
 Lorsque un serveur reçoit une requête, il génère une réponse
 
 - **cette réponse débute par une ligne de statut ([status line](https://tools.ietf.org/html/rfc7230#section-3.1.2))**
-  elle indique la version HTTP [HTTP version](https://tools.ietf.org/html/rfc7230#section-2.6), un code de statut [status code](https://tools.ietf.org/html/rfc7231#section-6), et une explication [reason phrase](https://tools.ietf.org/html/rfc7230#section-3.1.2)
-
+<br>elle indique la version HTTP [HTTP version](https://tools.ietf.org/html/rfc7230#section-2.6), un code de statut [status code](https://tools.ietf.org/html/rfc7231#section-6), et une explication [reason phrase](https://tools.ietf.org/html/rfc7230#section-3.1.2)
 - **la réponse peut contenir des messages d’entête ([header fields](https://tools.ietf.org/html/rfc7231#section-7))**
-
-  comme le type de contenu [`Content-Type`](https://tools.ietf.org/html/rfc7231#section-3.1.1.5), ou la longueur du contenu [`Content-Length`](https://tools.ietf.org/html/rfc7230#section-3.3.2)
-
+<br>comme le type de contenu [`Content-Type`](https://tools.ietf.org/html/rfc7231#section-3.1.1.5), ou la longueur du contenu [`Content-Length`](https://tools.ietf.org/html/rfc7230#section-3.3.2)
 - **de façon optionnelle, la réponse peut contenir un corps**
-
-  selon le code de statut ce corps de réponse peut contenir le contenu des documents
+<br>selon le code de statut ce corps de réponse peut contenir le contenu des documents
 
 
 ## Codes de statut
@@ -603,18 +589,15 @@ curl -I https://en.wikipedia.org/wiki/Victor_Hugo
 
 ## La négociation de contenu
 
-GET http://service/resource/xxx
-Accept: application/turtle
-
-303 See Other
-Location http://service/data/xxx
-
-GET http://service/data/xxx
-Accept: application/turtle
-
-200 OK
-…
-@PREFIX ...
+1. GET http://service/resource/example
+<br>Accept: application/turtle
+1. 303 See Other
+<br>Location http://service/data/example
+1. GET http://service/data/example
+<br>Accept: application/turtle
+1. 200 OK
+<br>Representation :
+<br>… @PREFIX ...
 
 ## TP avec un client HTTP
 
@@ -627,22 +610,27 @@ http://dbpedia.org/resource/Victor_Hugo
 
 ### Visitez la même adresse avec un client HTTP
 
-[cURL](https://curl.haxx.se) est un outil en ligne de commande pour formuler des requêtes HTTP
+- [cURL](https://curl.haxx.se) est un outil en ligne de commande pour formuler des requêtes HTTP
+- [ReqBin](https://reqbin.com/curl) est un client graphique web qui permet de formuler des requêtes HTTP
 
-[ReqBin](ReqBin https://reqbin.com/curl) est un client graphique web qui permet de formuler des requêtes HTTP
+`curl http://dbpedia.org/resource/Victor_Hugo`
 
 ### Essayer d’envoyer un message d’en-tête HTTP et observez le résultat
 
-- Tutoriel DBPedia <http://wimmics.inria.fr/projects/semanticpedia/doc/index.php/Tutoriel_déréférencement_des_resources>
+`curl -H "Accept: application/rdf+xml" http://dbpedia.org/resource/Victor_Hugo`
 
-- Tutoriel Wikidata 
+`curl -H "Accept: application/turtle" http://dbpedia.org/resource/Victor_Hugo`
+
+`curl -H "Accept: text/turtle" http://dbpedia.org/resource/Victor_Hugo`
+
+- Tutoriel DBPedia <http://wimmics.inria.fr/projects/semanticpedia/doc/index.php/Tutoriel_déréférencement_des_resources>
+- Tutoriel Wikidata (requêtes SPARQL )
   <https://gist.github.com/ColinMaudry/6fd6a5f610f0ac3e6696>
 
-En dehors de l’outil de ligne de commande cUrl, il est également possible d’utiliser l’outil ReqBin https://reqbin.com/curl ou Online curl command line builder https://curlbuilder.com
+En dehors de l’outil de ligne de commande cUrl, il est également possible d’utiliser l’outil ReqBin https://reqbin.com/curl
 
-application/rdf+xml
-
-application/turtle
+- application/rdf+xml
+- application/turtle
 
 <http://wimmics.inria.fr/projects/semanticpedia/doc/index.php/Tutoriel_déréférencement_des_resources>
 
@@ -670,7 +658,7 @@ HTML est un langage de balisage qui capture la structure du document
 
 Ce document est destiné à un navigateur (browser) tel que Firefox, Chrome ou Internet Explorer.
 
-**Pas le seul format de représentation possible d’une ressource.** Dans le contexte du web sémantique, comme nous allons le voir d’autres formats de représentation sont possibles pour une ressources.
+**Pas le seul format de représentation possible d’une ressource.** Dans le contexte du web sémantique, comme nous allons le voir d’autres formats de représentation sont possibles pour une ressource.
 
 —> Produire des contenus destinés à d’autres types d’agents (programme informatique, etc.)
 
@@ -678,34 +666,26 @@ Ex. pour ceux qui ont suivi le cours sur TEI, représentation possible d’un te
 
 —> Possibilité de construire des applications hypermédia, fondées sur REST
 
-Ex application qui peuvent servir des fichiers JSON, ou des réponses XML
+Ex applications qui peuvent servir des fichiers JSON, ou des réponses XML
 
-Possibilité de traitement automatiques
-
-### Pour des présentations plus développées
-
-ajouter un segment de HTML
-
-Décrire un ensemble minimal de balise
-
-Présenter l’association avec une feuille de style, les scripts
-
-Dans une document HTML, on renvoie habituellement les informations de mise en page dans une CSS.
-
-Contenus multimédias inclus
-
-Formulaires
+Possibilité de traitement automatique
 
 ### Pour des présentations plus développées
 
-Expliquer les notions de cache, proxy, etc.
+- ajouter un segment de HTML
+- Décrire un ensemble minimal de balise
+- Présenter l’association avec une feuille de style, les scripts
+  - Dans un document HTML, on renvoie habituellement les informations de mise en page dans une feulle de style CSS.
+- Contenus multimédias inclus
+- Formulaires
 
-HTTPs
+### Pour des présentations plus développées
 
-HTTP2
+- Expliquer les notions de cache, proxy, etc.
+- HTTPs
+- HTTP2
 
-
-## **HTTP** Hypertext Markup Language
+## **HTML** Hypertext Markup Language
 
 HTML & XHTML (eXtensible hypertext markuplanguage)
 
@@ -730,12 +710,12 @@ HTML & XHTML (eXtensible hypertext markuplanguage)
 
 ## hypertexte / hypermédia
 
-Architecture **REST**, pour Resource State Transfer.
+Architecture **REST**, pour Representational State Transfer.
 
 - Roy T. Fielding, _Architectural Styles and the Design of Network-based Software Architectures_, doctoral dissertation, University of California, Irvine, 2000.
 - Traduction Française du Chapitre 5 de la thèse de Roy T. Fielding http://opikanoba.org/tr/fielding/rest/
 
-L’architecture du web définit un ensemble de contraintes qui peuvent être modélisées en identifiant les propriétés qu’elles induisent. À partir d’une telle modélisation, Roy Thomas Fielding a théorisé, dans sa thèse de doctorat, un paradigme de développement d’applications web qu’il nomme REST, pour Resource State Transfer.
+L’architecture du web définit un ensemble de contraintes qui peuvent être modélisées en identifiant les propriétés qu’elles induisent. À partir d’une telle modélisation, Roy Thomas Fielding a théorisé, dans sa thèse de doctorat, un paradigme de développement d’applications web qu’il nomme REST, pour Representational State Transfer.
 
 **REST se compose d’un ensemble de contraintes architecturales qui induisent des propriétés sur les architectures logicielles.**
 
@@ -777,18 +757,18 @@ Cette contrainte facultative simplifie les clients en réduisant le nombre de fo
 
 ### Les éléments architecturaux de REST
 
-> Le modèle REST (Representation State Transfer) est une abstraction des éléments architecturaux d’un système réparti d’hypermédias." De ce fait, il est indépendant des détails de mise en œuvre de ces composants et de la syntaxe de protocole. Il se concentre sur le rôle des composants, les contraintes, sur leurs interactions, et leur interprétation des données. "Il englobe les contraintes fondamentales sur les composants, les connecteurs et les données qui définissent la base de l’architecture du Web, et ainsi l’essence de leur comportement en tant qu’application réseau.
+> Le modèle REST (Representational State Transfer) est une abstraction des éléments architecturaux d’un système réparti d’hypermédias." De ce fait, il est indépendant des détails de mise en œuvre de ces composants et de la syntaxe de protocole. Il se concentre sur le rôle des composants, les contraintes, sur leurs interactions, et leur interprétation des données. "Il englobe les contraintes fondamentales sur les composants, les connecteurs et les données qui définissent la base de l’architecture du Web, et ainsi l’essence de leur comportement en tant qu’application réseau.
 
 <!-- sep -->
 
-## 2. Principes du web sémantique et des données ouvertes et liées
+# 2. Principes du web sémantique et des données ouvertes et liées
 
 - Article de *The Atlantic*
 - [The Semantic Web](http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21&catID=2) ([read it on the Internet Archive](http://wayback.archive.org/web/20070713230811/http://www.sciam.com/print_version.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21)), Scientific American, May 2001, Tim Berners-Lee, James Hendler and Ora Lassila.
 
 Depuis la publication de l’article de Tim Berners Lee (que vous aviez à lire pour aujourd’hui), le W3C et d’autres acteurs promeuvent un web sémantique et un espace informationnel lié sur le web dénommé Linked Open Data (LOD) ou web de données ouvertes et liées.
 
-Ce Linked Open Data (LOD) prend une forme consistante dans plusieurs domaines et notamment dans le domaine culturel. Les technologies à la base de cet espace informationnel numérique sont celles du web sémantiques et reposent très largement sur le cadre de description RDF.
+Ce Linked Open Data (LOD) prend une forme consistante dans plusieurs domaines et notamment dans le domaine culturel. Les technologies à la base de cet espace informationnel numérique sont celles du web sémantique et reposent très largement sur le cadre de description RDF.
 
 Avant d’aborder le cadre de description RDF, il est maintenant nécessaire de vous présenter le contexte général du Linked Open Data, en particulier dans le domaine culturel.
 
@@ -818,9 +798,9 @@ Le Web sémantique fournit un cadre de travail commun qui permet le partage et l
 >
 > https://www.w3.org/2001/sw/
 
-**Le Web sémantique est un web de données.** Il concerne le partage de format, l’intégration et la combinaison de données issues de sources diverses. C’est aussi **un ensemble de standards et de langages** destinés à documenter la manière dont les données sont en rapport avec les objets du monde réel. C’est **une infrastructure technique** qui permet à des personnes ou des machines d’accéder à des données connectées entre elles.
+**Le Web sémantique est un web de données.** Il concerne le partage de formats, l’intégration et la combinaison de données issues de sources diverses. C’est aussi **un ensemble de standards et de langages** destinés à documenter la manière dont les données sont en rapport avec les objets du monde réel. C’est **une infrastructure technique** qui permet à des personnes ou des machines d’accéder à des données connectées entre elles.
 
-**L’activité Web sémantique du W3C créée en 2001 pour développer le web comme un médium d’échange pour les données et les documents a été réunie en 2013 au sein de la [W3C Data Activity](http://www.w3.org/2013/data/) avec une portée plus large :** De plus en plus d’applications web fournissent en effet des moyens pour accéder aux données. En outre, des simples visualisations à des outils interactifs plus sophistiqués, de plus en plus d’applications reposent sur l’accès à des données d’origine diverses, parfois sans coordination préalable mais en utilisant des vocabulaires communs ou des modélisations communes. Cette activité du W3C est destinée à dépasser cette diversité epour faciliter l’intégration des données et leur traitement à l‘échelle du web en fournissant des formats standards, des modèles, des outils et des recommandations pour l‘échange de données. ([W3C Data Activity](http://www.w3.org/2013/data/))
+**La W3C Semantic Web Activity créée en 2001 pour développer le web comme un médium d’échange pour les données et les documents a été réunie en 2013 au sein de la [W3C Data Activity](http://www.w3.org/2013/data/) avec une portée plus large :** De plus en plus d’applications web fournissent en effet des moyens pour accéder aux données. En outre, des simples visualisations à des outils interactifs plus sophistiqués, de plus en plus d’applications reposent sur l’accès à des données d’origine diverses, parfois sans coordination préalable mais en utilisant des vocabulaires communs ou des modélisations communes. Cette activité du W3C est destinée à dépasser cette diversité pour faciliter l’intégration des données et leur traitement à l‘échelle du web en fournissant des formats standards, des modèles, des outils et des recommandations pour l‘échange de données. ([W3C Data Activity](http://www.w3.org/2013/data/))
 
 > The overall vision of the Data Activity is that people and organizations should be able to share data as far as possible using their existing tools and working practices but in a way that enables others to derive and add value, and to utilize it in ways that suit them. Achieving that requires a focus not just on the interoperability of data but of communities.
 >
@@ -888,25 +868,13 @@ cf. [Tim Berners-Lee: The next Web of open, linked data](https://youtu.be/OM6XII
 #### Un problème sémantique
 
 - polysémie
-
 - multilinguisme
-
 - cf. le triangle sémiotique (Ogden et Richard, révisé par Ulmann)
-
-  https://www.universalis.fr/encyclopedie/triangle-semiotique/
-
-#### Le concept de données liées ouvertes
-
-Une toile de données
-
-- utiliser des adresses pour tout
-- répondre avec des données descriptives
-- inclure des liens vers d’autres données
-
-
-{{< image src="schema-evolution-web.png" alt="" >}}
+<br>https://www.universalis.fr/encyclopedie/triangle-semiotique/
 
 ## Les évolutions du Web
+
+{{< image src="schema-evolution-web.png" alt="" >}}
 
 Radar Networks & Nova Spivack, 2007 – www.radarnetworks.com
 
@@ -962,7 +930,7 @@ https://www.ted.com/talks/tim_berners_lee_on_the_next_web?utm_campaign=tedspread
 
 https://www.ted.com/talks/tim_berners_lee_the_year_open_data_went_worldwide?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare
 
-> A TED2009, Tim Berners-Lee a lancé un appel pour "des données brutes, maintenant" - afin que les gouvernements, les scientifiques et les institutions rendent leur données publiques sur internet. A l'université TED en 2010, il montre quelques-uns des résultats intéressants que l'on obtient en reliant les données.
+> A TED2009, Tim Berners-Lee a lancé un appel pour "des données brutes, maintenant" - afin que les gouvernements, les scientifiques et les institutions rendent leur données publiques sur internet. A l’université TED en 2010, il montre quelques-uns des résultats intéressants que l’on obtient en reliant les données.
 
 Rapport avec les politiques d’open data
 
@@ -998,10 +966,8 @@ Tim Berners Lee. Linked Data. W3C, 2006. https://www.w3.org/DesignIssues/LinkedD
 - ★★★★ use URIs to denote things, so that people can point at your stuff
 - ★★★★★ link your data to other data to provide context
 
-Le site http://5stardata.info/en/ propose pour chacune des 5 étapes de l’ouverture des données des exemples et explique les coûts et les bénéfices qui les accompagne. Les données utilisées pour les exemples sont issues de ‘*the temperature forecast for Galway, Ireland for the next 3 days*’.
+Le site http://5stardata.info/en/ propose pour chacune des 5 étapes de l’ouverture des données des exemples et explique les coûts et les bénéfices qui les accompagnent. Les données utilisées pour les exemples sont issues de ‘*the temperature forecast for Galway, Ireland for the next 3 days*’.
 
-
-### Le concept de données liées ouvertes
 
 ### Le concept de données liées ouvertes
 
@@ -1074,7 +1040,7 @@ Voici une liste de liens pour accéder aux documents de références corresponda
 
 <!-- sep -->
 
-## 3. Quelques applications du web sémantique au domaine culturel
+# 3. Quelques applications du web sémantique au domaine culturel
 
 [Semantic Web Case Studies and Use Cases](https://www.w3.org/2001/sw/sweo/public/UseCases/)
 
@@ -1357,28 +1323,28 @@ http://jocondelab.iri-research.org/jocondelab
 
 JocondeLab est une expérimentation réalisée par l’IRI en collaboration avec l’Office de la francophonie menée autour de 2013. Elle propose une traduction multilingue de l’interface et l’enrichissement des contenus de la base de données des musées de France en utilisant des données ouvertes et liées. 
 
-Le projet qui faisait suite au partenariat stratégique avec Wikipedia France et sémantique média et l’INRIA dans l'idée d'une politique culturelle de l’accès. Une politique qui remonte à André Malraux, ne peut se contenter d’être fournisseur d’accès, il faut cultiver l’accès.
+Le projet qui faisait suite au partenariat stratégique avec Wikipedia France et sémantique média et l’INRIA dans l’idée d’une politique culturelle de l’accès. Une politique qui remonte à André Malraux, ne peut se contenter d’être fournisseur d’accès, il faut cultiver l’accès.
 
-Délégation à la langue française. Multilinguisme. Les œuvres qui portent les langues et non pas les langues qui portent les œuvres. Chacun peut leur donner un sens, ouvrent toutes fenêtre sur l'universel. Il importe donc de faire rayonner les œuvres de l'esprit et les œuvres culturelles. Au nom même du pluralisme culturel que défendons la langue française. Quoi de mieux pour promouvoir cette diversité culturelle que de diffuser des œuvres...
+Délégation à la langue française. Multilinguisme. Les œuvres qui portent les langues et non pas les langues qui portent les œuvres. Chacun peut leur donner un sens, ouvrent toutes fenêtre sur l’universel. Il importe donc de faire rayonner les œuvres de l’esprit et les œuvres culturelles. Au nom même du pluralisme culturel que défendons la langue française. Quoi de mieux pour promouvoir cette diversité culturelle que de diffuser des œuvres...
 
-Plateforme en 14 langues, ouverte à tous les locuteurs. La première fois que l'administration offre une telle diversité linguistique sur la toile. Ouverture à des langues plus éloignées de nous, chinois, pays émergea tes, etc.
+Plateforme en 14 langues, ouverte à tous les locuteurs. La première fois que l’administration offre une telle diversité linguistique sur la toile. Ouverture à des langues plus éloignées de nous, chinois, pays émergea tes, etc.
 Proposons également de naviguer en quatre langues régionales.
 
-Termes de la base Joconde alignés avec la base Wikipedia à partir de DBpedia. Réutiliser des contenus textuels et multimédias. Des lors que le travail d'alignement, de liage à été fait. Des lors plus nécessaire d'avoir recours à la traduction pour offrir un accès multilingue au contenu. Seuls les éléments de l'interface sont à traduire.
+Termes de la base Joconde alignés avec la base Wikipedia à partir de DBpedia. Réutiliser des contenus textuels et multimédias. Des lors que le travail d’alignement, de liage à été fait. Des lors plus nécessaire d’avoir recours à la traduction pour offrir un accès multilingue au contenu. Seuls les éléments de l’interface sont à traduire.
 
-Facteurs humains. Ce travail n'aurait pas été possibles sans la mobilisation de différents services du MCC DLF, direction des musées de France. Sous direction des systèmes d'information qui a su proposer un cadre souple. Le département des services numériques qui a su transmettre expérience HDAlab.
+Facteurs humains. Ce travail n’aurait pas été possibles sans la mobilisation de différents services du MCC DLF, direction des musées de France. Sous direction des systèmes d’information qui a su proposer un cadre souple. Le département des services numériques qui a su transmettre expérience HDAlab.
 
-Une expérimentation qui n’a aucunement vocation à remplacer la base Joconde mais démontre à quel point les technologies du web sémantique peuvent être utiles pour la mise à disposition du patrimoine en ligne notamment du oint de vue du plurilinguisme. Espérons que puisse servir d'exemple à titre méthodologique, technologique, etc.
+Une expérimentation qui n’a aucunement vocation à remplacer la base Joconde mais démontre à quel point les technologies du web sémantique peuvent être utiles pour la mise à disposition du patrimoine en ligne notamment du oint de vue du plurilinguisme. Espérons que puisse servir d’exemple à titre méthodologique, technologique, etc.
 
 Service musées de France
 Ne remplace pas base des musées de France.
 Des peintures conservées dans les musées de France Élargissement champ à ensemble des collections
-Pas seulement 500 000 notices dont 300 000 illustrées, mais aussi pleinement devenue un outil de diffusion culturel à l'intention du grand public.
+Pas seulement 500 000 notices dont 300 000 illustrées, mais aussi pleinement devenue un outil de diffusion culturel à l’intention du grand public.
 
-52 millions d'interrogation
-Majorité des requêtes issues de pays francophone. La langue constitue donc bien un frein à la consultation des collections. Mais assurer la traduction en plusieurs langues d'une base de données en constante évolution pas les moyens. Ici tester l'intérêt d'une traduction dynamique.
+52 millions d’interrogation
+Majorité des requêtes issues de pays francophone. La langue constitue donc bien un frein à la consultation des collections. Mais assurer la traduction en plusieurs langues d’une base de données en constante évolution pas les moyens. Ici tester l’intérêt d’une traduction dynamique.
 
-Objets des collections publiques qui témoignent de l'évolution universelle. Renforcer synergie avec Wikipedia
+Objets des collections publiques qui témoignent de l’évolution universelle. Renforcer synergie avec Wikipedia
 
 #### Iconolab
 
@@ -1388,23 +1354,23 @@ Possibilité annoter fragment, fonctionnalités collaboratives. Évaluations con
 
 ### IRI
 
-Travail sur la capacité à caractériser les contenus des amateurs. Convergence entre cette capacité propre au ministère de la culture et de la confronter à celle des utilisateurs. Discussion catégorielle qui constitue un des programmes de recherche de l'IRI autour des Digital Studies. Opiniâtreté de Bertrand Sajus et Alexandre Monin à démontrer que le moment était venu.
+Travail sur la capacité à caractériser les contenus des amateurs. Convergence entre cette capacité propre au ministère de la culture et de la confronter à celle des utilisateurs. Discussion catégorielle qui constitue un des programmes de recherche de l’IRI autour des Digital Studies. Opiniâtreté de Bertrand Sajus et Alexandre Monin à démontrer que le moment était venu.
 
 Colloque 6 et 7 février résultat ANR
 Enjeux de valeurs sur les contenus
 
-Travail sur les catégories de Wikipedia pour les faire remonter dans l'interface et fournir des facettes.
+Travail sur les catégories de Wikipedia pour les faire remonter dans l’interface et fournir des facettes.
 Une chronologie, interface temporelle = manière très intuitive de naviguer dans la base. Aspect de serendipité que cherche à mettre en place. Geotagging des œuvres. Rapidité du développement car les données déjà targuées.
 
 Important de voir la manière dont les données agrégées, en fait parti de la Bretagne, et grâce à Wikipedia que détermine la période chronologique. Ou dynastie Tang...
 
-Prototype qui tire parti de Wikipedia pour traduire toutes les entrées quand disponibles dans Wikipedia. Permet de se balader dans toutes les langues : à partir d'une donnée française à pu aller chercher les données dans toutes les langues dès lors qu'étaient disponibles.
+Prototype qui tire parti de Wikipedia pour traduire toutes les entrées quand disponibles dans Wikipedia. Permet de se balader dans toutes les langues : à partir d’une donnée française à pu aller chercher les données dans toutes les langues dès lors qu’étaient disponibles.
 
 Exemple : Saint-Jean-pied de porc
 
-Un premier pas vers quelque chose de plus technique à l'avenir. Notamment si veut offrir un accès par login pour constituer des dossiers personnels.
+Un premier pas vers quelque chose de plus technique à l’avenir. Notamment si veut offrir un accès par login pour constituer des dossiers personnels.
 
-Intéressant y de voir que contributeurs peuvent ajouter des mots clefs qui n'existent pas dans le référentiel : exemple der des ders pour la 1ère guerre.
+Intéressant y de voir que contributeurs peuvent ajouter des mots clefs qui n’existent pas dans le référentiel : exemple der des ders pour la 1ère guerre.
 
 Propose aussi un tri aléatoire, en proposant aux gens de targuer les contenus. Proposer des chantiers aux utilisateurs et profiter de ces événements pour éditorialiser la collection.
 
@@ -1423,46 +1389,46 @@ Historique ancien de la BBC
   - Chaque chose une URI, une URI par choses
   - Alors peut avoir des vues de données de type RDF/XML
 
-Mais tout n'était pas rose dans ce monde
+Mais tout n’était pas rose dans ce monde
 
 - Ouverture de toutes les données dans des vocabulaires utilisables par tous. Alors google va prendre nos données mais eux des milliards pour les arranger de manière pertinente. Risque de rendre nos données irrelevantes.
-- Peur de la perte de contrôle qui a constitué un gros frein à nos ardeurs d'ouverture de données.
+- Peur de la perte de contrôle qui a constitué un gros frein à nos ardeurs d’ouverture de données.
 
-Beaucoup eu d'expérimentation, mais peu d'innovation. Car nombreuses de données dans nos placards pas libre de droits. Agréments avec agences météos, sports, etc. Souvent peu clairs pour l'ouverture des données. S'est donc dit qu'aller être flou en matière de licence. Des expérimentations, mais quand nécessite évolution avec investissement et startup, plus personnes.
+Beaucoup eu d’expérimentation, mais peu d’innovation. Car nombreuses de données dans nos placards pas libre de droits. Agréments avec agences météos, sports, etc. Souvent peu clairs pour l’ouverture des données. S’est donc dit qu’aller être flou en matière de licence. Des expérimentations, mais quand nécessite évolution avec investissement et startup, plus personnes.
 
-Se sont donc retournés vers leurs principes : Le Web est notre CMS, chaque URI une chose, etc. Qu'en faire ?
+Se sont donc retournés vers leurs principes : Le Web est notre CMS, chaque URI une chose, etc. Qu’en faire ?
 
-Un des succès pragmatique dont parlait peu. BBC avait fait des choses à partir de données ouvertes dont disposait et qui marchait très bien. Des données sur qui était passé à la radio et quand, etc. Mais pas de connaissance nécessairement fine sur ces personnes. Pouvait pour ça faire référence à d'autres données ouvertes telles que Wikipedia.
+Un des succès pragmatique dont parlait peu. BBC avait fait des choses à partir de données ouvertes dont disposait et qui marchait très bien. Des données sur qui était passé à la radio et quand, etc. Mais pas de connaissance nécessairement fine sur ces personnes. Pouvait pour ça faire référence à d’autres données ouvertes telles que Wikipedia.
 
-Deux avantages à cela. Utiliser des données ouverte permet de disposer d'identifiants. Mais également des environnements et nous permet de nous intégrer à tout cela. Peut participer à la base Wikipedia.
-En tant qu'utilisateur de LOD cela a plutôt bien fonctionné.
+Deux avantages à cela. Utiliser des données ouverte permet de disposer d’identifiants. Mais également des environnements et nous permet de nous intégrer à tout cela. Peut participer à la base Wikipedia.
+En tant qu’utilisateur de LOD cela a plutôt bien fonctionné.
 
-Depuis 2009 beaucoup aussi utilisé le LOD en interne. Linked data plateform pour construire des sites web. Nous a permis de passer d'un système ou chacun faisait son truc dans son coin à la mise en commun efficace sans avoir à tout refaire depuis le début. Se contenter ajouter petits tags, pour permettre ensuite de récupérer ensemble sans avoir à changer la plateforme de publication.
+Depuis 2009 beaucoup aussi utilisé le LOD en interne. Linked data plateform pour construire des sites web. Nous a permis de passer d’un système ou chacun faisait son truc dans son coin à la mise en commun efficace sans avoir à tout refaire depuis le début. Se contenter ajouter petits tags, pour permettre ensuite de récupérer ensemble sans avoir à changer la plateforme de publication.
 
-Aujourd'hui en train de le faire  de manière pilote sur des informations de lieux pour produire de l'information locale à bas coût. Mais aussi des stories au sens de développement narratif des histoires. Interressant pour nous que l'utilisation assez simple de LOD permet de passer d'une information très répétitive et pauvre en elle-même à une information qui s'intègre dans une trame narrative, à faire du sens.
+Aujourd’hui en train de le faire  de manière pilote sur des informations de lieux pour produire de l’information locale à bas coût. Mais aussi des stories au sens de développement narratif des histoires. Interressant pour nous que l’utilisation assez simple de LOD permet de passer d’une information très répétitive et pauvre en elle-même à une information qui s’intègre dans une trame narrative, à faire du sens.
 
-Travail avec le Gardian pour développer une ontologie pour voir comment cette série d'événements peuvent faire une histoire, faire l'Histoire avec un grand H.
+Travail avec le Gardian pour développer une ontologie pour voir comment cette série d’événements peuvent faire une histoire, faire l’Histoire avec un grand H.
 
 Pour BBC world service, travail sur l’extraction de sujet et correction par les humains.
-Venus nous voir il y a deux ou trois ans avec quelques téra octets de diffusion. Trois ans d'écoute ! Une belle archive, mais les métadonnées horribles.
+Venus nous voir il y a deux ou trois ans avec quelques téra octets de diffusion. Trois ans d’écoute ! Une belle archive, mais les métadonnées horribles.
 
 Dans ces cas là que faire ?
 Une solution qui marche les stagiaires !
-Mais si faisait quelque chose de plus flexible et réutilisable que le stagiaire. Démultiplier le stagiaire : un algorithme ! Qui allait probablement faire  mieux qu'un stagiaire... Utilisation d.un logiciel de reconnaissance vocale. = transcription de programmes plus ou moins utilisable. Ne dit pas que compréhensible, mais des mots, et d'après la fréquence des termes, possibilité d'extraire des éléments d'indexation avec une certitude plus ou moins grande.
+Mais si faisait quelque chose de plus flexible et réutilisable que le stagiaire. Démultiplier le stagiaire : un algorithme ! Qui allait probablement faire  mieux qu’un stagiaire... Utilisation d.un logiciel de reconnaissance vocale. = transcription de programmes plus ou moins utilisable. Ne dit pas que compréhensible, mais des mots, et d’après la fréquence des termes, possibilité d’extraire des éléments d’indexation avec une certitude plus ou moins grande.
 
-Revient alors à l'humain qui va maintenant nous aider à vérifier. Ouverture de cette archive au l'onde en permettant de contribuer. D'abord à ouvert à des fans un outil pour localiser les plages d'écoutes par speakers. Plusieurs sujets extraits. Demande aux auditeurs de nous confirmer cette extraction de sujets.
-Idéalement se retrouve avec un cercle vertueux. Auditeurs nous aide et peut faire en sorte que nos algorithme apprennent de cette correction. Et peut maintenant le faire et l'utiliser pour nos programmes en live, à la volée.
+Revient alors à l’humain qui va maintenant nous aider à vérifier. Ouverture de cette archive au l’onde en permettant de contribuer. D’abord à ouvert à des fans un outil pour localiser les plages d’écoutes par speakers. Plusieurs sujets extraits. Demande aux auditeurs de nous confirmer cette extraction de sujets.
+Idéalement se retrouve avec un cercle vertueux. Auditeurs nous aide et peut faire en sorte que nos algorithme apprennent de cette correction. Et peut maintenant le faire et l’utiliser pour nos programmes en live, à la volée.
 
-Une extraction de sujets peu coûteuse, mais surtout la possibilité de la mettre en relation avec notre archive et l'histoire en donnant à l'auditeur du contexte.
+Une extraction de sujets peu coûteuse, mais surtout la possibilité de la mettre en relation avec notre archive et l’histoire en donnant à l’auditeur du contexte.
 Utiliser le passé pour expliquer  le présent.
 
-Ces technologies de web sémantique ne demandent pas nécessairement de tout reprendre à zéro. Au contraire ajoute successivement des couches de compréhension, d'identification et de sémantique. Et petit à petit va pouvoir reconstituer et pouvoir offrir à nos auditeurs des informations de contexte.
+Ces technologies de web sémantique ne demandent pas nécessairement de tout reprendre à zéro. Au contraire ajoute successivement des couches de compréhension, d’identification et de sémantique. Et petit à petit va pouvoir reconstituer et pouvoir offrir à nos auditeurs des informations de contexte.
 
 Europeana, donc pas tous seuls
 
 Finir avec Marshall McLuhan
-Partis avec beaucoup enthousiasme. Fait qu'ait eut un coup de frein
-Nous façonnons nos outils et nos outils nous façonnent. Amené progressivement des outils qui changent notre manière de faire ou de penser les choses. Ensemble de petites choses beaucoup plus disruptives qu'il n'y paraît. Nous amène petit à petit par des chemins détournés au monde que pensait créer il y a dix ans.
+Partis avec beaucoup enthousiasme. Fait qu’ait eut un coup de frein
+Nous façonnons nos outils et nos outils nous façonnent. Amené progressivement des outils qui changent notre manière de faire ou de penser les choses. Ensemble de petites choses beaucoup plus disruptives qu’il n’y paraît. Nous amène petit à petit par des chemins détournés au monde que pensait créer il y a dix ans.
 
 
 ### Open Annotation
@@ -1547,7 +1513,7 @@ Nouvelle expérimentation
 
 <!-- sep -->
 
-## 4. Le cadre de description RDF
+# 4. Le cadre de description RDF
 
 Si on avance dans la pile des technologies sémantiques, après Unicode, et XML pour structurer l’information, le modèle RDF est destiné à embarquer la sémantique. Nous verrons ensuite comment introduire de la logique pour interroger les données représentées en RDF avec RDFs et OWL, etc.
 
@@ -1556,25 +1522,21 @@ Si on avance dans la pile des technologies sémantiques, après Unicode, et XML 
 
 Diapositives Fabien Gandon INRIA
 
-Une grammaire de description universelle
+## Une grammaire de description universelle
 
-¶ Resource
+- **Resource**
+  - une page, une image, une vidéo, un concept, une personne
+    <br>n’importe quoi...
+- **Description**
+  - caractéristiques et relation entre les ressources
+- **Format**
+  - un modèle de données et des syntaxes pour la description
 
-une page, une image, une vidéo, un concept,
-
-n’importe quoi...
-
-¶ Description
-caractéristiques et relation entre les ressources
-
-¶ Format
-un modèle de données et des syntaxes pour la description
-
-Recommandation W3C depuis 2004, version 1.1 en 2014
+Recommandation du W3C depuis 2004, version 1.1 en 2014
 
 https://www.w3.org/standards/techs/rdf#w3c_all
 
-#### RDF
+## RDF
 
 Structurer les descriptions en informations atomiques sous la forme : sujet verbe prédicat. **RDF est avant tout un modèle de données basées sur des arcs.**
 
@@ -1594,6 +1556,9 @@ Un exemple un peu plus formel
 - et des ontologies qui donnent une signification non-équivoque aux verbes, catégories de sujets et compléments.
 
 Chaque ontologie peut être envisagée comme une manière particulière d’envisager un domaine. Un point de vue sur un domaine. (cf. Gruber)
+
+- http://www-ksl.stanford.edu/kst/what-is-an-ontology.html
+- https://doi.org/10.1007/978-0-387-39940-9_1318
 
 Les ontologies peuvent être alignées, partagées et connectées pour produire ces points de vue (interopérabilité)
 
@@ -1787,7 +1752,7 @@ Alors que les SGBDR et le langage SQL pour le requêtage et la mise à jour des 
 
 ## Sérialisations de RDF (exemples)
 
-#### application/rdf+xml
+### application/rdf+xml
 
 ```xml
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -1801,16 +1766,16 @@ Alors que les SGBDR et le langage SQL pour le requêtage et la mise à jour des 
 </rdf:RDF>
 ```
 
-#### application/x-turtle, text/turtle
+### application/x-turtle, text/turtle
 
-```tel
+```ttl
 sujet predicat objet .
 ```
 
 - Outil de conversion web ou en ligne de commande [EasyRDF](http://www.easyrdf.org/converter) ou [RDF Validator and Converter](http://rdfvalidator.mybluemix.net)
 - [Exemples de fichiers RDF et de leur équivalents Turtle](http://www.iro.umontreal.ca/~lapalme/ift6282/RDF) par Guy Lapalme (DIRO)
 
-RDF est un modèle de données pour lequel il existe une stérilisation XML, on peut l’utiliser comme une façon de coder le modèle de données même si on utilise de plus en plus d’autres notations plus proches du modèle d’interrogation. On aura donc deux grands types de sérialisation.
+RDF est un modèle de données pour lequel il existe une sérialisation XML, on peut l’utiliser comme une façon de coder le modèle de données même si on utilise de plus en plus d’autres notations plus proches du modèle d’interrogation. On aura donc deux grands types de sérialisation.
 
 Cette relation de graphe, peut donc s’exprimer de plusieurs manières.
 
@@ -1821,24 +1786,21 @@ Cette relation de graphe, peut donc s’exprimer de plusieurs manières.
 
 ## Éléments de syntaxe **Turtle**
 
-#### Turtle (Terse RDF Triple Language), abrégé `ttl`
+Voir RDF 1.1 Turtle, Terse RDF Triple Language, W3C Recommendation, 25 février 2014 <http://www.w3.org/TR/turtle/>
 
-**La notation la plus longue se compose de trois *termes* séparés par des espaces et terminées par un `.**`
+La syntaxe Turtle : Terse RDF Triple Language, abrégé `ttl`
+
+La notation la plus longue se compose de trois **termes** séparés par des espaces et terminées par un `.`
 
 - Un *terme* pourra être un **URI** noté entre chevrons
    `<uri>`
-- Un *terme* pourra aussi être un **QName** (nom qualifié en XML), cad un nom, qualifié par un préfixe
+- Un *terme* pourra aussi être un **QName** (nom qualifié en XML), c’est-à-dire un nom, qualifié par un préfixe
    `prefix:nom` où le préfixe a été prédéfini avec une instruction `@prefix`
 - Un *terme* peut encore être un **littéral** qui est écrit entre guillemets auquel on peut ajouter un **type XML** `"littéral"`, ou encore `"2019-04-06"^^xsd:gDate`
 
-RDF 1.1 Turtle, Terse RDF Triple Language, W3C Recommendation, 25 février 2014 <http://www.w3.org/TR/turtle/>
-
-L’avantage de cette notation est qu’elle est plus proche de celle employée dans le langage d’interrogation.
+L’avantage de cette notation est qu’elle est plus proche de celle employée dans le langage d’interrogation SPARQL.
 
 On exprime des triplets, puisqu’un graphe est un paquet de triplet.
-
-
-## Éléments de syntaxe **Turtle**
 
 ### instruction préfixe
 
@@ -1849,54 +1811,42 @@ id ex:p "o" .
 id <http://my/uri#p> "o" .
 ```
 
-
-## Éléments de syntaxe **Turtle**
-
 ### raccourcis
 
-- La virgule permet de répéter le sujet et le prédicat précédent (on écrit toujours des triplets).
+- La **virgule** permet de répéter le sujet et le prédicat précédent (on écrit toujours des triplets) :
 
-  	`ex:s ex:p ex:o1 , ex:o2 .` ⇒
+  	`ex:s ex:p ex:o1 , ex:o2 .` est équivalent à :
 
-   `ex:s ex:p ex:o1 .`
+    ```
+    ex:s ex:p ex:o1 .
+    ex:s ex:p ex:o2 .
+    ```
 
-   `ex:a ex:p ex:o2 .`
+- Le **point-virgule** permet de répéter le sujet précédent :
 
-- Le point-virgule permet de répéter le sujet précédent
+  	```
+    ex:s ex:p1 ex:o1 ;
+         ex:p2 ex:o2 .
+    ```
+  est équivalent à :
 
-  	`ex:s ex:p1 ex:o1 ; ex:p2 ex:o2 .` ⇒
-
-   `ex:s ex:p1 ex:o1 .`
-
-   `ex:s ex:p2 ex:o2 .`
+    ```
+    ex:s ex:p1 ex:o1 .
+    ex:s ex:p2 ex:o2 .
+    ```
 
 Il existe plusieurs abréviations.
 
 Il arrive assez souvent qu’on ait des relations qui partagent des prédicats ou des objets.
 
-- La virgule permet de répéter le sujet et le prédicat précédent (on écrit toujours des triplets).
-- Le point-virgule permet de répéter le sujet précédent
+### Les nœuds vides
 
-
-## Les nœuds vides
-
-On peut aussi exprimer un nœud vide soit avec un préfixe underscore et un id local au fichier _id mais plus souvent en utilisant des crochets ouvrant et fermants.
+On peut aussi exprimer un nœud vide soit avec un préfixe underscore et un id local au fichier _id mais plus souvent en utilisant des crochets ouvrant et fermant.
 
 - `[ ] ex:p "o" .` peut aussi s’écrire `_:b1 ex:p "o" .`
 - mais encore `[ex:p "o"]`
 
-## Les relations n-aires
-
-```
-Emmanuel réside _.
-_ aRue Doudeauville.
-_ aVille Paris.
-_ aPays France.
-```
-
-### Les nœuds vides
-
-On peut aussi exprimer un nœud vide soit avec un préfixe underscore et un id local au fichier _id mais plus souvent en utilisant des crochets ouvrant et fermants.
+Un noeud vide est une ressource dépendante du triplet auquel il appartient : il ne possède pas d’identifiant comme une URL qui lui permettrait d’exister pour lui-même.
 
 ### Les relations n-aires
 
@@ -1915,9 +1865,9 @@ _ aVille Paris.
 _ aPays France.
 ```
 
-Les *nœuds vides* vont être ajoutés au modèle pour être en mesure d’exprimer autre chose que des relations binaires. Les *nœuds blancs* seront des URIs locales au graphe de sorte que l’on puisse reconstruire le graphe. Personne de l’extérieur pourra y faire référence.
-
 Les relations n-aires sont binarisées via des *nœuds vides (blank nodes)*.
+
+Les *nœuds vides* vont être ajoutés au modèle pour être en mesure d’exprimer autre chose que des relations binaires. Les *nœuds blancs* seront des URIs locales au graphe de sorte que l’on puisse reconstruire le graphe. Personne de l’extérieur pourra y faire référence.
 
 
 ```rdf
@@ -1926,13 +1876,13 @@ Les relations n-aires sont binarisées via des *nœuds vides (blank nodes)*.
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix udem:    <http://www.umontreal.ca/ontology#> .
 
-<http://publicarchitectura.org/edn6103>
-      udem:professeur
-              [ foaf:homepage <http://emmanuel.chateau-dutier.fr> ;
-                foaf:name "Emmanuel Chateau";
+<http://cours-web-sem.ca/hnu6054>
+      udem:enseignant
+              [ foaf:homepage <http://davidvalentine.ca> ;
+                foaf:name "David Valentine";
                 foaf:Organization "Université de Montréal"
               ] ;
-      dc:title "Web Sémantique pour l’édition" ;
+      dc:title "Humanités numériques : Web sémantique et données" ;
       dc:subject "Ontologie"@fr, "RDF" .
 
 ## même définition pour toutes les simplifications RDF/XML
@@ -1944,7 +1894,7 @@ Ce que l’on écrit ici ce sont des triplets : pour chaque déclaration, on a u
 
 L’indentation est seulement choisie pour faciliter la lecture.
 
-Quelques raccourcis
+### Quelques raccourcis
 
 En insérant un `;` au lieu de terminer par un point, on va pouvoir partager un sujet.
 
@@ -1980,7 +1930,7 @@ Rmq : Format choisi par Schema.org
 
 ## TP Visualiser du RDF
 
-- http://rdfshape.weso.es
+- **http://rdfshape.weso.es**
 - https://github.com/tdt/rdf2html
 - https://visgraph3.github.io/index.html
 - https://www.w3.org/RDF/Validator/
@@ -1988,6 +1938,7 @@ Rmq : Format choisi par Schema.org
 - http://cytoscape.org
 - http://philogb.github.io/jit/
 
+<!--
 à trier
 
 - https://visgraph3.github.io/index.html
@@ -2008,12 +1959,12 @@ Rmq : Format choisi par Schema.org
 - http://provoviz.org
 - http://aksw.org/Projects/CubeViz.html
 
+-->
 
 
+## TP exemple shakespearien
 
-## TP exemple
-
-Exemple fortement inspiré (et simplifié) de *D. Allemang* et *J. Hendler*, [Semantic Web for the working Ontologist](http://www.workingontologist.org/), chap 3 qui présente une version OWL/RDF (générée automatiquement).
+Exemple fortement inspiré (et simplifié) de *D. Allemang* et *J. Hendler*, [Semantic Web for the working Ontologist](http://www.workingontologist.org/), chapitre 3 qui présente une version OWL/RDF (générée automatiquement).
 
 http://www.iro.umontreal.ca/~lapalme/ift6282/Shakespeare/index.html
 
@@ -2056,19 +2007,19 @@ geo:Stratford
       geo:isIn geo:England .
 ```
 
-RDF est un formalisme de graphe, ce que l’on définit c’est un sujet, un prédicat et un objet. On compose les contenus de cette manière, ce qui permet de créer des graphes car il y a des liens entre des propositions car on utilise des URI. Il y a différentes façons de présenter des graphes et il y a plusieurs stérilisation. Un système qui lit du RDF produit des constructions sous la forme d’un ensemble de triplets. Il n’y a pas de répétition, et il n’y a pas d'ordre.
+RDF est un formalisme de graphe, ce que l’on définit c’est un sujet, un prédicat et un objet. On compose les contenus de cette manière, ce qui permet de créer des graphes puisqu'il y a des liens, rendus possibles par l'utilisation des URI, entre des propositions.
 
-Nous avions vu un ensemble de petits graphes où l’on indique un certain nombre de relations sur Shakespeare et des œuvres littéraires. On peut expliciter chacun des graphes sous la forme d’un tableau. Et cela peut être exprimé dans une stérilisation XML ou turtle.
+Il y a différentes façons de présenter des graphes et il y a plusieurs sérialisations (RDF/XML, Turtle, JSON-LD, etc.). Un système qui lit du RDF produit des constructions sous la forme d’un ensemble de triplets. Il n’y a pas de répétition, et il n’y a pas d'ordre.
+
+Nous avions vu un ensemble de petits graphes où l’on indique un certain nombre de relations sur Shakespeare et des œuvres littéraires. On peut expliciter chacun des graphes sous la forme d’un tableau. Et cela peut être exprimé dans une sérialisation XML ou turtle.
 
 #### Exemple shakespearien
 
-Lorsque l’on fait un graph RDF, la première chose à penser, c’est la manière dont on va structurer ce que l’on veut dire.
+Lorsque l’on fait un graphe RDF, la première chose à penser, c’est la manière dont on va structurer ce que l’on veut dire. Il faut essayer d’imaginer le graphe d’ensemble et de le dessiner pour identifier l’organisation des choses.
 
-Ici placé dans des espaces de nom différents ce qui a rapport à la biographie, à la littérature et aux lieux. La structuration des URIs fait partie du processus de conception et traduit la manière dont va construire son monde. Ce faisant, on impose sa vision du monde.
+Ici, on a placé dans des espaces de nom différents ce qui a rapport à la biographie, à la littérature et aux lieux. La structuration des URIs fait partie du processus de conception et traduit la manière dont va construire son monde. Ce faisant, on impose sa vision du monde.
 
-Quand on fait du RDF la première des choses consiste à essayer d’imaginer le graph d’ensemble et de le dessiner pour identifier l’organisation des choses.
-
-Le monde que je veux représenter peut-être codé sous la forme de triplets. On emploie ici des couleurs pour distinguer ce qui a rapport à la littérature, la biographie et la géographie.
+Le monde que je veux représenter peut être codé sous la forme de triplets. On emploie ici des couleurs pour distinguer ce qui a rapport à la littérature, la biographie et la géographie.
 
 On peut encore les noter sous la forme de triplets, les systèmes utilisent ce genre de représentation RDF. La première chose que fait un système c’est représenter les choses dans un format dans lequel peut travailler et créer ses index.
 
@@ -2078,7 +2029,7 @@ Regardons maintenant la notation turtle = une codification du graphe que l’on
 
 Il existe un langage d’interrogation dédié qui s’appelle SPARQL dont l’objet est essentiellement de trouver des motifs de triplets. Pour la pratique, un module de base pour apprendre, twinkle. Choisir celui qui est accessible depuis ma page pour faciliter son utilisation. Ajout de plusieurs éléments.
 
-Aller chercher un fichier RDF et s’assurer que l’on charge le bon graph.
+Aller chercher un fichier RDF et s’assurer que l’on charge le bon graphe.
 
 
 ## Biblio
