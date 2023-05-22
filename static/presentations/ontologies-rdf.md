@@ -1130,6 +1130,8 @@ https://ckan.org
 
 ### **Quelles opportunités pour le domaine éditorial ?**
 
+Et les humanités numériques?
+
 --
 
 - Quelles conséquences sur le format livre ?

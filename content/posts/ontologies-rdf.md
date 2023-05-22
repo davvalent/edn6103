@@ -981,11 +981,13 @@ https://ckan.org
 
 ### Discussion
 
-### **Quelles opportunités pour le domaine éditorial ?**
+### **Quelles opportunités pour le domaine éditorial ?
+
+Et les humanités numériques?
 
 --
 
-- Quelles conséquences sur le format livre ?
+- Quelles conséquences sur le format livre ? Sur la recherche?
 
 --
 
