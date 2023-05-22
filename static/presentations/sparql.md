@@ -1,10 +1,11 @@
-## EDN6103 - Web sémantique pour l'édition numérique
+## HNU6054 – Humanités numériques : Web sémantique et données
 
 # SPARQL
-Emmanuel Château-Dutier et Antoine Fauchié, mars 2021
+Emmanuel Château-Dutier et Antoine Fauchié, mars 2021<br>
+David Valentine, mai 2023
 
 Site web pour les ressources du cours :  
-[https://publicarchi.github.io/edn6103/](https://publicarchi.github.io/edn6103/)
+[https://davvalent.github.io/hnu6054/](https://davvalent.github.io/hnu6054/)
 
 ===↓===
 
@@ -196,7 +197,8 @@ WHERE e.gender = 'male'
 ```
 
 ```SPARQL
-PREFIX : <http://example.org/> SELECT ?sn, (?projname AS ?pn) 
+PREFIX : <http://example.org/>
+SELECT ?sn, (?projname AS ?pn) 
 WHERE {
 	?e a :Employee .
 	?e :surname ?sn .
@@ -211,6 +213,8 @@ WHERE {
 ???
 
 Obtenir les projets dont les administrateurs sont des hommes et le nom commence par la lettre `N`.
+
+Sans `@` et `.` pour PREFIX dans la notation SPARQL.
 
 ===↓===
 
@@ -236,7 +240,7 @@ Une spécification du W3C modularisée
 
 [SPARQL 1.1 Query Language](http://www.w3.org/TR/sparql11-query/)
 
-Supposant un graphe de triplet chargé dans un service SPARQL, le Langage de requêtes SPARQL permet de formuler des requêtes qui prennent la forme de **motifs de graphe** plus ou moins complexes. 
+Supposant un graphe de triplet chargé dans un service SPARQL, le langage de requêtes SPARQL permet de formuler des requêtes qui prennent la forme de **motifs de graphe** plus ou moins complexes. 
 
 ### Formats des résultats
 
@@ -285,6 +289,11 @@ Afin de pouvoir échanger les résultats dans des formats lisibles par la machin
 
 cf. [SPARQL 1.1 Overview](http://www.w3.org/TR/sparql11-overview/)
 
+???
+
+- Séries d'exemples
+- N'entre pas dans le détail, j'y viens dans la deuxième partie de la présentation
+
 ===↓===
 
 ##### La requête SPARQL suivante avec SELECT
@@ -322,6 +331,9 @@ WHERE spécifie les données à tirer ; `SELECT` détermine les données qui do
 
 @todo
 
+- on doit sélectionner les triplets (clause `WHERE`)
+- on doit afficher les valeurs que l'on souhaite consulter (clause `SELECT`)
+
 ===↓===
 
 ##### La requête SPARQL suivante avec SELECT
@@ -339,7 +351,7 @@ WHERE
 
 --
 
-Ramène les noms des personnes et leur courriel s’il y en a et qu’elles ont la propriété `foaf:name` et `foaf:mbox` renseignées.
+Ramène les noms des personnes et leur courriel s’il y en a et que ces personnes ont la propriété `foaf:name` et `foaf:mbox` renseignées.
 
 ???
 
@@ -513,7 +525,7 @@ Dans cet exemple, la requête SPARQL est adressé via HTTP à l’hôte `http://
 
 ## SPARQL endpoint
 
-L’URI à laquelle un service au protocole SPARQL écoute les requêtes d’un client SPARQL
+L’URI à laquelle un service est accessible au moyen du protocole SPARQL écoute les requêtes d’un client SPARQL
 
 - https://ckan.org
 - https://datahub.io
@@ -992,7 +1004,7 @@ Aide-Mémoire http://www.iro.umontreal.ca/~lapalme/ift6282/SparqlRappels.html
 
 ### SPARQL par l’exemple 
 
-(dans **YASGUI** sur http://data.persee.fr/sparql)
+(dans **YASGUI** sur https://data.persee.fr/explorer/sparklis/)
 
 - Explorer l’ensemble des contenus
 - Chercher les noms, prénoms et auteurs de tous les auteurs
@@ -1008,9 +1020,7 @@ Aide-mémoire par Guy Lapalme http://www.iro.umontreal.ca/~lapalme/ift6282/Sparq
 
 ===↓===
 
-Explorer l’ensemble des contenus avec la requête
-
-http://data.persee.fr/sparql
+### Explorer l’ensemble des contenus
 
 ```SPARQL
 SELECT * 
@@ -1062,17 +1072,14 @@ WHERE {
 ```SPARQL
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-SELECT ?surname ?forename ?author
+SELECT (CONCAT(?forename, " ", ?surname) AS ?name) ?author ?namePropertyValue
 WHERE {
   ?doc marcrel:aut ?author .
-  ?author foaf:familyName ?surname .
-  ?author foaf:givenName ?forename .
+  ?author foaf:familyName ?surname ;
+    foaf:givenName ?forename ;
+    foaf:name ?namePropertyValue .
 }
 ```
-
-@todo
-
-
 
 ### Supprimer les doublons
 
@@ -1174,7 +1181,7 @@ WHERE {
 
 ???
 
-### xxx
+### Publication de Lepetit avec sujets
 
 ```SPARQL
 PREFIX bibo: <http://purl.org/ontology/bibo/>

@@ -1,10 +1,11 @@
-## EDN6103 - Web sémantique pour l'édition numérique
+## HNU6054 – Humanités numériques : Web sémantique et données
 
 # Vocabulaires et ontologies
-Emmanuel Château-Dutier et Antoine Fauchié, mars 2022
+Emmanuel Château-Dutier et Antoine Fauchié, mars 2022<br>
+David Valentine, mai 2023
 
 Site web pour les ressources du cours :  
-[https://publicarchi.github.io/edn6103/](https://publicarchi.github.io/edn6103/)
+[https://davvalent.github.io/hnu6054/](https://davvalent.github.io/hnu6054/)
 
 ===↓===
 
@@ -45,9 +46,9 @@ Plusieurs standards définis par le W3C sont destinés à déclarer des classes,
 
 ### Comment ne pas être ambigu dans la description ?
 
-- en utilisant un langage commun d’interprétation de cette description ;
-- en employant des vocabulaires partagés ;
-- et des ontologies qui donnent une signification non-équivoque aux verbes, catégories de sujets et compléments.
+- en utilisant un langage commun d’interprétation de cette description (RDF) ;
+- en employant des vocabulaires partagés (SKOS, thésaurus, etc.) ;
+- et des ontologies qui donnent une signification non-équivoque aux verbes, catégories de sujets et compléments (RDFs, OWL).
 
 Chaque ontologie peut être envisagée comme une manière particulière d’envisager un domaine. Un point de vue sur un domaine (cf. définition par Gruber).
 
@@ -83,7 +84,7 @@ Plusieurs ressources :
 
 ===↓===
 
-## Simple Knowledge Organization System SKOS
+## Simple Knowledge Organization System (SKOS)
 
 **Famille de langage formels conçus pour la représentation des thesauri, des taxonomies, ou tout autre type de vocabulaire contrôlé, destinée faciliter la publication et la connexion entre des vocabulaires contrôlés pour le web sémantique** 
 
@@ -257,6 +258,8 @@ Deux concepts de Rameau représentés sous forme de graphe RDF/SKOS
 
 ???
 
+> RAMEAU (Répertoire d’autorité-matière encyclopédique et alphabétique unifié) est le langage d’indexation matière utilisé, en France, par la Bibliothèque nationale de France, les bibliothèques universitaires, de nombreuses bibliothèques de lecture publique ou de recherche ainsi que plusieurs organismes privés.
+
 Travail interconnexion RAMEAU LCSH
 
 Source : Isaac, Antoine, et Bouchet. 2009. « Rameau et SKOS ». *Arabesques*, juin 2009. <http://rameau.bnf.fr/informations/pdf/arabesques54_art_isaac_bouchet.pdf>.
@@ -270,10 +273,9 @@ http://www.few.vu.nl/~aisaac/
 ### Exemple SKOS
 
 ```xml
-<skosConcept 
-rdf:about="http://www.ihr-tobias.org/concepts/21250/Abdication">
+<skos:Concept rdf:about="http://www.ihr-tobias.org/concepts/21250/Abdication">
     <skos:prefLabel>Abdication</skos:prefLabel>
-</skosConcept>
+</skos:Concept>
 ```
 
 exemple tiré du [thesaurus of British and Irish History](http://www.history.ac.uk/projects/digital/tobias)
@@ -283,11 +285,10 @@ exemple tiré du [thesaurus of British and Irish History](http://www.history.ac.
 ### Exemple SKOS
 
 ```xml
-<skosConcept 
-rdf:about="http://www.ihr-tobias.org/concepts/21250/abdication">
-    <skos:prefLabel>Abdication</skos:prefLabel>
-    <skos:narrower rdf:resource="http://www.ihr-tobias.org/concepts/19838/abdication_crisis_1936"/>
-</skosConcept>
+<skos:Concept rdf:about="http://www.ihr-tobias.org/concepts/21250/abdication">
+  <skos:prefLabel>Abdication</skos:prefLabel>
+  <skos:narrower rdf:resource="http://www.ihr-tobias.org/concepts/19838/abdication_crisis_1936"/>
+</skos:Concept>
 ```
 
 exemple tiré du [Thesaurus of British and Irish History](http://www.history.ac.uk/projects/digital/tobias)
@@ -295,6 +296,16 @@ exemple tiré du [Thesaurus of British and Irish History](http://www.history.ac.
 ???
 
 Visionner ce RDF en Turtle avec [EasyRDF](http://www.easyrdf.org/converter)
+
+```xml
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <skos:Concept rdf:about="http://www.ihr-tobias.org/concepts/21250/abdication">
+    <skos:prefLabel>Abdication</skos:prefLabel>
+    <skos:narrower rdf:resource="http://www.ihr-tobias.org/concepts/19838/abdication_crisis_1936"/>
+  </skos:Concept>
+</rdf:RDF>
+```
 
 ===↓===
 
@@ -350,7 +361,7 @@ souvent utilisés pour les documents techniques ou dans des domaines spéciali
 
 <http://www.iconclass.org/>
 
-- **Getty Arts and Architecture thesaurus** (AAT) 
+- **Getty Art and Architecture thesaurus** (AAT) 
 
 <http://www.getty.edu/research/conducting_research/vocabularies/aat/>
 
@@ -366,7 +377,7 @@ souvent utilisés pour les documents techniques ou dans des domaines spéciali
 
 ## TP SKOS Play
 
-http://labs.sparna.fr/skos-play
+**SKOS Play !** http://labs.sparna.fr/skos-play
 
 1. Naviguer dans le thesaurus de désignation architecturale du ministère de la Culture et de la communication en France 
    http://data.culture.fr/thesaurus/
@@ -377,15 +388,17 @@ http://labs.sparna.fr/skos-play
 
 4. Visualiser le fichier dans SKOS Play
 
+???
+
+@todo Le site http://data.culture.fr/thesaurus/ est fonctionnel en ligne, mais trop lent, inutilisable en pratique.
+
+voir donc `corriges/architecture_civile_publique.ttl`
+
 ===↓===
 
 ## Logiciels
 
 OpenTheso https://github.com/miledrousset/opentheso
-
-Ginco http://www.culture.gouv.fr/Divers/Harmonisation-des-donnees-culturelles/Referentiels/Les-vocabulaires-scientifiques-et-techniques/L-application-GINCO
-
-Terminology Management Platform (TMP) http://linkedheritage.eu
 
 Open Refine http://openrefine.org
 
@@ -395,7 +408,10 @@ Skosmos http://skosmos.org/
 
 ???
 
-https://www.jlis.it/article/view/5471
+- 404 https://www.jlis.it/article/view/5471
+- 404 Ginco http://www.culture.gouv.fr/Divers/Harmonisation-des-donnees-culturelles/Referentiels/Les-vocabulaires-scientifiques-et-techniques/L-application-GINCO
+- ne répond pas linkedheritage.eu
+
 
 ===↓===
 
@@ -430,7 +446,7 @@ une ontologie définit **une conceptualisation commune** pour une communauté qu
 
 ???
 
-En sciences de l’informatique, une ontologie est une spécification formelle d'un modèle conceptuel lisible par la machine dans laquelle les concepts, propriétés,relations, fonctions, contraintes et axiomes sontexplicitement définis
+En sciences de l’informatique, une ontologie est une spécification formelle d'un modèle conceptuel lisible par la machine dans laquelle les concepts, propriétés, relations, fonctions, contraintes et axiomes sont explicitement définis
 
 - pas un vocabulaire contrôlé proprement dit
 - mais peut en employer un ou plusieurs
@@ -469,13 +485,13 @@ http://tomgruber.org/writing/onto-design.htm
 
 > An ontology is an explicit, formal specification of a shared conceptualization. (Thomas R. Gruber, 1993)
 
-> […] ontologies are defined as a formal specification of a shared conceptualization. (Borst 1997)
+> […] ontologies are defined as a formal specification of a shared conceptualization. (Borst, 1997)
 
 > […] an ontology is a formal, explicit specification of a shared conceptualization.
 > Conceptualization refers to an abstract model of some phenomenon in the world by having identified the relevant concepts of that phenomenon.
 > Explicit means that the type of concepts used, and the constraints on their use are explicitly defined.
 > Formal refers to the fact that the ontology should be machine readable.
-> Shared reflects the notion that an ontology captures consensual knowledge, that is, it is not private of some individual but accepted by a group. (Studer 1998)
+> Shared reflects the notion that an ontology captures consensual knowledge, that is, it is not private of some individual but accepted by a group. (Studer, 1998)
 
 ???
 
@@ -508,7 +524,7 @@ https://keet.wordpress.com/2017/01/20/on-that-shared-conceptualization-and-other
 
 ===↓===
 
-## RDF Schema
+## RDF Schema (RDFs)
 
 - Premier brouillon du W3C en avril 1998
 - Recommandation en février 2004
@@ -526,19 +542,23 @@ https://keet.wordpress.com/2017/01/20/on-that-shared-conceptualization-and-other
 
 ???
 
-Les ontologies qui peuvent être définies au moyen des standards RDF schéma (RDFs) et du Web Ontologie Language (OWL), ces formats peuvent contenir à la fois des définitions informelles sous la forme de documentation pour les humains et des documentations formelles sous la forme de règles et de contraintes qui permettent de détecter des inconsistances ou de dériver de nouveaux faits à partir d’assertions.
+Les ontologies peuvent être définies au moyen des standards RDF Schema (RDFs) et du Web Ontology Language (OWL).
 
-Une ontologie peut, par exemple, définir des classes pour des livres des peintures, des tableaux et des personnes, une propriété d’auteur, et déclarer formellement que toutes les ressources connectées aux livres par la propriété auteur sont de type personne. Elle peut aussi formellement définir une autre classe d’objet comme une superclasse des livres et des peintures. En employant un moteur d’inférence sur les données de la collections de peinture et de livres, et en cherchant tous les objets créés par une personne, on pourra retrouver tous ces objets, sans connaissance préalable de leur type spécifique ; une fonctionnalité cruciale dès lors que l’intégration d’information est requise.
+Ces formats peuvent contenir à la fois des définitions informelles sous la forme de documentation pour les humains et des descriptions formelles sous la forme de règles et de contraintes qui permettent de détecter des inconsistances ou de dériver de nouveaux faits à partir d’assertions explicites.
+
+Une ontologie peut, par exemple, définir des classes pour des livres, des peintures, des tableaux et des personnes, une propriété d’auteur, et déclarer formellement que toutes les ressources connectées aux livres par la propriété auteur sont de type personne.
+
+Elle peut aussi formellement définir une autre classe d’objet comme une superclasse des livres et des peintures. En employant un moteur d’inférence sur les données de la collections de peinture et de livres, et en cherchant tous les objets créés par une personne, on pourra retrouver tous ces objets, sans connaissance préalable de leur type spécifique ; une fonctionnalité cruciale dès lors que l’intégration d’information est requise.
 
 Pour en savoir plus sur les ontologies : https://fr.slideshare.net/SergeLinckels/semantic-web-ontologies-212812210
 
 ## RDFs
 
-Depuis la dernière séance, on vous vend l’idée que le web sémantique nous permettrait de faire des déductions à partir de faits documentés. Toutefois, jusqu’ici on n’a pas fait grand chose. On s’est contenté de combiner des requêtes, etc. Les seules déductions que l’on ait faites consistaient à savoir dire si x est marié a y, etc.
+<!-- Depuis la dernière séance, on vous vend l’idée que le web sémantique nous permettrait de faire des déductions à partir de faits documentés. Toutefois, jusqu’ici on n’a pas fait grand chose. On s’est contenté de combiner des requêtes, etc. Les seules déductions que l’on ait faites consistaient à savoir dire si x est marié a y, etc. -->
 
 Pour pouvoir formuler ce genre de déductions, nous allons avoir besoin de pouvoir intégrer plus de sémantique. C’est ce que va permettre RDFs en introduisant les notions de classes et de propriétés.
 
-RDFs est un vocabulaire pour la modélisation de données RDF sépcifié par le W3C à partir de 2014. La version courante est la 1.1 qui date de 2014. 
+RDFs est un **vocabulaire pour la modélisation** de données RDF sépcifié par le W3C à partir de 2014. La version courante est la 1.1 qui date de 2014. 
 
 https://www.w3.org/TR/rdf-schema/
 
@@ -552,10 +572,20 @@ https://www.w3.org/TR/rdf-schema/
 
 ## La représentation des connaissances en RDF
 
-- Toute information est encodée comme un triplet
+- toute information est encodée comme un triplet
 - un fait complexe est encodé comme une conjonction de triplets élémentaires
 - on ne peut exprimer la négation ou la disjonction
 - on peut déduire des nouvelles informations à l’aide d’un processus d’implication (*entailment*)
+
+### `rdf:type`
+
+Instancier une ressource en RDF avec `rdf:type` :
+
+`:David rdf:type :Enseignant .`
+
+Instancier une classe en RDF avec `rdf:type` :
+
+`:Enseignant rdf:type rdf:Class .`
 
 ???
 
@@ -565,16 +595,17 @@ Exemple de typage, rappelle l’utilisation des types XML Schema
 
 RDF permet d’exprimer des énoncés simples à propos de ressources, de propriétés et de valeurs, mais il est nécessaire de pouvoir définir le vocabulaire utilisé dans ces énoncés —> RDFs
 
-En RDF, toutes les ressources disposent d’un type (ou plusieurs) appelé *classe*. Ces classes peuvent être organisées en hiérarchies (classes, sous-classes).
+En RDF, toutes les ressources disposent d’un type (ou plusieurs) appelé *classe*.
 
 - type sert à instancier les classes ou les ressources
 - les entités d’une même classe partagent des propriétés
-- on peut définir des hiérarchies de classes
+- lasses peuvent être organisées en hiérarchies (classes, sous-classes)
 
 `rdf:type`, `rdfs:Class`, `rdfs:subClassOf`
 
 ### par ex. :
 
+- **Classe** : **Propriétés**
 - Livre : auteur, titre, sujet...
 - Personne : nom, prénom, titre, adresse, âge
 - Entreprise : nom de société, nombre d’employés, adresse
@@ -596,6 +627,10 @@ toutes les entités du modèle RDF sont instances de cette classe
 
 `rdf:Datatype`, `rdf:XMLLiteral`, `rdfs:Container`, `rdfs:ContainerMembershipProperty`.
 
+???
+
+Poursuivre avec David et enseignant.
+
 ===↓===
 
 ## Classes de RDFs et RDF
@@ -606,7 +641,6 @@ toutes les entités du modèle RDF sont instances de cette classe
 - `rdfs:Class`
 - `rdfs:Literal, rdf:XMLLiteral`
 - `rdfs:Property`
-- `rdf:Statement`
 
 ### Relations
 
@@ -623,7 +657,7 @@ Type et liens entre les propriétés et des classes
 
 ===↓===
 
-## Propriétés pour la réification  Statement, subject, prédicateur, object
+## Classes et propriétés pour les conteneurs et les collections de ressources
 
 #### Container
 
@@ -633,7 +667,7 @@ Type et liens entre les propriétés et des classes
 
 #### Autres propriétés auxiliaires (documentation pour les humains, pas de sémantique associée)
 
-- `rdf:seeAlso` (lien vers une autre propriété qui l’expliqque
+- `rdf:seeAlso` (lien vers une autre propriété qui l’explique)
 - `rdfs:isDefinedBy`
 - `rdfs:comment`
 - `rdfs:label`
@@ -642,13 +676,13 @@ Type et liens entre les propriétés et des classes
 
 ### Containers
 
-On peut aussi construire par dessus RDF un certain nombre de structures avec les *containers*. Ici on reste dans RDF. Pour le moment, on se contentait de dire que l’on avait des relations entre a et b. Mais si veut dire que l’on a un cours et que des étudiants font partie de ce cours là, et que ce cours là, c’est l’ensemble de ses étudiants. Comme il s’agit de cas de cas de figure courants, on a défini en RDF des containers pour prendre en charge ces cas de figure.
+On peut aussi construire par dessus RDF un certain nombre de structures avec les *containers*. Ici on reste dans RDF. Pour le moment, on se contentait de dire que l’on avait des relations entre a et b. Mais si veut dire que l’on a un cours et que des étudiants font partie de ce cours là, et que ce cours là, c’est l’ensemble de ses étudiants. Comme il s’agit de cas de figure courants, on a défini en RDF des containers pour prendre en charge ces cas-là.
 
 Un type prédéfini destiné à exprimer le fait qu’on ait un ensemble d’étudiants. Ce qui dit que c’est un container, c’est que son type, l’URI de RDF bag.
 
 http://www.w3c.org/1999/02/22-rdf-syntax-ns#Bag
 
-en fait on a un nœud vide, et son type, le type prédéfini de bag.
+**En fait, on a un nœud vide, et son type, le type prédéfini de bag.**
 
 Les éléments du bag sont codés à la suite en étant numérotés.
 
@@ -684,10 +718,6 @@ Il existe également les containers alt, collection, etc.
 
 ===↓===
 
-<!-- .slide: data-background="images/openhpi-26-how-to-model-classes-and-relations-rdfs-27-638-1.jpg" data-background-size="contain" -->
-
-===↓===
-
 <!-- .slide: data-background="images/openhpi-26-how-to-model-classes-and-relations-rdfs-27-638.jpg" data-background-size="contain" -->
 
 ===↓===
@@ -720,6 +750,10 @@ ex:MiniVan
       rdfs:subClassOf ex:PassengerVehicle , ex:Van .
 ```
 
+???
+
+Analyse en groupe
+
 ===↓===
 
 ## Propriétés associant les classes
@@ -735,6 +769,10 @@ ex:MiniVan
 - absent: aucune restriction
 - 1 fois: doit être instance de ce type
 - plusieurs fois: instance de **toutes** ces classes
+
+???
+
+Domaine et portée pour la suite de l'analyse en groupe
 
 ===↓===
 
@@ -761,39 +799,51 @@ ex:primaryDriver
 ex:johnSmithsCar
     rdf:type ex:PassengerVehicle ;
     ex:primaryDriver <http://www.example.org/staffid/85740> ;
-    ex:rearSeatLegRoom "127"^^<xsd:integer> ;
+    ex:rearSeatLegRoom "127"^^<http://www.w3.org/2001/XMLSchema#integer> ;
 	ex:registeredTo <http://www.example.org/staffid/85740> .
 ```
 
+???
+
+Fin de l'analyse avec l'instanciation des propriétés et d'une ressource de la classe PassengerVehicle.
+
 ===↓===
 
-<!-- .slide: data-background="images/CBWC-RDF-S.png" data-background-size="contain" -->
+<!-- .slide: data-background="images/CBWC-RDF-Sp.png" data-background-size="contain" -->
 
 http://www.iro.umontreal.ca/~lapalme/ForestInsteadOfTheTrees/HTML/ch07s01.html
+
+???
+
+Le modèle s'articule autour de :
+
+- trois classes
+- deux propriétés
+  - domaines
+  - portées
 
 ===↓===
 
 ## TP RDFs
 
-Téléchargez le fichier suivant `https://publicarchi.github.io/edn6103/exercices/CBWC-RDF-S.ttl`
+Téléchargez le fichier suivant https://davvalent.github.io/hnu6054/exercices/CBWC-RDF-S.ttl
 
-Modifier le fichier local pour y ajouter les informations du tableau suivant associées à des vins qui sont déjà dans le fichier mais sans autre information.
+Modifiez le fichier pour y ajouter les informations du tableau suivant associées à des vins qui sont déjà dans le fichier, mais sans autre information.
 
-Il faut aussi indiquer que le rdf:type de ces éléments est cb:Wine.
+- Il faut indiquer que le rdf:type de ces éléments est `cb:Bottle`.
+- Il faut aussi indiquer les types pour les prix (`xsd:decimal`) et les années (`xsd:gYear`).
 
-| uri   | wc:C00871996       | wc:C00042101   | wc:C00043125             |
-| ----- | ------------------ | -------------- | ------------------------ |
-| nom   | Château Montguérêt | Riesling Hügel | Domaine de l’Île Margaux |
-| prix  | 14.65              | 7.95           | 22.80                    |
-| année | 2011               | 2002           | 2004                     |
+| uri          | nom                      | prix  | année |
+| ------------ | ------------------------ | ----- | ----- |
+| wc:C00871996 | Château Montguérêt       | 14.65 | 2011  |
+| wc:C00042101 | Riesling Hüge            | 7.95  | 2002  |
+| wc:C00043125 | Domaine de l’Île Margaux | 22.80 | 2004  |
 
 Comment faudrait-il procéder pour
 
 1. Lister les vins (noms, prix et année) en ordre croissant d’année.
-2. Lister les vins (noms, prix et année) en ordre croissant de prix.
-3. Indiquez les types pour les prix (xsd:decimal) et les années (xsd:gYear).
-4. Lister les vins (noms, prix et année) en ordre croissant de prix.
-5. Lister les vins (noms, prix et année) en ordre croissant de prix en n’affichant pas les indications de type.
+1. Lister les vins (noms, prix et année) en ordre croissant de prix.
+1. Lister les vins (noms, prix et année) en ordre croissant de prix en n’affichant pas les indications de type.
 
 Solutions SPARQL http://www.iro.umontreal.ca/~lapalme/ift6281/RDF/ExerciceRDF.pdf
 

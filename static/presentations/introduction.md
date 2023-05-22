@@ -1,15 +1,11 @@
-## EDN6103 - Web sémantique pour l'édition numérique
+## HNU6054 – Humanités numériques : Web sémantique et données
 
-# Introduction : architecture du web et web sémantique
-Emmanuel Château-Dutier et Antoine Fauchié, mars 2022
+# Introduction : architecture du web et web sémantique
+Emmanuel Château-Dutier et Antoine Fauchié, mars 2022<br>
+David Valentine, mai 2023
 
 Site web pour les ressources du cours :  
-[https://publicarchi.github.io/edn6103/](https://publicarchi.github.io/edn6103/)
-
-
-===↓===
-
-# Introduction
+[https://davvalent.github.io/hnu6054/](https://davvalent.github.io/hnu6054/)
 
 ???
 
@@ -17,21 +13,27 @@ Site web pour les ressources du cours :
 - Présentation des intervenants
 - Conditions matérielles de la formation (matériel informatique, pauses, etc.)
 
-Les technologies du web sémantique et l’approche du web de données liées désignent une combinaison de techniques d’outils et de standards qui permettent de transformer le world wide web d’un web de documents à un web de données. Lorsque cette approche est appliquée au monde des bibliothèques, des archives et des musées, les données liées transforment la manière dont nous pouvons découvrir, analyser, et visualiser les contenus culturels et scientifiques.
+===↓===
 
-Les données ouvertes et liées (Linked Open Data LOD) permettent aux institutions patrimoniales et culturelles de publier et partager des informations sur leur collections en ouvrant d’infinies possibilités de réutilisations et d’enrichissements et afin d’augmenter leur visibilité.
+# Introduction
+
+???
+
+Les technologies du web sémantique et l’approche du web de données liées désignent une combinaison de techniques d’outils et de standards qui permettent de transformer le world wide web d’un web de documents à un web de données. Lorsque cette approche est appliquée au monde des bibliothèques, des archives, des musées, et plus largement au domaine des humanités numériques, les données liées transforment la manière dont nous pouvons découvrir, analyser, et visualiser les contenus culturels et scientifiques.
+
+Les données ouvertes et liées (Linked Open Data LOD) permettent aux institutions patrimoniales et culturelles de publier et de partager des informations sur leur collections, aux projets de recherche des informations sur les objets de la recherche, en ouvrant d’infinies possibilités de réutilisations et d’enrichissements et afin d’augmenter leur visibilité.
 
 Cependant, les acteurs du monde culturels sont confrontés à plusieurs enjeux dans l’appropriation de ces technologies :
 
-- bien sûr, l’adoption de ces technologies et de ces standards nécessite des compétences techniques particulières. Pour autant, ce n’est pas le seul enjeu pour les institutions ou les acteurs du secteur culturel.
-- En effet, partager les données des collections suppose l’adoption de politiques d’ouverture de données adaptées
-- cette démarche présente également des enjeux relatifs à l’autorité des institutions. Dans un contexte distribué, il y a un changement d’échelle qui n’est pas sans impact sur les collection.
+- bien sûr, l’adoption de ces technologies et de ces standards nécessite des compétences techniques particulières; pour autant, ce n’est pas le seul enjeu pour les institutions ou les acteurs du secteur culturel.
+- En effet, partager les données des collections suppose l’adoption de politiques d’ouverture de données adaptées.
+- Cette démarche présente également des enjeux relatifs à l’autorité des institutions. Dans un contexte distribué, il y a un changement d’échelle qui n’est pas sans impact sur les collections; on s'ouvre à des réseaux de données potentiellement très vastes, où chacun peut identifier, désigner et décrire à sa façon un objet culturel.
 
 ===↓===
 
 ## Présentation du plan de cours
 
-http://github.com/publicarchi/edn6103
+https://davvalent.github.io/hnu6054/
 
 ### Objectifs de la formation
 
@@ -54,6 +56,8 @@ Comme de nombreux secteurs d’activité numérique, le monde de l’édition es
 - pour collecter des données d’utilisation
 - etc.
 
+Dans les humanités numériques, on cherche plus souvent à décrire les objets de la recherche, qui peuvent être des documents, mais aussi des objets que l’on cherche à reconstituer à travers une représentation formelle. Par exemple, on pourrait décrire des bâtiments ou des objets muséaux afin d’utiliser ces représentation pour tenter de répondre à des questionnements.
+
 Les choix de structuration de données sont déterminés par l’exploitation visées. En d’autres termes, ce sont les objectifs d’un projet de numérisation ou d’un projet de recherche qui déterminent ce qui doit être décrit, explicité, et discrétisé.
 
 Beaucoup de projets numériques sont fondés sur l’utilisation de métadonnées. On recommande pour celles-ci l’emploi de format ouverts et interopérables, fondés sur des standards.
@@ -69,7 +73,7 @@ Dublin Core est l’un des ces standards. Ce n’est pas un standard du monde mu
 
 Avec Dublin Core, vous avez sans doute déjà eu l’occasion de rencontrer dans d’autres cours, vous a permet d’identifier ce que permet l’utilisation d’un modèle minimal de métadonnées générique (expressivité du modèle, enjeux relatifs aux formats de sérialisation, etc.). Mais surtout, Dublin Core joue depuis longtemps un rôle de format pivot pour l’interopérabilité sur le web avec le protocole de moissonnage de métadonnées OAI-PMH.
 
-Au cours de cet atelier, nous allons particulièrement nous intéresser à un ensemble de technologies promues et standardisées par le W3C (un organisme en charge de la standardisation du web) pour publier des données et assurer leur interopérabilité que l’on désigne globalement sous l’appellation de **technologies du web sémantique**.
+Au cours de cet atelier, nous allons particulièrement nous intéresser à un ensemble de technologies promues et standardisées par le W3C (un organisme en charge de la standardisation du web) pour publier des données et assurer leur interopérabilité. Et on désigne globalement cet ensemble technologique sous l’appellation de **technologies du web sémantique**.
 
 Nous parlerons également de données ouvertes et liées, ou Linked Open Data (LOD), pour désigner une manière d’utiliser la plateforme du word wide web afin de publier et connecter ces données entre elles sur le réseau.
 
@@ -89,7 +93,7 @@ Le projet du web sémantique et du web de données ouvertes et liées et un proj
 
 Toutefois, au terme de plus d’une décennie d’expérimentation, la promesse du websémantique est loin d’être entièrement tenue. Ce projet n’a certainement pas connu le succès fulgurant qu’a rencontré le premier web dont on fêtait récemment les 30 ans.
 
-Néanmoins, de nombreuses initiatives ont émergé ces dernières années, en particulier dans le domaine patrimonial et culturel, qui témoignent du très grand intérêt de ces approches. L’approche du web sémantique et du web de données ouvertes et liées s’est sont affirmée comme une solution de choix pour le partage et l’échange d’information de qualité. Ces modèles présentent en effet une très grande expressivité qui permet de facilement bien rendre compte de réalités complexes et hétérogènes comme celles auxquelles on est souvent confrontés pour décrire des objets culturels.
+Néanmoins, de nombreuses initiatives ont émergé ces dernières années, en particulier dans le domaine patrimonial et culturel, qui témoignent du très grand intérêt de ces approches. L’approche du web sémantique et du web de données ouvertes et liées s’est affirmée comme une solution de choix pour le partage et l’échange d’information de qualité. Ces modèles présentent en effet une très grande expressivité qui permet de facilement bien rendre compte de réalités complexes et hétérogènes comme celles auxquelles on est souvent confrontés pour décrire des objets culturels.
 
 Petit florilège de projets
 
@@ -120,7 +124,7 @@ Au terme du cours, l’étudiante ou l’étudiant sera en mesure
 
 ## Démarche pédagogique
 
-Le programme des séances est conçu selon un parcours progressif. Partant  d’une présentation générale de l’architecture du web et des enjeux  relatifs à la production de données ouvertes et liées on envisage leur application au domaine culturel.
+Le programme des séances est conçu selon un parcours progressif. Partant  d’une présentation générale de l’architecture du web et des enjeux relatifs à la production de données ouvertes et liées on envisage leur application au domaine culturel.
 
 Le cours se déroule en trois séances intensives qui associent étroitement la théorie et son application à la pratique.
 
@@ -138,11 +142,13 @@ Le cours se déroule en trois séances intensives qui associent étroitement la 
 - Principes du web sémantique et du Linked Open Data
 - Applications du web sémantique au domaine culturel
 
-#### Lectures
+### Lectures
 
 - Tim Berners Lee, James Hendler, et Ora Lassila. « The Semantic Web. » *The Scientific American,* 17 May 2001. http://www.scientificamerican.com/article.cfm?id=the-semantic-web [traduction française par Elisabeth Lacombe et Jo Link-Pezet, voir fichier]
 - Jonathan Blaney. Introduction to the Principles of Linked Open Data. The Programming Historian. 2017. https://doi.org/10.46430/phen0068
 - *The next web*. Réalisé par Tim Berners-Lee. 2019. https://www.ted.com/talks/tim_berners_lee_the_next_web/
+
+===↓===
 
 ## Samedi 12 mars 2022, 13h-17h (Deuxième séance)
 
@@ -202,6 +208,8 @@ Comme l’atelier s’adresse à des novices, **c’est la participation aux exe
 Recommandation pour la suite du cours
 
 - ne pas hésiter à dire si vous êtes perdus
+- sentez-vous **toujours** légitime de poser une question
+- sentez-vous **toujours** légitime de ne pas comprendre
 - c’est la participation qui est évaluée plutôt que les résultats = pas de stress
 
 ===↓===
@@ -262,17 +270,19 @@ Un WWW à la fois en lecture et en écriture : *A CRUD Web !* (CRUD *create*, *
 
 ### Caractéristiques
 
-- Utilise TCP/IP
-- Protocole d’échange,
-- manière d’identifier les resources
-- et hypertexte
+On détaille les implémentations plus bas...
+
+- utilise TCP/IP
+- manière d’identifier les resources 
+- protocole d’échange
+- hypertexte
 
 ### La notion d’hypertexte
 
-- terme proposé par Ted Nelson dans le cadre duprojet Xanadu
-- décrit un texte non séquentiel qui comporte des embranchements et permet le choix du lecteur
-- à la différence du texte imprimé, il est destiné àêtre utilisé avec un dispositif interactif
-- il est ouvert, fluide, mutable et peut être connectéà d’autres hypertexte par des « liens »
+- terme proposé par Ted Nelson dans le cadre du [projet Xanadu](https://www.xanadu.net/)
+- décrit un texte non séquentiel qui comporte des embranchements et permet au lecteur de choisir son cheminement de lecture 
+- à la différence du texte imprimé, il est destiné à être utilisé avec un dispositif interactif
+- il est ouvert, fluide, mutable et peut être connecté à d’autres hypertextes par des « liens »
 - hypermedia
 
 ===↓===
@@ -287,11 +297,12 @@ Paul Baran (1926-2011). « Centralized, Decentralized and Distributed networks�
 
 ???
 
-Paul Baran (1926-2011), RAND Corporation
+**Paul Baran** (1926-2011), RAND Corporation.
 
-https://www.rand.org/about/history/baran.html
+- *Paul Baran and the Origins of the Internet*. https://www.rand.org/about/history/baran.html
+- Paul Baran (1926-2011). « Centralized, Decentralized and Distributed networks » in On Distributed Communications. I. Introduction to distributed communications networks, Memorandum RM-3420-PR, août 1964. https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf
 
-Paul Baran (1926-2011). « Centralized, Decentralized and Distributed networks » in On Distributed Communications. I. Introduction to distributed communications networks, Memorandum RM-3420-PR, août 1964. https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf
+La notion de réseau décentralisé jette les bases conceptuelles pour le développement du protocole de communication qui permet à Internet de fonctionner de manière décentralisée et interconnectée (vers TCP/IP).
 
 ===↓===
 
@@ -303,21 +314,20 @@ Paul Baran (1926-2011). « Centralized, Decentralized and Distributed networks�
 
 ## Internet ≠ le web
 
-Tim Berners Lee, Vint Cerf © W3C
+Tim Berners-Lee, Vint Cerf © W3C<!-- .element: style="background-color: rgba(217, 222, 222, 0.2);" -->
 
 ???
 
 Tim Berners Lee, Vint Cerf © W3C
 
-internet n’est pas le web
+Internet n’est pas le web. Internet c'est :
 
+- infrastructure
 - un réseau de réseaux
-
 - basé sur le protocole TCP/IP
+- le web est une des applications d’internet : HTTP, HTML, navigateurs, etc.
 
-- le web est une des applications d’internet
-
-(mails, transfert de fichiers, internet des objets, etc.)
+(mails, transfert de fichiers, P2P, internet des objets, etc.)
 
 ===↓===
 
@@ -331,13 +341,13 @@ internet n’est pas le web
 | Navigateurs web      | 1993  | Marc Andreessen                   |
 | Moteurs de recherche | 1998  | Sergey Brin & Larry Page          |
 
-Couches fonctionnelles derrière les moteurs de recherche sur base de <http://en.wikipedia.org/wiki/Web_search_engine/>
+Couches fonctionnelles derrière les moteurs de recherche sur base de http://en.wikipedia.org/wiki/Web_search_engine
 
 ???
 
 ## Internet et le World wide web
 
-L’omniprésence des moteurs de recherche nous fait parfois oublier qu’ils sont des outils relativement récents. Afin de comprendre leur fonctionnement, il est important de les comprendre dans le contexte plus large de l’internet et du Web.
+L’omniprésence des moteurs de recherche nous fait parfois oublier qu’ils sont des outils relativement récents. Afin de comprendre leur fonctionnement, il est important de les examiner dans le contexte plus large de l’internet et du Web.
 
 | Fonctionnalités      | Dates | Concepteurs                       |
 |:-------------------|-----|---------------------------------|
@@ -347,7 +357,7 @@ L’omniprésence des moteurs de recherche nous fait parfois oublier qu’ils s
 | Navigateurs web      | 1993  | Marc Andreessen                   |
 | Moteurs de recherche | 1998  | Sergey Brin & Larry Page          |
 
-Couches fonctionnelles derrière les moteurs de recherche sur base de <http://en.wikipedia.org/wiki/Web_search_engine/>
+Couches fonctionnelles derrière les moteurs de recherche sur base de http://en.wikipedia.org/wiki/Web_search_engine
 
 Présentation chronologique même si l’articulation des différentes couches est plutôt fonctionnelle. Par exemple, si les développements théoriques concernant l’hypertexte datent de la fin des années 60, il se greffe d’un point de vue fonctionnel sur Internet avec le web.
 
@@ -364,7 +374,7 @@ Présentation chronologique même si l’articulation des différentes couches e
 
 Les **machines clientes** faisant partie du réseau contactent un **serveur** qui leur fournit des **services**.
 
-Principe : le serveur (ou service) attend l’arrivée des requêtes des programmes clients, puis il les traite
+Principe : le serveur (ou service) attend l’arrivée des requêtes des programmes clients, puis il les traite.
 
 Avantages : 
 
@@ -390,14 +400,14 @@ La notion de **protocole technique** : ensemble de spécifications qui définit 
 
 ## **TCP/IP**, le protocole de transport
 
-**TCP/IP** ensemble des protocoles utilisés pour le transfert des données sur internet (début des années 80’s)
+**TCP/IP** est un ensemble de protocoles utilisés pour le transfert des données sur internet (début des années 1980).
 
 Un nom qui réfère à deux protocoles distincts :
 
-- **TCP** Transmission Control Protocol**
-- **IP** Internet Protocol**
+- **TCP** Transmission Control Protocol
+- **IP** Internet Protocol
 
-  adoptés le 1er janvier 1983 par le réseau Arpanet
+Adoptés le 1er janvier 1983 par le réseau Arpanet
 
 ===↓===
 
@@ -413,19 +423,19 @@ FTP, Imap, pop, SMTP, HTTP, P2P, VoIP (Voice over IP), etc.
 #### Protocoles
 
 - **HTTP (HyperText Transfer Protocol)**
-  protocole de transfert hypertexte pour naviguer sur le web (HTTPS pour la version sécurisée)
+<br>protocole de transfert hypertexte pour naviguer sur le web (HTTPS pour la version sécurisée)
 - **FTP (File Transfer Protocol)**
-  protocole destiné au transfert de fichiers informatiques
+<br>protocole destiné au transfert de fichiers informatiques
 - **SMTP (Simple Mail Transfer Protocol)**
-  protocole utilisé pour transférer le courrier électronique vers les serveurs de messagerie
+<br>protocole utilisé pour transférer le courrier électronique vers les serveurs de messagerie
 - **IMAP (Internet Message ac cess Protocol)** 
-  protocole utilisé pour consulter son courrier électronique sur un serveur de messagerie
+<br>protocole utilisé pour consulter son courrier électronique sur un serveur de messagerie
 
 ===↓===
 
 ## Le World Wide Web (www)
 
-Destiné à mettre à disposition des ressources pour les partager. Un système où chacun peut publier.
+Destiné à mettre à disposition des ressources pour les partager. Un système où tout le monde peut publier.
 
 **Une application de l’internet**
 
@@ -444,11 +454,11 @@ Une architecture client-serveur.
 
 Rôle des protocoles. TCP/IP pour véhiculer l’ensemble de l’information = couche de transport et d’indentification. Wifi, etc.
 
-World Wide Web, 3 composants principaux
+Sur cette base, le World Wide Web est constitué de trois principaux composants :
 
-- utilisation d’URI (Uniform Resource Identifier) (pour identifier et adresser les ressources)
-- utilisation de HTTP (HypertextTransfertTransportProtocol) protocole de communication sur l’internet
-- utilisation de HTML (HyperText Markup Language) langage de représentation et d’hypertexte
+- utilisation d’URI (Uniform Resource Identifier), pour identifier et adresser les ressources
+- utilisation de HTTP (Hypertext Transfert Protocol), protocole de communication sur l’internet
+- utilisation de HTML (HyperText Markup Language), langage de représentation de l’information et d’hypertexte
 
 ===↓===
 
@@ -458,7 +468,7 @@ World Wide Web, 3 composants principaux
 - Une ressource peut recevoir plusieurs **représentations**
 - Les ressources peuvent être **identifiées** sur le web.
 
-Axioms of Web Architecture: 3, https://www.w3.org/DesignIssues/Generic
+*Axioms of Web Architecture: 3*, https://www.w3.org/DesignIssues/Generic
 
 A Short History of "Resource" in web architecture. https://www.w3.org/DesignIssues/TermResource.html
 
@@ -477,22 +487,29 @@ Cela implique de donner un identifiant pour identifier des ressources impliquée
 Une représentation se compose de données et de métadonnées qui les décrivent. Le format de données d’une représentation est connu comme étant un type de média.
 
 - Roy T. Fielding, _Architectural Styles and the Design of Network-based Software Architectures_, doctoral dissertation, University of California, Irvine, 2000. <https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm>
+- Voir aussi https://datatracker.ietf.org/doc/html/rfc3986
 
 ===↓===
 
 ## IRI
 
-International Resource Identifier (IRI), Uniform Resource Identifier (URI), Uniforme Resource Locator (URL), Uniform Resource Name (URN), etc.
+Internationalized Resource Identifier (**IRI**), Uniform Resource Identifier (**URI**), Uniforme Resource Locator (**URL**), Uniform Resource Name (**URN**), etc.
 
 Les IRI et les URI sont des identifiants sur le web. Les URL identifient la ressource par le moyen d’y accéder.
 
-Schemes des IRI
+### Schemes des IRI
 
 `http://<host>/<path>?<search>#<fragment>`
 
 - <scheme:chaîne/de.caractère>
 - <http://monsite.com/dossier/fichier.html#ancre>
 - <http://mondomaine.org/ressource/1234>
+
+???
+
+> The Internationalized Resource Identifier (IRI) is an internet protocol standard which builds on the Uniform Resource Identifier (URI) protocol by greatly expanding the set of permitted characters.
+
+https://en.wikipedia.org/wiki/Internationalized_Resource_Identifier
 
 ===↓===
 
@@ -510,6 +527,24 @@ scheme authority   port    path      query    fragment
 - séparateurs : `:`, `/`, `?`, `#`, `[`, `]`, `@`
 - sous-séparateurs : `!`, `$`, `&`, `'`, `(`, `)`, `*`, `+`, `,`, `;`, `=`
 
+???
+
+Les IRI sont des identifiants, ceux-ci peuvent être signifiants ou non.
+
+Bonnes pratiques :
+
+- Veiller à la persistance des différentes parties qui composent l’IRI
+- Choisir un système de nommage extensible et pérenne
+- Garantir l’unicité, en excluant toute ambiguïté
+
+Plusieurs manière de gérer les identifiants :
+
+- utilisation de systèmes normalisés (DOI, URN, ARK)
+- utilisation d’IRI et mise en place de règles de gestion (une problématique d’organisation qui nécessite des processus et des moyens)
+- prévoir les cas de disparition ou de fusion de ressources
+
+===↓===
+
 ### Références
 
 - **URL** – Uniform Resource Locator ([RFC1738](https://tools.ietf.org/html/rfc1738))
@@ -521,26 +556,9 @@ scheme authority   port    path      query    fragment
 - **URI** – Uniform Resource Identifier ([RFC3986](https://tools.ietf.org/html/rfc3986))
   - union of URLs and URNs
 - **IRI** – Internationalized Resource Identifiers ([RFC3987](https://www.ietf.org/rfc/rfc3987))
-  - Non-ASCII chars don’t need to be encoded.
-
-???
-
-Les IRI sont des identifiants, ceux-ci peuvent être signifiants ou noms.
-
-Bonnes pratiques :
-
-- Veiller à la persistance des différentes parties qui composent l’IRI
-- Choisir un système de nommage extensible et pérenne
-- Garantir l’unicité, en excluant toute ambiguïté
-
-Plusieurs manière de gérer les identifiants
-
-- utilisation de systèmes normalisés (DOI, URN, ARK)
-- utilisation d’IRI et mise en place de règles de gestion (une problématique d’organisation qui nécessite des processus et des moyens)
-- prévoir les cas de disparition ou de fusion de ressources
-
-resource_type://hostname.domain:port/filepathname#anchor
-
+  - non-ASCII chars don’t need to be encoded.
+  - a sequence of characters from the
+   Universal Character Set (Unicode/ISO 10646)
 
 ===↓===
 
@@ -548,8 +566,7 @@ resource_type://hostname.domain:port/filepathname#anchor
 
 HTTP est un protocole pour le transfert de représentations d’un serveur à un client (HTTPs pour la version sécurisée)
 
-- HTTP utilise TCP comme couche de transport,
-  port par défaut 80 (443 pour HTTPs)
+- HTTP utilise TCP comme couche de transport, port par défaut 80 (443 pour HTTPs)
 - HTTP standardise la manière dont un client envoie une requête à un serveur pour accéder à la représentation d’une ressource par l’intermédiaire de son URL
 - HTTP standardise la manière dont un serveur répond avec une réponse qui peut contenir une représentation
 
@@ -565,17 +582,18 @@ HTTP est un protocole pour le transfert de représentations d’un serveur à un
 ## HTTP définit un nombre limité de méthodes
 
 - [`GET`](https://tools.ietf.org/html/rfc7231#section-4.3.1) transfère une représentation
-
 - [`HEAD`](https://tools.ietf.org/html/rfc7231#section-4.3.2) transfère seulement le statut et les entêtes
-
 - [`POST`](https://tools.ietf.org/html/rfc7231#section-4.3.3) performe une opération spéciale à une ressource
-
-- [`PUT`](https://tools.ietf.org/html/rfc7231#section-4.3.4) rumple les représentations
-
-- [`DELETE`](https://tools.ietf.org/html/rfc7231#section-4.3.5) supprime les représentations
-
+- [`PUT`](https://tools.ietf.org/html/rfc7231#section-4.3.4) remplace ou crée une représentation
+- [`DELETE`](https://tools.ietf.org/html/rfc7231#section-4.3.5) supprime une représentation
 
 ???
+
+Attention : v.1.1!
+
+> The request method token is the primary source of request semantics; it indicates the purpose for which the client has made this request and what is expected by the client as a successful result.
+
+La méthode sert à indiquer au serveur la nature de la requête du client.
 
 On considère qu’une méthode HTTP est [safe](https://tools.ietf.org/html/rfc7231#section-4.2.1) si elle est seulement en lecture. Le client ne demande pas alors de changement d’état de la ressource. GET et HEAD sont des méthodes sûres.
 
@@ -662,7 +680,7 @@ Lorsque un serveur reçoit une requête, il génère une réponse
 
 ## Codes de statut
 
-HTTP dispose rassemble ces codes en cinq catégories selon la manière dont les requêtes sont prises en charge
+HTTP rassemble ces codes en cinq catégories selon la manière dont les requêtes sont prises en charge
 
 - [100–199](https://tools.ietf.org/html/rfc7231#section-6.2) *info* – le client peut continuer
 - [200–299](https://tools.ietf.org/html/rfc7231#section-6.3) *success* – la requête a été comprise et acceptée
@@ -694,22 +712,22 @@ curl -I https://en.wikipedia.org/wiki/Victor_Hugo
 
 ## La négociation de contenu
 
-GET http://service/resource/xxx
-Accept: application/turtle
-
-303 See Other
-Location http://service/data/xxx
-
-GET http://service/data/xxx
-Accept: application/turtle
-
-200 OK
-…
-@PREFIX ...
+1. GET http://service/resource/example
+<br>Accept: application/turtle
+1. 303 See Other
+<br>Location http://service/data/example
+1. GET http://service/data/example
+<br>Accept: application/turtle
+1. 200 OK
+<br>Representation :
+<br>… @PREFIX ...
 
 ???
 
 @todo faire image
+
+- la négociation de contenu peut servir à diriger le client au bon endroit pour accéder à une représentation
+- elle peut aussi servir à indiquer le type de contenu que le client attend
 
 ===↓===
 
@@ -724,28 +742,40 @@ http://dbpedia.org/resource/Victor_Hugo
 
 ### Visitez la même adresse avec un client HTTP
 
-[cURL](https://curl.haxx.se) est un outil en ligne de commande pour formuler des requêtes HTTP
-
-[ReqBin](ReqBin https://reqbin.com/curl) est un client graphique web qui permet de formuler des requêtes HTTP
+- [cURL](https://curl.haxx.se) est un outil en ligne de commande pour formuler des requêtes HTTP
+- [ReqBin](https://reqbin.com/curl) est un client graphique web qui permet de formuler des requêtes HTTP
 
 ### Essayer d’envoyer un message d’en-tête HTTP et observez le résultat
 
-- Tutoriel DBPedia <http://wimmics.inria.fr/projects/semanticpedia/doc/index.php/Tutoriel_déréférencement_des_resources>
-
-- Tutoriel Wikidata 
-  <https://gist.github.com/ColinMaudry/6fd6a5f610f0ac3e6696>
+- `curl -H "Accept: application/rdf+xml" http://dbpedia.org/resource/Victor_Hugo`
+- `curl -H "Accept: application/turtle" http://dbpedia.org/resource/Victor_Hugo`
+- `curl -H "Accept: text/turtle" http://dbpedia.org/resource/Victor_Hugo`
+- Tutoriel DBPedia : <http://wimmics.inria.fr/projects/semanticpedia/doc/index.php/Tutoriel_déréférencement_des_resources>
+- Tutoriel Wikidata <https://gist.github.com/ColinMaudry/6fd6a5f610f0ac3e6696>
 
 ???
 
-En dehors de l’outil de ligne de commande cUrl, il est également possible d’utiliser l’outil ReqBin https://reqbin.com/curl ou Online curl command line builder https://curlbuilder.com
+- L'URL a changé
+- On accède à un document HTML : représentation
 
-application/rdf+xml
+On peut observer la négociation de contenu dans la console du navigateur :
 
-application/turtle
+- 303 : vers page
+- 303 : vers page avec https
+- 200
+
+En dehors de l’outil de ligne de commande cUrl, il est également possible d’utiliser l’outil ReqBin https://reqbin.com/curl
+
+`curl -H "Accept: application/rdf+xml" http://dbpedia.org/resource/Victor_Hugo`
+
+- application/rdf+xml
+- application/turtle
 
 <http://wimmics.inria.fr/projects/semanticpedia/doc/index.php/Tutoriel_déréférencement_des_resources>
 
-@todo revoir l’exercice
+- @todo revoir l’exercice
+  - https://reqbin.com/curl s'occupe automatiquement de la négociation
+  - code à copier-coller
 
 ===↓===
 
@@ -753,18 +783,20 @@ application/turtle
 
 HTML est un langage de balisage qui capture la structure du document
 
-### HTML structure le contenu d’un document à l’aide de balises ou d’éléments
+### HTML structure le contenu d’un document à l’aide de balises et d’éléments
 
 - une balise ouvrant débute par `<` et se termine par `>`
 - une balise fermante commence par `</` et se termine par `>`
 - une balise auto-fermantes se terminent par `/>`
 
-### ces éléments peuvent recevoir des attributs sous la forme de nom/valeur
+### un élément peuvt recevoir des attributs sous la forme de nom/valeur
 
 - le nom de l’attribut est suivi par `=` et sa valeur
 - la valeur est entourée de guillemets simples ou doubles
 
 ### HTML définit des hyperliens
+
+Élément représentant un hyperlien :
 
 `<a href="http://url.com">ancre de l’hyperlien</a>`
 
@@ -774,17 +806,13 @@ HTML est un langage de balisage qui capture la structure du document
 
 Ce document est destiné à un navigateur (browser) tel que Firefox, Chrome ou Internet Explorer.
 
-**Pas le seul format de représentation possible d’une ressource.** Dans le contexte du web sémantique, comme nous allons le voir d’autres formats de représentation sont possibles pour une ressources.
+**Pas le seul format de représentation possible d’une ressource.** Dans le contexte du web sémantique, comme nous allons le voir d’autres formats de représentation sont possibles pour une ressource. Ces différents formats permettent :
 
-—> Produire des contenus destinés à d’autres types d’agents (programme informatique, etc.)
-
-Ex. pour ceux qui ont suivi le cours sur TEI, représentation possible d’un texte en HTML, mais aussi en TEI, et même extraction MARC ou DC.
-
-—> Possibilité de construire des applications hypermédia, fondées sur REST
-
-Ex application qui peuvent servir des fichiers JSON, ou des réponses XML
-
-Possibilité de traitement automatiques
+- Produire des contenus destinés à d’autres types d’agents (programme informatique, etc.)
+  - Ex. pour ceux qui ont suivi le cours sur TEI, représentation possible d’un texte en HTML, mais aussi en TEI, et même extraction MARC ou DC.
+- Possibilité de construire des applications hypermédia, fondées sur REST
+  - Ex application qui peuvent servir des fichiers JSON, ou des réponses XML
+- Possibilité de traitement automatique
 
 ### Pour des présentations plus développées
 
@@ -810,7 +838,7 @@ HTTP2
 
 ===↓===
 
-## **HTTP** Hypertext Markup Language
+## **HTML** Hypertext Markup Language
 
 HTML & XHTML (eXtensible hypertext markuplanguage)
 
@@ -836,7 +864,7 @@ HTML & XHTML (eXtensible hypertext markuplanguage)
 
 ## hypertexte / hypermédia
 
-Architecture **REST**, pour Resource State Transfer.
+Architecture **REST**, pour Representational State Transfer.
 
 - Roy T. Fielding, _Architectural Styles and the Design of Network-based Software Architectures_, doctoral dissertation, University of California, Irvine, 2000.
 - Traduction Française du Chapitre 5 de la thèse de Roy T. Fielding http://opikanoba.org/tr/fielding/rest/
@@ -852,7 +880,7 @@ Architecture **REST**, pour Resource State Transfer.
 
 ???
 
-L’architecture du web définit un ensemble de contraintes qui peuvent être modélisées en identifiant les propriétés qu’elles induisent. À partir d’une telle modélisation, Roy Thomas Fielding a théorisé, dans sa thèse de doctorat, un paradigme de développement d’applications web qu’il nomme REST, pour Resource State Transfer.
+L’architecture du web définit un ensemble de contraintes qui peuvent être modélisées en identifiant les propriétés qu’elles induisent. À partir d’une telle modélisation, Roy Thomas Fielding a théorisé, dans sa thèse de doctorat, un paradigme de développement d’applications web qu’il nomme REST, pour Representational State Transfer.
 
 **REST se compose d’un ensemble de contraintes architecturales qui induisent des propriétés sur les architectures logicielles.**
 
@@ -908,7 +936,7 @@ Cette contrainte facultative simplifie les clients en réduisant le nombre de fo
 
 Depuis la publication de l’article de Tim Berners Lee (que vous aviez à lire pour aujourd’hui), le W3C et d’autres acteurs promeuvent un web sémantique et un espace informationnel lié sur le web dénommé Linked Open Data (LOD) ou web de données ouvertes et liées.
 
-Ce Linked Open Data (LOD) prend une forme consistante dans plusieurs domaines et notamment dans le domaine culturel. Les technologies à la base de cet espace informationnel numérique sont celles du web sémantiques et reposent très largement sur le cadre de description RDF.
+Ce Linked Open Data (LOD) prend une forme consistante dans plusieurs domaines et notamment dans le domaine culturel. Les technologies à la base de cet espace informationnel numérique sont celles du web sémantique et reposent très largement sur le cadre de description RDF.
 
 Avant d’aborder le cadre de description RDF, il est maintenant nécessaire de vous présenter le contexte général du Linked Open Data, en particulier dans le domaine culturel.
 
@@ -942,9 +970,9 @@ Le Web sémantique fournit **un cadre de travail commun** qui permet le partage 
 >
 > https://www.w3.org/2001/sw/
 
-**Le Web sémantique est un web de données.** Il concerne le partage de format, l’intégration et la combinaison de données issues de sources diverses. C’est aussi **un ensemble de standards et de langages** destinés à documenter la manière dont les données sont en rapport avec les objets du monde réel. C’est **une infrastructure technique** qui permet à des personnes ou des machines d’accéder à des données connectées entre elles.
+**Le Web sémantique est un web de données.** Il concerne le partage de formats, l’intégration et la combinaison de données issues de sources diverses. C’est aussi **un ensemble de standards et de langages** destinés à documenter la manière dont les données sont en rapport avec les objets du monde réel. C’est **une infrastructure technique** qui permet à des personnes ou des machines d’accéder à des données connectées entre elles.
 
-**L’activité Web sémantique du W3C créée en 2001 pour développer le web comme un médium d’échange pour les données et les documents a été réunie en 2013 au sein de la [W3C Data Activity](http://www.w3.org/2013/data/) avec une portée plus large :** De plus en plus d’applications web fournissent en effet des moyens pour accéder aux données. En outre, des simples visualisations à des outils interactifs plus sophistiqués, de plus en plus d’applications reposent sur l’accès à des données d’origines diverses, parfois sans coordination préalable mais en utilisant des vocabulaires communs ou des modélisations communes. Cette activité du W3C est destinée à dépasser cette diversité epour faciliter l’intégration des données et leur traitement à l‘échelle du web en fournissant des formats standards, des modèles, des outils et des recommandations pour l‘échange de données. ([W3C Data Activity](http://www.w3.org/2013/data/))
+**La W3C Semantic Web Activity créée en 2001 pour développer le web comme un médium d’échange pour les données et les documents a été réunie en 2013 au sein de la [W3C Data Activity](http://www.w3.org/2013/data/) avec une portée plus large :** De plus en plus d’applications web fournissent en effet des moyens pour accéder aux données. En outre, des simples visualisations à des outils interactifs plus sophistiqués, de plus en plus d’applications reposent sur l’accès à des données d’origines diverses, parfois sans coordination préalable mais en utilisant des vocabulaires communs ou des modélisations communes. Cette activité du W3C est destinée à dépasser cette diversité pour faciliter l’intégration des données et leur traitement à l‘échelle du web en fournissant des formats standards, des modèles, des outils et des recommandations pour l‘échange de données. ([W3C Data Activity](http://www.w3.org/2013/data/))
 
 > The overall vision of the Data Activity is that people and organizations should be able to share data as far as possible using their existing tools and working practices but in a way that enables others to derive and add value, and to utilize it in ways that suit them. Achieving that requires a focus not just on the interoperability of data but of communities.
 >
@@ -1009,6 +1037,8 @@ cf. [Tim Berners-Lee: The next Web of open, linked data](https://youtu.be/OM6XII
 
 ???
 
+Le web de données propose des mécanismes pour pallier deux importants problèmes en lien avec l'idée des réseaux de données (réseaux sémantiques)
+
 #### Le problème des silos
 
 - bases de données seulement accessibles à travers des formulaires (exposition)
@@ -1023,20 +1053,9 @@ cf. [Tim Berners-Lee: The next Web of open, linked data](https://youtu.be/OM6XII
 #### Un problème sémantique
 
 - polysémie
-
 - multilinguisme
-
 - cf. le triangle sémiotique (Ogden et Richard, révisé par Ulmann)
-
-  https://www.universalis.fr/encyclopedie/triangle-semiotique/
-
-#### Le concept de données liées ouvertes
-
-Une toile de données
-
-- utiliser des adresses pour tout
-- répondre avec des données descriptives
-- inclure des liens vers d’autres données
+<br>https://www.universalis.fr/encyclopedie/triangle-semiotique/
 
 ===↓===
 
@@ -1087,10 +1106,6 @@ L’évolution du web. http://www.evolutionoftheweb.com
 <iframe width="854" height="480" src="https://embed.ted.com/talks/tim_berners_lee_on_the_next_web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ???
-
-<iframe width="854" height="480" src="https://www.youtube.com/embed/OM6XIICm_qo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-[Tim Berners-Lee: The next Web of open, linked data](https://youtu.be/OM6XIICm_qo)
 
 Conférence TED 13 mars 2009
 
@@ -1152,7 +1167,7 @@ Tim Berners Lee. Linked Data. W3C, 2006. https://www.w3.org/DesignIssues/LinkedD
 - ★★★★ use URIs to denote things, so that people can point at your stuff
 - ★★★★★ link your data to other data to provide context
 
-Le site http://5stardata.info/en/ propose pour chacune des 5 étapes de l’ouverture des données des exemples et explique les coûts et les bénéfices qui les accompagne. Les données utilisées pour les exemples sont issues de ‘*the temperature forecast for Galway, Ireland for the next 3 days*’.
+Le site http://5stardata.info/en/ propose pour chacune des 5 étapes de l’ouverture des données des exemples et explique les coûts et les bénéfices qui les accompagnent. Les données utilisées pour les exemples sont issues de ‘*the temperature forecast for Galway, Ireland for the next 3 days*’.
 
 ===↓===
 
@@ -1780,17 +1795,13 @@ Diapositives Fabien Gandon INRIA
 
 Une grammaire de description universelle
 
-¶ Resource
-
-une page, une image, une vidéo, un concept,
-
-n’importe quoi...
-
-¶ Description
-caractéristiqeus et relation entre les ressources
-
-¶ Format
-un modèle de données et des syntaxes pour la description
+- **Resource**
+  - une page, une image, une vidéo, un concept, une personne
+    <br>n’importe quoi...
+- **Description**
+  - caractéristiques et relation entre les ressources
+- **Format**
+  - un modèle de données et des syntaxes pour la description
 
 Recommandation W3C depuis 2004, version 1.1 en 2014
 
@@ -1817,6 +1828,9 @@ Un exemple un peu plus formel
 
 Chaque ontologie peut être envisagée comme une manière particulière d’envisager un domaine. Un point de vue sur un domaine. (cf. Gruber)
 
+- http://www-ksl.stanford.edu/kst/what-is-an-ontology.html
+- https://doi.org/10.1007/978-0-387-39940-9_1318
+
 Les ontologies peuvent être alignées, partagées et connectées pour produire ces points de vue (interopérabilité)
 
 RDF a été inventé au cours des années 2000 dans l’idée de pouvoir disposer d’un modèle d’organisation des données.
@@ -1835,7 +1849,7 @@ cf. https://www.w3.org/TR/rdf11-primer/
 
 ### Buts de la conception
 
-- On souhaitait pouvoir disposer d’un **modèle ouvert super simple de données**.
+- On souhaitait pouvoir disposer d’un modèle ouvert **super simple de données**.
 - On souhaitait également pouvoir disposer d’une **sémantique formelle qui permet des inférences**
 - Disposer d’une sérialisation XML (même si on dispose aujourd’hui d’autres types de sérialisations) en intégrant les types XML
 - Permettre à tous de créer des faits (des contenus)
@@ -1902,9 +1916,10 @@ Le sujet est un URI, l’objet est un URI, et le prédicat est un URI. Tout cela
 
 ## Resource Description Framework **RDF**
 
-![](images/example-graph.jpg)
+![](images/example-graph.jpg)<!-- .element: style="margin: 0px;" -->
 
-Schreiber, Guus, et Yves Raimond. 2014. « RDF 1.1 Primer ». W3C Working Group Note. W3C. <https://www.w3.org/TR/rdf11-primer/>.
+Schreiber, Guus, et Yves Raimond. 2014. « RDF 1.1 Primer ». W3C Working Group Note. W3C. https://www.w3.org/TR/rdf11-primer/.
+<!-- .element: style="margin-top: 0px;" -->
 
 ???
 
@@ -2054,7 +2069,7 @@ Alors que les SGBDR et le langage SQL pour le requêtage et la mise à jour des 
 
 #### application/x-turtle, text/turtle
 
-```tel
+```ttl
 sujet predicat objet .
 ```
 
@@ -2063,7 +2078,7 @@ sujet predicat objet .
 
 ???
 
-RDF est un modèle de données pour lequel il existe une stérilisation XML, on peut l’utiliser comme une façon de coder le modèle de données même si on utilise de plus en plus d’autres notations plus proches du modèle d’interrogation. On aura donc deux grands types de sérialisation.
+RDF est un modèle de données pour lequel il existe une sérialisation XML, on peut l’utiliser comme une façon de coder le modèle de données même si on utilise de plus en plus d’autres notations plus proches du modèle d’interrogation. On aura donc deux grands types de sérialisation.
 
 Cette relation de graphe, peut donc s’exprimer de plusieurs manières.
 
@@ -2161,6 +2176,10 @@ _ aPays France.
 
 On peut aussi exprimer un nœud vide soit avec un préfixe underscore et un id local au fichier _id mais plus souvent en utilisant des crochets ouvrant et fermants.
 
+> Statements involving blank nodes say that something with the given relationships exists, without explicitly naming it.
+
+https://www.w3.org/TR/rdf11-concepts/
+
 ### Les relations n-aires
 
 Quelles sont les limitations du modèle ? Pour le moment, les seules choses que l’on peut exprimer ce sont des relations entre deux choses. Or, dans la réalité il arrive que l’on doive exprimer des *relations n-aires*. On va donc faire comme en logique des prédicats, c’est-à-dire que l’on va binariser toutes les relations.
@@ -2190,13 +2209,13 @@ Les relations n-aires sont binarisées via des *nœuds vides (blank nodes)*.
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix udem:    <http://www.umontreal.ca/ontology#> .
 
-<http://publicarchitectura.org/edn6103>
-      udem:professeur
-              [ foaf:homepage <http://emmanuel.chateau-dutier.fr> ;
-                foaf:name "Emmanuel Chateau";
+<http://cours-web-sem.ca/hnu6054>
+      udem:enseignant
+              [ foaf:homepage <http://davidvalentine.ca> ;
+                foaf:name "David Valentine";
                 foaf:Organization "Université de Montréal"
               ] ;
-      dc:title "Web Sémantique pour l’édition" ;
+      dc:title "Humanités numériques : Web sémantique et données" ;
       dc:subject "Ontologie"@fr, "RDF" .
 
 ## même définition pour toutes les simplifications RDF/XML
@@ -2260,7 +2279,9 @@ Rmq : Format choisi par Schema.org
 
 ???
 
-à trier
+Voir http://rdfshape.weso.es pour l'exercice, section Data analyis and visualization. Fonctionne très bien.
+
+à trier 
 
 - https://visgraph3.github.io/index.html
 - https://github.com/robstewart57/discover-me-semantically
@@ -2284,15 +2305,19 @@ Rmq : Format choisi par Schema.org
 
 ===↓===
 
-## TP exemple
+## TP exemple shakespearien
 
-Exemple fortement inspiré (et simplifié) de *D. Allemang* et *J. Hendler*, [Semantic Web for the working Ontologist](http://www.workingontologist.org/), chap 3 qui présente une version OWL/RDF (générée automatiquement).
+Exemple fortement inspiré (et simplifié) de *D. Allemang* et *J. Hendler*, [Semantic Web for the working Ontologist](http://www.workingontologist.org/), chapitre 3 qui présente une version OWL/RDF (générée automatiquement).
 
 http://www.iro.umontreal.ca/~lapalme/ift6282/Shakespeare/index.html
 
 - http://www.iro.umontreal.ca/~lapalme/ift6282/Shakespeare/Shakespeare.rdf
 - http://www.iro.umontreal.ca/~lapalme/ift6282/Shakespeare/Shakespeare.ttl
 - http://www.iro.umontreal.ca/~lapalme/ift6282/Shakespeare/Shakespeare.pdf
+
+???
+
+- ouvire PDF et montrer
 
 ===↓===
 
@@ -2307,44 +2332,44 @@ http://www.iro.umontreal.ca/~lapalme/ift6282/Shakespeare/index.html
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 geo:England
-      geo:partOf geo:UK .
+  geo:partOf geo:UK .
 
 geo:ChannelsIsland
-      geo:partOf geo:UK .
+  geo:partOf geo:UK .
 
 geo:Scotland
-      geo:partOf geo:UK .
+  geo:partOf geo:UK .
 
 lit:Macbeth
-      lit:setIn geo:Scotland .
+  lit:setIn geo:Scotland .
 
 lit:Shakespeare
-     bio:bornIn "1564"^^xsd:gDate ;
-     bio:liveIn geo:Stratford ;
-     lit:wrote lit:Othello , lit:Macbeth , lit:TheTempest , lit:KingLear , lit:Hamlet .
+  bio:bornIn "1564"^^xsd:gDate ;
+  bio:liveIn geo:Stratford ;
+  lit:wrote lit:Othello , lit:Macbeth , lit:TheTempest , lit:KingLear , lit:Hamlet .
 
 bio:AnneHathaway
-      bio:married lit:Shakespeare .
+  bio:married lit:Shakespeare .
 
 geo:Stratford
-      geo:isIn geo:England .
+   geo:isIn geo:England .
 ```
 
 ???
 
-RDF est un formalisme de graphe, ce que l’on définit c’est un sujet, un prédicat et un objet. On compose les contenus de cette manière, ce qui permet de créer des graphes car il y a des liens entre des propositions car on utilise des URI. Il y a différentes façons de présenter des graphes et il y a plusieurs stérilisation. Un système qui lit du RDF produit des constructions sous la forme d’un ensemble de triplets. Il n’y a pas de répétition, et il n’y a pas d'ordre.
+RDF est un formalisme de graphe, ce que l’on définit c’est un sujet, un prédicat et un objet. On compose les contenus de cette manière, ce qui permet de créer des graphes puisqu'il y a des liens, rendus possibles par l'utilisation des URI, entre des propositions.
 
-Nous avions vu un ensemble de petits graphes où l’on indique un certain nombre de relations sur Shakespeare et des œuvres littéraires. On peut expliciter chacun des graphes sous la forme d’un tableau. Et cela peut être exprimé dans une stérilisation XML ou turtle.
+Il y a différentes façons de présenter des graphes et il y a plusieurs sérialisations (RDF/XML, Turtle, JSON-LD, etc.). Un système qui lit du RDF produit des constructions sous la forme d’un ensemble de triplets. Il n’y a pas de répétition, et il n’y a pas d'ordre.
+
+Nous avions vu un ensemble de petits graphes où l’on indique un certain nombre de relations sur Shakespeare et des œuvres littéraires. On peut expliciter chacun des graphes sous la forme d’un tableau. Et cela peut être exprimé dans une sérialisation XML ou turtle.
 
 #### Exemple shakespearien
 
-Lorsque l’on fait un graph RDF, la première chose à penser, c’est la manière dont on va structurer ce que l’on veut dire.
+Lorsque l’on fait un graphe RDF, la première chose à penser, c’est la manière dont on va structurer ce que l’on veut dire. Il faut essayer d’imaginer le graphe d’ensemble et de le dessiner pour identifier l’organisation des choses.
 
-Ici placé dans des espaces de nom différents ce qui a rapport à la biographie, à la littérature et aux lieux. La structuration des URIs fait partie du processus de conception et traduit la manière dont va construire son monde. Ce faisant, on impose sa vision du monde.
+Ici, on a placé dans des espaces de nom différents ce qui a rapport à la biographie, à la littérature et aux lieux. La structuration des URIs fait partie du processus de conception et traduit la manière dont va construire son monde. Ce faisant, on impose sa vision du monde.
 
-Quand on fait du RDF la première des choses consiste à essayer d’imaginer le graph d’ensemble et de le dessiner pour identifier l’organisation des choses.
-
-Le monde que je veux représenter peut-être codé sous la forme de triplets. On emploie ici des couleurs pour distinguer ce qui a rapport à la littérature, la biographie et la géographie.
+Le monde que je veux représenter peut être codé sous la forme de triplets. On emploie ici des couleurs pour distinguer ce qui a rapport à la littérature, la biographie et la géographie.
 
 On peut encore les noter sous la forme de triplets, les systèmes utilisent ce genre de représentation RDF. La première chose que fait un système c’est représenter les choses dans un format dans lequel peut travailler et créer ses index.
 
