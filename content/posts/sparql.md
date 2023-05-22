@@ -454,7 +454,7 @@ Dans cet exemple, la requête SPARQL est adressé via HTTP à l’hôte `http://
 
 ### SPARQL endpoint
 
-L’URI à laquelle un service au protocole SPARQL écoute les requêtes d’un client SPARQL
+L’URI à laquelle un service est accessible au moyen du protocole SPARQL écoute les requêtes d’un client SPARQL
 
 - https://ckan.org
 - https://datahub.io
@@ -891,7 +891,7 @@ Aide-Mémoire http://www.iro.umontreal.ca/~lapalme/ift6282/SparqlRappels.html
 
 ### SPARQL par l’exemple 
 
-(dans **YASGUI** sur http://data.persee.fr/sparql)
+(dans **YASGUI** sur https://data.persee.fr/explorer/sparklis/)
 
 - Explorer l’ensemble des contenus
 - Chercher les noms, prénoms et auteurs de tous les auteurs
@@ -906,9 +906,7 @@ Aide-Mémoire http://www.iro.umontreal.ca/~lapalme/ift6282/SparqlRappels.html
 Aide-mémoire par Guy Lapalme http://www.iro.umontreal.ca/~lapalme/ift6282/SparqlRappels.html
 
 
-Explorer l’ensemble des contenus avec la requête
-
-http://data.persee.fr/sparql
+### Explorer l’ensemble des contenus
 
 ```SPARQL
 SELECT * 

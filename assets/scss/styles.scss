@@ -28,8 +28,12 @@ main {
 	margin: auto;
 }
 
-h2 {
+h1 {
 	font-size: 1.75em;
+}
+
+h2 {
+	font-size: 1.5em;
 }
 
 a, body {
@@ -84,6 +88,10 @@ pre code {
 	border: none;
 }
 
+code::selection {
+	background-color: cadetblue;
+}
+
 img {
 	max-width:100%;
 	border: 1px solid #0609C6;
@@ -109,7 +117,7 @@ header li, footer li {
     text-transform: uppercase;
 }
 
-header a, footer a {
+header a {
     text-decoration: none;
 }
 

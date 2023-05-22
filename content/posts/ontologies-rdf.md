@@ -181,7 +181,7 @@ skos: http://www.w3.org/2004/02/skos/core#
 - skos:inScheme is usually used to describe the relation that a skos:Concept "belongs to" a skos:ConceptScheme, such as, in our case, a NIMS term skos:inScheme the whole NIMS vocabulary.
 - skos:topConceptOf is a sub-property of skos:inScheme, meaning a skos:Concept is important to a skos:ConceptScheme. For example, top-level categories are treated as top concepts of the NIMS vocabulary. We can see that multiple concepts can simultaneously be top concepts of the same concept scheme.
 - skos:prefLabel and skos:altLabel mean the preferred and alternative labels, respectively. They are useful when generating or creating human-readable representations of a knowledge organization system. These labels provide the strongest clues as to the meaning of a SKOS concept.
-- The properties skos:broader and skos:narrower are used to assert a direct hierarchical link between two SKOS concepts. A triple <A> skos:broader <B> asserts that <B>, the object of the triple, is a broader concept than <A>, the subject of the triple. Similarly, a triple <C> skos:narrower <D> asserts that <D>, the object of the triple, is a narrower concept than <C>, the subject of the triple. By convention, skos:broader and skos:narrower are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties skos:broader and skos:narrower are not declared as transitive properties.
+- The properties skos:broader and skos:narrower are used to assert a direct hierarchical link between two SKOS concepts. A triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. Similarly, a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. By convention, skos:broader and skos:narrower are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties skos:broader and skos:narrower are not declared as transitive properties.
 
 For the full list of classes and properties in SKOS as well as their detailed definitions, see [SKOS Simple Knowledge Organization System Reference](http://www.w3.org/TR/2009/REC-skos-reference-20090818/).
 
@@ -378,7 +378,7 @@ une description formelle explicite des concepts partagés dans un domaine donné
 une ontologie définit **une conceptualisation commune** pour une communauté qui a besoin de partager l’information dans un certain domaine
 
 
-En sciences de l’informatique, une ontologie est une spécification formelle d'un modèle conceptuel lisible par la machine dans laquelle les concepts, propriétés,relations, fonctions, contraintes et axiomes sontexplicitement définis
+En sciences de l’informatique, une ontologie est une spécification formelle d'un modèle conceptuel lisible par la machine dans laquelle les concepts, propriétés, relations, fonctions, contraintes et axiomes sont explicitement définis
 
 - pas un vocabulaire contrôlé proprement dit
 - mais peut en employer un ou plusieurs
@@ -414,13 +414,13 @@ http://tomgruber.org/writing/onto-design.htm
 
 > An ontology is an explicit, formal specification of a shared conceptualization. (Thomas R. Gruber, 1993)
 
-> […] ontologies are defined as a formal specification of a shared conceptualization. (Borst 1997)
+> […] ontologies are defined as a formal specification of a shared conceptualization. (Borst, 1997)
 
 > […] an ontology is a formal, explicit specification of a shared conceptualization.
 > Conceptualization refers to an abstract model of some phenomenon in the world by having identified the relevant concepts of that phenomenon.
 > Explicit means that the type of concepts used, and the constraints on their use are explicitly defined.
 > Formal refers to the fact that the ontology should be machine readable.
-> Shared reflects the notion that an ontology captures consensual knowledge, that is, it is not private of some individual but accepted by a group. (Studer 1998)
+> Shared reflects the notion that an ontology captures consensual knowledge, that is, it is not private of some individual but accepted by a group. (Studer, 1998)
 
 
 Il faut ici souligner plusieurs notions : 
@@ -468,9 +468,11 @@ https://keet.wordpress.com/2017/01/20/on-that-shared-conceptualization-and-other
   - sous-propriétés et super-propriétés
 
 
-Les ontologies qui peuvent être définies au moyen des standards RDF schéma (RDFs) et du Web Ontologie Language (OWL), ces formats peuvent contenir à la fois des définitions informelles sous la forme de documentation pour les humains et des documentations formelles sous la forme de règles et de contraintes qui permettent de détecter des inconsistances ou de dériver de nouveaux faits à partir d’assertions.
+Les ontologies peuvent être définies au moyen des standards RDF Schema (RDFs) et du Web Ontology Language (OWL). Ces formats peuvent contenir à la fois des définitions informelles sous la forme de documentation pour les humains et des descriptions formelles sous la forme de règles et de contraintes qui permettent de détecter des inconsistances ou de dériver de nouveaux faits à partir d’assertions explicites.
 
-Une ontologie peut, par exemple, définir des classes pour des livres des peintures, des tableaux et des personnes, une propriété d’auteur, et déclarer formellement que toutes les ressources connectées aux livres par la propriété auteur sont de type personne. Elle peut aussi formellement définir une autre classe d’objet comme une superclasse des livres et des peintures. En employant un moteur d’inférence sur les données de la collections de peinture et de livres, et en cherchant tous les objets créés par une personne, on pourra retrouver tous ces objets, sans connaissance préalable de leur type spécifique ; une fonctionnalité cruciale dès lors que l’intégration d’information est requise.
+Une ontologie peut, par exemple, définir des classes pour des livres, des peintures, des tableaux et des personnes, une propriété d’auteur, et déclarer formellement que toutes les ressources connectées aux livres par la propriété auteur sont de type personne.
+
+Elle peut aussi formellement définir une autre classe d’objet comme une superclasse des livres et des peintures. En employant un moteur d’inférence sur les données de la collections de peinture et de livres, et en cherchant tous les objets créés par une personne, on pourra retrouver tous ces objets, sans connaissance préalable de leur type spécifique ; une fonctionnalité cruciale dès lors que l’intégration d’information est requise.
 
 Pour en savoir plus sur les ontologies : https://fr.slideshare.net/SergeLinckels/semantic-web-ontologies-212812210
 
@@ -559,7 +561,7 @@ Type et liens entre les propriétés et des classes
 - `rdfs:range` (dont les ressource peuvent être objet)
 
 
-### Propriétés pour la réification  Statement, subject, prédicateur, object
+### Classes et propriétés pour les conteneurs et les collections de ressources
 
 #### Container
 
@@ -569,7 +571,7 @@ Type et liens entre les propriétés et des classes
 
 #### Autres propriétés auxiliaires (documentation pour les humains, pas de sémantique associée)
 
-- `rdf:seeAlso` (lien vers une autre propriété qui l’expliqque
+- `rdf:seeAlso` (lien vers une autre propriété qui l’explique)
 - `rdfs:isDefinedBy`
 - `rdfs:comment`
 - `rdfs:label`
@@ -577,21 +579,13 @@ Type et liens entre les propriétés et des classes
 
 ### Containers
 
-On peut aussi construire par dessus RDF un certain nombre de structures avec les *containers*. Ici reste dans RDF. Pour le moment, on se contentait de dire que l’on avait des relations entre a et b. Mais si veut dire que l’on a un cours et que des étudiants font partie de ce cours là, et que ce cours là, c’est l’ensemble de ses étudiants. Comme il s’agit de cas de cas de figure courants, on a défini en RDF des containers pour prendre en charge ces cas là.
+On peut aussi construire par dessus RDF un certain nombre de structures avec les *containers*. Ici reste dans RDF. Pour le moment, on se contentait de dire que l’on avait des relations entre a et b. Mais si on veut dire que l’on a un cours et que des étudiants font partie de ce cours là, et que ce cours là, c’est l’ensemble de ses étudiants, nous avons besoin d’un vocabualire pour l'exprimer. Comme il s’agit de cas de figure courants, on a défini en RDF des conteneurs pour prendre en charge ces cas.
 
-Un type prédéfini destiné à exprimer le fait qu’on ait un ensemble d’étudiants. Ce qui dit que c’est un container, c’est que son type, l’URI de RDF bag.
+Il existe donc Un type prédéfini destiné à exprimer le fait qu’on ait un ensemble d’étudiants. Ce qui dit que c’est un container, c’est que son type, l’URI de RDF bag.
 
 http://www.w3c.org/1999/02/22-rdf-syntax-ns#Bag
 
-en fait on a un nœud vide, et son type, le type prédéfini de bag.
-
-Les éléments du bag sont codés à la suite en étant numérotés.
-
-Pour accéder à tous les étudiants de ce bag, possibilité de faire des expressions régulière sur la valeur. Mais il existe ici un rdfs:member qui est un prédicat spécial interprété par l’interprète SPARQL.
-
-Notation qui emploie des noms internes.
-
-également les containers alt, collection, etc.
+En fait, il s’agit d’un nœud vide instancié avec la classe `rdf:Bag`. Les éléments du `bag` sont codés à la suite en étant numérotés. Pour accéder à tous les étudiants de ce `bag`, il est possible d’utiliser des expressions régulières sur les valeur de ce `bag`. Mais il existe ici une propriété `rdfs:member` qui est un prédicat spécial interprété par l’interprète SPARQL.
 
 
 <!-- .slide: data-background="/presentations/images/openhpi-26-how-to-model-classes-and-relations-rdfs-19-638.jpg" data-background-size="contain" -->
@@ -610,9 +604,6 @@ Notation qui emploie des noms internes.
 
 
 <!-- .slide: data-background="/presentations/images/openhpi-26-how-to-model-classes-and-relations-rdfs-25-638-1.jpg" data-background-size="contain" -->
-
-
-<!-- .slide: data-background="/presentations/images/openhpi-26-how-to-model-classes-and-relations-rdfs-27-638-1.jpg" data-background-size="contain" -->
 
 
 <!-- .slide: data-background="/presentations/images/openhpi-26-how-to-model-classes-and-relations-rdfs-27-638.jpg" data-background-size="contain" -->
@@ -695,25 +686,24 @@ http://www.iro.umontreal.ca/~lapalme/ForestInsteadOfTheTrees/HTML/ch07s01.html
 
 ### TP RDFs
 
-Téléchargez le fichier suivant `https://publicarchi.github.io/edn6103/exercices/CBWC-RDF-S.ttl`
+Téléchargez le fichier suivant https://davvalent.github.io/hnu6054/exercices/CBWC-RDF-S.ttl
 
-Modifier le fichier local pour y ajouter les informations du tableau suivant associées à des vins qui sont déjà dans le fichier mais sans autre information.
+Modifiez le fichier pour y ajouter les informations du tableau suivant associées à des vins qui sont déjà dans le fichier, mais sans autre information.
 
-Il faut aussi indiquer que le rdf:type de ces éléments est cb:Wine.
+- Il faut indiquer que le rdf:type de ces éléments est `cb:Bottle`.
+- Il faut aussi indiquer les types pour les prix (`xsd:decimal`) et les années (`xsd:gYear`).
 
-| uri   | wc:C00871996       | wc:C00042101   | wc:C00043125             |
-| ----- | ------------------ | -------------- | ------------------------ |
-| nom   | Château Montguérêt | Riesling Hügel | Domaine de l’Île Margaux |
-| prix  | 14.65              | 7.95           | 22.80                    |
-| année | 2011               | 2002           | 2004                     |
+| uri          | nom                      | prix  | année |
+| ------------ | ------------------------ | ----- | ----- |
+| wc:C00871996 | Château Montguérêt       | 14.65 | 2011  |
+| wc:C00042101 | Riesling Hüge            | 7.95  | 2002  |
+| wc:C00043125 | Domaine de l’Île Margaux | 22.80 | 2004  |
 
 Comment faudrait-il procéder pour
 
 1. Lister les vins (noms, prix et année) en ordre croissant d’année.
-2. Lister les vins (noms, prix et année) en ordre croissant de prix.
-3. Indiquez les types pour les prix (xsd:decimal) et les années (xsd:gYear).
-4. Lister les vins (noms, prix et année) en ordre croissant de prix.
-5. Lister les vins (noms, prix et année) en ordre croissant de prix en n’affichant pas les indications de type.
+1. Lister les vins (noms, prix et année) en ordre croissant de prix.
+1. Lister les vins (noms, prix et année) en ordre croissant de prix en n’affichant pas les indications de type.
 
 Solutions SPARQL http://www.iro.umontreal.ca/~lapalme/ift6281/RDF/ExerciceRDF.pdf
 
