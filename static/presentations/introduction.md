@@ -2279,6 +2279,10 @@ Rmq : Format choisi par Schema.org
 
 ???
 
+Alors maintenant on va faire un petit TP, cad une petite démo.
+
+On va partir d'un petit graphe de données RDF, et on on va en observer différentes visualisations.
+
 Voir http://rdfshape.weso.es pour l'exercice, section Data analyis and visualization. Fonctionne très bien.
 
 à trier 
@@ -2317,7 +2321,11 @@ http://www.iro.umontreal.ca/~lapalme/ift6282/Shakespeare/index.html
 
 ???
 
-- ouvire PDF et montrer
+On va prendre un exemple Shakespearien!
+
+Ne pas dupliquer.
+
+- ouvrir les liens
 
 ===↓===
 
@@ -2357,29 +2365,27 @@ geo:Stratford
 
 ???
 
+#### Exemple shakespearien
+
+Alors voici notre graphe.
+
 RDF est un formalisme de graphe, ce que l’on définit c’est un sujet, un prédicat et un objet. On compose les contenus de cette manière, ce qui permet de créer des graphes puisqu'il y a des liens, rendus possibles par l'utilisation des URI, entre des propositions.
 
 Il y a différentes façons de présenter des graphes et il y a plusieurs sérialisations (RDF/XML, Turtle, JSON-LD, etc.). Un système qui lit du RDF produit des constructions sous la forme d’un ensemble de triplets. Il n’y a pas de répétition, et il n’y a pas d'ordre.
 
-Nous avions vu un ensemble de petits graphes où l’on indique un certain nombre de relations sur Shakespeare et des œuvres littéraires. On peut expliciter chacun des graphes sous la forme d’un tableau. Et cela peut être exprimé dans une sérialisation XML ou turtle.
-
-#### Exemple shakespearien
+On peut expliciter chacun des graphes sous la forme d’un tableau. Et cela peut être exprimé dans une sérialisation XML ou turtle.
 
 Lorsque l’on fait un graphe RDF, la première chose à penser, c’est la manière dont on va structurer ce que l’on veut dire. Il faut essayer d’imaginer le graphe d’ensemble et de le dessiner pour identifier l’organisation des choses.
 
 Ici, on a placé dans des espaces de nom différents ce qui a rapport à la biographie, à la littérature et aux lieux. La structuration des URIs fait partie du processus de conception et traduit la manière dont va construire son monde. Ce faisant, on impose sa vision du monde.
 
-Le monde que je veux représenter peut être codé sous la forme de triplets. On emploie ici des couleurs pour distinguer ce qui a rapport à la littérature, la biographie et la géographie.
-
-On peut encore les noter sous la forme de triplets, les systèmes utilisent ce genre de représentation RDF. La première chose que fait un système c’est représenter les choses dans un format dans lequel peut travailler et créer ses index.
+Et le monde que je veux représenter est codé sous la forme de triplets. On emploie ici des couleurs pour distinguer ce qui a rapport à la littérature, la biographie et la géographie.
 
 On peut encore sérialiser cet exemple en XML qui est une autre façon de coder la même information.
 
 Regardons maintenant la notation turtle = une codification du graphe que l’on a à côté. On définit un ensemble de préfixe.
 
-Il existe un langage d’interrogation dédié qui s’appelle SPARQL dont l’objet est essentiellement de trouver des motifs de triplets. Pour la pratique, un module de base pour apprendre, twinkle. Choisir celui qui est accessible depuis ma page pour faciliter son utilisation. Ajout de plusieurs éléments.
-
-Aller chercher un fichier RDF et s’assurer que l’on charge le bon graph.
+Il existe un langage d’interrogation dédié qui s’appelle SPARQL dont l’objet est essentiellement de trouver des motifs de triplets.
 
 ===↓===
 
