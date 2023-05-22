@@ -686,9 +686,9 @@ http://www.iro.umontreal.ca/~lapalme/ForestInsteadOfTheTrees/HTML/ch07s01.html
 
 ### TP RDFs
 
-Téléchargez le fichier suivant https://davvalent.github.io/hnu6054/exercices/CBWC-RDF-S.ttl
+Téléchargez le fichier suivant [exercices/CBWC-RDF-S.ttl](/exercices/CBWC-RDF-S.ttl)
 
-Modifiez le fichier pour y ajouter les informations du tableau suivant associées à des vins qui sont déjà dans le fichier, mais sans autre information.
+Modifiez le fichier avec un éditeur de texte pour y ajouter les informations du tableau suivant associées à des vins qui sont déjà dans le fichier, mais sans autre information.
 
 - Il faut indiquer que le rdf:type de ces éléments est `cb:Bottle`.
 - Il faut aussi indiquer les types pour les prix (`xsd:decimal`) et les années (`xsd:gYear`).
