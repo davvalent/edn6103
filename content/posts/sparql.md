@@ -1,10 +1,10 @@
 +++
 author = "Emmanuel"
 title = "SPARQL"
-date = "2022-03-11"
+date = "2023-05-22"
 description = "SPARQL"
 seance = 2
-weight = 1
+weight = 3
 layout = "diapo"
 diapo = "seance-03.html"
 toc = "oui"
@@ -958,28 +958,25 @@ WHERE {
 ```SPARQL
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-SELECT ?surname ?forename ?author
+SELECT (CONCAT(?forename, " ", ?surname) AS ?name) ?author ?namePropertyValue
 WHERE {
   ?doc marcrel:aut ?author .
-  ?author foaf:familyName ?surname .
-  ?author foaf:givenName ?forename .
+  ?author foaf:familyName ?surname ;
+    foaf:givenName ?forename ;
+    foaf:name ?namePropertyValue .
 }
 ```
-
-@todo
-
-
 
 ### Supprimer les doublons
 
 ```SPARQL
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-SELECT ?surname ?forename DISTINCT ?author
+SELECT DISTINCT ?surname ?forename ?author
 WHERE {
   ?doc marcrel:aut ?author .
   ?author foaf:familyName ?surname .
-  ?autor foaf:givenName ?forename .
+  ?author foaf:givenName ?forename .
 }
 ```
 
@@ -1068,9 +1065,21 @@ WHERE {
 | ---- | ------- | ------- | ----------------------------------------------- |
 | 2    | Lepetit | Bernard | <http://data.persee.fr/authority/393571#Person> |
 
+### Lister les publications de Bernard Lepetit
 
-
-### xxx
+```SPARQL
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?author ?id { 
+  ?doc dcterms:identifier ?id .
+  ?doc marcrel:aut ?author .
+  ?author foaf:familyName ?surname .
+  ?author foaf:givenName ?forename .
+  FILTER ( REGEX(str(?surname), "Lepetit") && REGEX(str(?forename), "Bernard"))
+}
+```
 
 ```SPARQL
 PREFIX bibo: <http://purl.org/ontology/bibo/>
@@ -1092,26 +1101,6 @@ WHERE {
 GROUP BY ?doc
 LIMIT 100
 ```
-
-
-
-### Lister les publications de Bernard Lepetit
-
-```SPARQL
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-SELECT ?author ?id { 
-  ?doc dcterms:identifier ?id .
-  ?doc marcrel:aut ?author .
-  ?author foaf:familyName ?surname .
-  ?author foaf:givenName ?forename .
-  FILTER ( REGEX(str(?surname), "Lepetit") && REGEX(str(?forename), "Bernard"))
-}
-```
-
-
 
 ### Tous les documents qui ont pour auteur “Lepetit”, listés par date d’édition décroissante
 
@@ -1135,7 +1124,6 @@ WHERE {
 }
 ORDER BY $date
 ```
-
 
 
 ### Avant 1990
