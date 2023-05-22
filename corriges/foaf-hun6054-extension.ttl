@@ -1,0 +1,24 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://davidvalentine.ca/me/>
+  a <http://hnu6054.ca/teacher> ;
+  foaf:givenName "David" ;
+  foaf:workplaceHomepage <http://umontreal.ca> ;
+  foaf:knows <http://alice.ca/me/> , <http://yanet.ca/me/> .
+
+<http://alice.ca/me/>
+  a <http://hnu6054.ca/student> ;
+  foaf:givenName "Alice" ;
+  foaf:knows <http://yanet.ca/me/> .
+
+<http://yanet.ca/me/>
+  a <http://hnu6054.ca/student> ;
+  foaf:givenName "Yanet" .
+
+# model extension
+<http://hnu6054.ca/student>
+  rdfs:subClassOf foaf:Person .
+<http://hnu6054.ca/teacher>
+  rdfs:subClassOf foaf:Person .

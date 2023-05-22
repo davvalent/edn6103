@@ -1,0 +1,61 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix cb:      <http://www.iro.umontreal.ca/lapalme/CellarBook#> .
+@prefix wc:      <http://www.iro.umontreal.ca/lapalme/WineCatalog#> .
+
+cb:theCellar
+      cb:ownedBy cb:JudeRaisin ;                        # 1
+      a       rdf:Bag , cb:Cellar ;                     # ICI
+      rdf:_1  wc:C00043125 ;
+      rdf:_2  wc:C00042101 ;
+      rdf:_3  wc:C00871996 ;
+      cb:locatedAt [ cb:city "Vallée des crus" ;        # 5,6
+                     cb:street "4587 des Futailles"] .
+
+wc:C00871996
+      a cb:Bottle ;
+      wc:name "Château Montguérêt" ;
+      wc:price "14.65"^^xsd:decimal ;
+      wc:vintage "2011"^^xsd:gYear .
+
+wc:C00042101
+      a cb:Bottle ;
+      wc:name "Riesling Hügel" ;
+      wc:price "7.95"^^xsd:decimal ;
+      wc:vintage "2002"^^xsd:gYear .
+
+wc:C00043125
+      a cb:Bottle ;
+      wc:name "Domaine de l’Île Margaux" ;
+      wc:price "22.80"^^xsd:decimal ;
+      wc:vintage "2004"^^xsd:gYear .
+
+cb:JudeRaisin cb:city "St-George" ;                     # 2
+      a cb:Person ;                                     # ICI
+      cb:named [ cb:family "Raisin" ;
+                 cb:first "Jude" ] ;
+      cb:loved wc:C00043125 , wc:C00871996  ;           # 3
+      cb:comment "this is <b>great</b>!"^^rdf:XMLLiteral ;
+      cb:street "1234 rue des Châteaux" .
+
+# Schema part in RDFS
+
+cb:Person a       rdfs:Class .                         # 7
+cb:Cellar a       rdfs:Class .
+cb:Bottle a       rdfs:Class .
+
+cb:loved                                               # 8
+      a           rdf:Property ;
+      rdfs:domain cb:Person ;
+      rdfs:range  cb:Wine .
+
+cb:ownedBy                                             # 9
+      a           rdf:Property ;
+      rdfs:domain cb:Cellar ;
+      rdfs:range  cb:Person .
+
+xsd:decimal
+      a rdfs:DataType .
+xsd:gYear
+      a rdfs:DataType .

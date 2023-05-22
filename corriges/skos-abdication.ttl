@@ -1,0 +1,6 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<http://www.ihr-tobias.org/concepts/21250/abdication>
+  a skos:Concept ;
+  skos:prefLabel "Abdication" ;
+  skos:narrower <http://www.ihr-tobias.org/concepts/19838/abdication_crisis_1936> .

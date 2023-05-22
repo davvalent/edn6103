@@ -1,0 +1,18 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://davidvalentine.ca/me/>
+  a foaf:Person ;
+  foaf:givenname "David" ;
+  foaf:knows <http://alice.ca/me/> , <http://yanet.ca/me/> .
+
+<http://alice.ca/me/>
+  a foaf:Person ;
+  foaf:givenname "Alice" .
+
+<http://yanet.ca/me/>
+  a foaf:Person ;
+  foaf:givenname "Yanet" .
+
+  
