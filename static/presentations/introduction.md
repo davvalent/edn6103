@@ -69,11 +69,11 @@ Dans le monde de l’édition numérique, de nombreux modèles ont été dével
 - modèles spécialisés pour l’édition numérique académique comme la Text Encoding Initiative (TEI) ou JATS
 - ONIX, un format développé spécifiquement par le secteur de l’édition numérique
 
-Dublin Core est l’un des ces standards. Ce n’est pas un standard du monde muséal à proprement parler mais il est prévalent dans le domaine culturel et sert de pivot à l’interopérabilité sur le web.
+Dublin Core est l’un des ces standards. Vous avez sans doute déjà eu l’occasion de le rencontrer dans d’autres cours, vous permet d’identifier ce que permet l’utilisation d’un modèle minimal de métadonnées générique (expressivité du modèle, enjeux relatifs aux formats de sérialisation, etc.). 
 
-Avec Dublin Core, vous avez sans doute déjà eu l’occasion de rencontrer dans d’autres cours, vous a permet d’identifier ce que permet l’utilisation d’un modèle minimal de métadonnées générique (expressivité du modèle, enjeux relatifs aux formats de sérialisation, etc.). Mais surtout, Dublin Core joue depuis longtemps un rôle de format pivot pour l’interopérabilité sur le web avec le protocole de moissonnage de métadonnées OAI-PMH.
+Ce n’est pas un standard du monde muséal à proprement parler, mais il est prévalent dans le domaine culturel et sert de pivot à l’interopérabilité sur le web.
 
-Au cours de cet atelier, nous allons particulièrement nous intéresser à un ensemble de technologies promues et standardisées par le W3C (un organisme en charge de la standardisation du web) pour publier des données et assurer leur interopérabilité. Et on désigne globalement cet ensemble technologique sous l’appellation de **technologies du web sémantique**.
+Alors au cours de cet atelier, on va particulièrement nous intéresser à un ensemble de technologies promues et standardisées par le W3C (un organisme en charge de la standardisation du web) pour publier des données et assurer leur interopérabilité. Et on désigne globalement cet ensemble technologique sous l’appellation de **technologies du web sémantique**.
 
 Nous parlerons également de données ouvertes et liées, ou Linked Open Data (LOD), pour désigner une manière d’utiliser la plateforme du word wide web afin de publier et connecter ces données entre elles sur le réseau.
 
@@ -273,7 +273,7 @@ Tim Berners Lee. *A proposal*. 1989. http://info.cern.ch/Proposal.html = fête l
 - conçu comme une bibliothèque virtuelle
 - un système de gestion de l’information pour partager des ressources informationnelles sur un réseau entre des chercheurs
 
-Les ressources en ligne (*on line*) sont accessibles via une adresse unique, l’Universal Resource Locator (URL). Ces documents peuvent être référencés entre eux via des liens hypertextuels.
+Les ressources en ligne (*on line*) sont accessibles via une adresse unique, Uniform Resource Locator (URL). Ces documents peuvent être référencés entre eux via des liens hypertextuels.
 
 Un WWW à la fois en lecture et en écriture : *A CRUD Web !* (CRUD *create*, *read*, *update*, *delete*).
 
@@ -471,7 +471,7 @@ Sur cette base, le World Wide Web est constitué de trois principaux composants�
 
 ===↓===
 
-## Resources, Représentations et Identifiants
+## Resources, représentations et identifiants
 
 - Toute information pouvant être nommée peut être une **ressource**
 - Une ressource peut recevoir plusieurs **représentations**
@@ -482,6 +482,8 @@ Sur cette base, le World Wide Web est constitué de trois principaux composants�
 A Short History of "Resource" in web architecture. https://www.w3.org/DesignIssues/TermResource.html
 
 ???
+
+La diapo correspond aux passages en gras.
 
 > L’abstraction principale de l’information dans REST est la ressource. **Toute information pouvant être nommée peut être une ressource** : un document ou une image, un service temporel (par exemple «le temps d’aujourd’hui à Marseille»), une collection d’autres ressources, un objet réel (par exemple une personne), etc. En d’autres termes, tout concept pouvant être la cible d’une référence hypertexte d’un auteur doit entrer dans la définition d’une ressource. C’est une correspondance conceptuelle à un ensemble d’entités et ce n’est pas l’entité correspondant à cette association à un moment particulier dans le temps.
 
@@ -494,6 +496,8 @@ Cela implique de donner un identifiant pour identifier des ressources impliquée
 > Les composant REST effectue des actions sur une ressource en utilisant une représentation pour capturer l’état courant ou prévu de cette ressource et en transférant cette représentation entre composants.
 
 Une représentation se compose de données et de métadonnées qui les décrivent. Le format de données d’une représentation est connu comme étant un type de média.
+
+Puis identifiant prochaine diapo.
 
 - Roy T. Fielding, _Architectural Styles and the Design of Network-based Software Architectures_, doctoral dissertation, University of California, Irvine, 2000. <https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm>
 - Voir aussi https://datatracker.ietf.org/doc/html/rfc3986
@@ -1065,6 +1069,8 @@ Le web de données propose des mécanismes pour pallier deux importants problèm
 - multilinguisme
 - cf. le triangle sémiotique (Ogden et Richard, révisé par Ulmann)
 <br>https://www.universalis.fr/encyclopedie/triangle-semiotique/
+
+Web sem fournit un mécanisme pour désambiguiser les descritptions de ressources sur le Web
 
 ===↓===
 
