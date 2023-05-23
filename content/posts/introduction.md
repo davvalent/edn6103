@@ -1,7 +1,7 @@
 +++
 author = "Emmanuel"
 title = "Introduction : architecture du web et web sémantique"
-date = "2023-05-24"
+date = "2023-05-23"
 weight = 1
 description = "Introduction : architecture du web et web sémantique"
 seance = 1
