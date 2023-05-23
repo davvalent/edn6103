@@ -118,14 +118,11 @@ Le cours se déroule en six séances intensives (sur trois journées) qui associ
 - une initiation aux langage de requête : complexe, mais abordé à partir de cas pratiques.
 
 
-## Samedi 12 mars 2022, 9h-12h (Première séance)
+## Mardi 23 mai 2023, 9h30-11h30 (séance 1.1)
 
+- Introduction
 - Architecture du web
 - Principes du web sémantique et du Linked Open Data
-- Applications du web sémantique au domaine culturel
-- Le cadre RDF
-- TP RDF
-- Présentation Exercice pour la séance suivante
 
 ### Lectures
 
@@ -133,36 +130,48 @@ Le cours se déroule en six séances intensives (sur trois journées) qui associ
 - Jonathan Blaney. Introduction to the Principles of Linked Open Data. The Programming Historian. 2017. https://doi.org/10.46430/phen0068
 - *The next web*. Réalisé par Tim Berners-Lee. 2019. https://www.ted.com/talks/tim_berners_lee_the_next_web/
 
-## Samedi 12 mars 2022, 13h-17h (Deuxième séance)
+## Mardi 23 mai 2023, 12h30-15h30 (séance 1.2)
 
+- Applications du web sémantique au domaine culturel
+- Le cadre de description <abbr title="Resource Description Framework">RDF</abbr>
+- TP RDF
+<span style="display: none">- **Présentation TD??**</span>
 - Ontologies et vocabulaires structurés
+
+
+## Mercredi 24 2023, 9h30-11h30 (séance 2.1)
+
+- Ontologies et vocabulaires structurés (suite)
 - TP RDFs
-- Quelles utilisations du web sémantique pour l’édition numérique ?
 
+### Lectures
 
-## Samedi 26 mars 2022, 9h-12h (Troisième séance)
+- RDF 1.1 Primer, W3C Working Group Note 24 June 2014, http://www.w3.org/TR/rdf11-primer/
 
+## Mercredi 24 2023, 12h30-15h30 (séance 2.2)
+
+- Présentation des exercices
 - Le protocole et le langage de requête SPARQL
 - Notation SPARQL
 - TP Écriture de requêtes SPARQL
-- Présentation de l’exercice pour la séance suivante
 
-#### Lectures
+### Lectures
 
-- RDF 1.1 Primer, W3C Working Group Note 24 June 2014, http://www.w3.org/TR/rdf11-primer/
 - Bob Ducharme. « Jumping Right In: Some Data and Some Queries. » Learning  SPARQL. Querying and Updating with SPARQL 1.1. 2e édition. O’Reilly,  2013
 
-
-## Samedi 26 mars 2022, 17h-12h (Quatrième séance)
+## Vendredi 26 mars 2022, 9h30-11h30 (séance 3.1)
 
 - Reprise exercice écriture de requêtes SPARQL
 - Florilège d’applications du Linked Open Data
+
+### Lectures
+
+- Matthew Lincoln. Using SPARQL to access Linked Open Data. The Programming Historian. 2015. https://doi.org/10.46430/phen0047 (retiré)
+
+## Vendredi 26 mars 2022, 12h30-15h30 (séance 3.2)
+
+- QDMTL : de l’analyse des sources à la publication de données
 - Discussion
-
-#### Lectures
-
-- Matthew Lincoln. Using SPARQL to access Linked Open Data. The Programming Historian. 2015. https://doi.org/10.46430/phen0047 (retires)
-
 
 ## Lectures et travail personnel 
 
@@ -171,7 +180,8 @@ Outre une bibliographie sommaire, plusieurs lectures sont proposées avec le cou
 ## Évaluations
 
 1. Travail pratique (chez soi) exploration de Persée (40%)
-2. Travail pratique (chez soi) sur des requêtes SPARQL (60%)
+1. Travail pratique (chez soi) sur des requêtes SPARQL (60%)
+1. Participation et présence en classe (10%)
 
 Comme l’atelier s’adresse à des novices, **c’est la participation aux exercices qui est principalement évaluée plus que les résultats**.
 

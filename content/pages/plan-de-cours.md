@@ -93,7 +93,7 @@ N’hésitez pas à consulter la page du Centre étudiant de soutien à la réus
 ### Mardi 23 mai 2023, 12h30-15h30 (séance 1.2)
 
 - Applications du web sémantique au domaine culturel
-- Le cadre de descriptrion <abbr title="Resource Description Framework">RDF</abbr>
+- Le cadre de description <abbr title="Resource Description Framework">RDF</abbr>
 - TP RDF
 <span style="display: none">- **Présentation TD??**</span>
 - Ontologies et vocabulaires structurés
@@ -131,7 +131,7 @@ N’hésitez pas à consulter la page du Centre étudiant de soutien à la réus
 
 #### Lectures
 
-- Matthew Lincoln. Using SPARQL to access Linked Open Data. The Programming Historian. 2015. https://doi.org/10.46430/phen0047 (retires)
+- Matthew Lincoln. Using SPARQL to access Linked Open Data. The Programming Historian. 2015. https://doi.org/10.46430/phen0047 (retiré)
 
 ### Vendredi 26 mars 2022, 12h30-15h30 (séance 3.2)
 
