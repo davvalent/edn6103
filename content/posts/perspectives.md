@@ -1,7 +1,7 @@
 +++
 author = "Emmanuel"
 title = "Perspectives"
-date = "2022-03-11"
+date = "2023-05-26"
 description = "Perspectives"
 seance = 3
 layout = "diapo"

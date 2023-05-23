@@ -1,7 +1,7 @@
 +++
 author = "Emmanuel"
 title = "Exercice 2 : Analyse d’un projet utilisant les technologies du web sémantique ou du Linked Open Data et production de requêtes SPARQL"
-date = "2022-03-11"
+date = "2023-05-24"
 description = "Exercice 2 : Le travail final porte sur l’analyse d’un projet utilisant les technologies du web sémantique ou du Linked Open Data et la production de requêtes SPARQL."
 seance = 2
 weight = 4

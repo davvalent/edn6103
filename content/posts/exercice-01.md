@@ -1,7 +1,7 @@
 +++
 author = "Emmanuel"
 title = "Exercice 1 : Explorer un entrepôt de données SPARQL avec un outil graphique"
-date = "2022-03-11"
+date = "2023-05-24"
 description = "Exercice 1 : Explorer un entrepôt de données SPARQL avec un outil graphique"
 seance = 2
 weight = 2

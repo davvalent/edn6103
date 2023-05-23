@@ -1,7 +1,7 @@
 +++
 author = "Emmanuel"
 title = "Ontologies et RDF"
-date = "2022-03-11"
+date = "2023-05-24"
 description = "Ontologies et RDF"
 weight = 2
 seance = 1

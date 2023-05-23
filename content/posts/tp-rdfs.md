@@ -1,7 +1,7 @@
 +++
 author = "Emmanuel"
 title = "TP RDFs"
-date = "2023-05-22"
+date = "2023-05-24"
 description = "Découverte de RDF et de la manipulation de ces fichiers"
 weight = 1
 seance = 2
