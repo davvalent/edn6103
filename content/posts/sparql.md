@@ -257,7 +257,7 @@ cf. [SPARQL 1.1 Overview](http://www.w3.org/TR/sparql11-overview/)
 
 ```SPARQL
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-SELECT ?name ?email
+SELECT ?person
 WHERE
   {
     ?person a foaf:Person .
@@ -268,9 +268,11 @@ WHERE
 
 Ramène toutes les personnes 
 
-La requête précédente ramène les noms des personnes et leur courriel (s’il y en a).
+La requête précédente ramène les URIs qui identifient des personnes.
 
-Comme la syntaxe turtle, la syntaxe SPARQL vous permet de renseigner des préfixes. Le plus souvent avec une requête SPARQL, il vaut mieux d’abord d’abord s’intérerer à la clause WHERE car c’est elle qui décrit les triplets du dataset que nous voulons requêter. La clause WHERE fait cela avec un ou plusieurs motifs de triplets qui sont comme des triplets mais avec des variables comme comme des remplacement de l’un ou de toutes les parties du triplets.
+Comme la syntaxe turtle, la syntaxe SPARQL vous permet de renseigner des préfixes.
+
+Le plus souvent avec une requête SPARQL, il vaut mieux d’abord d’abord s’intérerer à la clause WHERE car c’est elle qui décrit les triplets du dataset que nous voulons requêter. La clause WHERE fait cela avec un ou plusieurs motifs de triplets qui sont comme des triplets mais avec des variables comme comme des remplacement de l’un ou de toutes les parties du triplets.
 
 Dans cette requête nous avons un premier motif de triplet qui sélectionne les triplets qui ont la propriété `rdf:type` avec pour objet `foaf:Person`.
 
