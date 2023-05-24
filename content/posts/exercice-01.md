@@ -1,7 +1,7 @@
 +++
 author = "Emmanuel"
 title = "Exercice 1 : Explorer un entrepôt de données SPARQL avec un outil graphique"
-date = "2022-03-11"
+date = "2023-05-24"
 description = "Exercice 1 : Explorer un entrepôt de données SPARQL avec un outil graphique"
 seance = 2
 weight = 2
@@ -22,6 +22,6 @@ L’objectif de cet exercice est de construire une requête avec ce service afin
 4. Pour chacune des requêtes, visualisez à chaque fois sa version SPARQL (cliquez sur "YASGUI view" en haut de la fenêtre) et essayer de comprendre à quoi celle-ci correspond
 5. **Question bonus :** Essayer de modifier la dernière requête en SPARQL pour afficher les titres d’articles.
 
-**Envoi de votre travail** : Les résultats du travail sont à envoyer par courriel avant samedi matin. Pour chacune des requêtes à effectuer, vous devez copier son permalien (en cliquant sur le bouton "permalink"). 
+**Envoi de votre travail** : Les résultats du travail sont à déposer sur StudiUM avant vendredi matin. Pour chacune des requêtes à effectuer, vous devez copier son permalien (en cliquant sur le bouton "permalink"). 
 
-Nous reviendrons sur ces exercice en classe pour identifier les difficultés que vous avez rencontrées.
+Nous reviendrons sur ces exercices en classe pour identifier les difficultés que vous avez rencontrées.

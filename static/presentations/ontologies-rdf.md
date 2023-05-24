@@ -9,7 +9,7 @@ Site web pour les ressources du cours :
 
 ===↓===
 
-## Samedi 12 mars 2022, 13h-17h (Deuxième séance)
+## Mardi 23 mai 2023, 12h30-15h30 (séance 1.2)
 
 - Retours sur le TP
 - Vocabulaires structurés et RDFs
@@ -160,6 +160,16 @@ SKOS s’adapte à la diversité des systèmes d’organisation des connaissance
 
 ???
 
+- SKOS c'est un modèle du web sem, qui a basé sur RDF, que l'on utilise pour représenter des vocabualires controlés
+- Et que l'on utilise pour aligner ces vocabulaires entre eux
+- Les concepts et les relations décrites seront identifiés par des URI
+- C'est un modèle spécifiquement concu
+  - pour représenter des vocabulaires contrôlés,
+  - et pour faciliter la réutilisation dans différents contextes, dans différentes applications.
+- J'attire votre attention sur les propriétés de mapping
+
+### Autre
+
 Plusieurs espaces de noms sont utilisés, celui spécifique de SKOS, mais également rdf, rdfs, etc.
 
 Plutôt que de parler de classe, on parle ici de concepts. La notion de concept correspond en partie à l’idée de classe mais son acception est plus générale. Il peut s’agir d’unité de sens, de choses, etc. qui existent indépendamment de leur étiquette.
@@ -229,29 +239,6 @@ skos: http://www.w3.org/2004/02/skos/core#
 
 ===↓===
 
-<!-- .slide: data-background="images/SKOS-Model.png" data-background-size="contain" -->
-
-???
-
-SKOS Mapping
-
-Langage d’alignement de vocabulaires qui définit différents types de correspondances :
-
-- `Exact` correspondance parfaite
-- `Inexact` correspondance imparfaite
-  - `Major` > 50%
-  - `Minor` < 50%
-- `Partial`correspondance partielle
-  - `Broad`, `Narrow` relation d’appartenance
-
-skos: http://www.w3.org/2004/02/skos/core#
-
-> - The properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts. A triple \<A> `skos:broader` \<B> asserts that \<B>, the object of the triple, is a broader concept than \<A>, the subject of the triple. Similarly, a triple \<C> `skos:narrower` \<D> asserts that \<D>, the object of the triple, is a narrower concept than \<C>, the subject of the triple. By convention, `skos:broader` and `skos:narrower` are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties skos:broader and skos:narrower are not declared as transitive properties.
-> 
-> For the full list of classes and properties in SKOS as well as their detailed definitions, see [SKOS Simple Knowledge Organization System Reference](http://www.w3.org/TR/2009/REC-skos-reference-20090818/).
-
-===↓===
-
 <!-- .slide: data-background="images/skossRameau.png" data-background-size="contain" -->
 
 Deux concepts de Rameau représentés sous forme de graphe RDF/SKOS
@@ -267,45 +254,6 @@ Source : Isaac, Antoine, et Bouchet. 2009. « Rameau et SKOS ». *Arabesques*, 
 Projet de RAMEAU -> SKOS lancé début 2008, projet TELplus
 
 http://www.few.vu.nl/~aisaac/
-
-===↓===
-
-### Exemple SKOS
-
-```xml
-<skos:Concept rdf:about="http://www.ihr-tobias.org/concepts/21250/Abdication">
-    <skos:prefLabel>Abdication</skos:prefLabel>
-</skos:Concept>
-```
-
-exemple tiré du [thesaurus of British and Irish History](http://www.history.ac.uk/projects/digital/tobias)
-
-===↓===
-
-### Exemple SKOS
-
-```xml
-<skos:Concept rdf:about="http://www.ihr-tobias.org/concepts/21250/abdication">
-  <skos:prefLabel>Abdication</skos:prefLabel>
-  <skos:narrower rdf:resource="http://www.ihr-tobias.org/concepts/19838/abdication_crisis_1936"/>
-</skos:Concept>
-```
-
-exemple tiré du [Thesaurus of British and Irish History](http://www.history.ac.uk/projects/digital/tobias)
-
-???
-
-Visionner ce RDF en Turtle avec [EasyRDF](http://www.easyrdf.org/converter)
-
-```xml
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-  <skos:Concept rdf:about="http://www.ihr-tobias.org/concepts/21250/abdication">
-    <skos:prefLabel>Abdication</skos:prefLabel>
-    <skos:narrower rdf:resource="http://www.ihr-tobias.org/concepts/19838/abdication_crisis_1936"/>
-  </skos:Concept>
-</rdf:RDF>
-```
 
 ===↓===
 
@@ -372,46 +320,6 @@ souvent utilisés pour les documents techniques ou dans des domaines spéciali
 - **Getty Thesaurus of Geographical Names** (TGN) 
 
 <http://www.getty.edu/research/conducting_research/vocabularies/tgn>
-
-===↓===
-
-## TP SKOS Play
-
-**SKOS Play !** http://labs.sparna.fr/skos-play
-
-1. Naviguer dans le thesaurus de désignation architecturale du ministère de la Culture et de la communication en France 
-   http://data.culture.fr/thesaurus/
-
-2. Télécharger le vocabulaire au format SKOS
-
-3. Prendre connaissance du fichier, de sa structure, identifier les liens internes et externes
-
-4. Visualiser le fichier dans SKOS Play
-
-???
-
-@todo Le site http://data.culture.fr/thesaurus/ est fonctionnel en ligne, mais trop lent, inutilisable en pratique.
-
-voir donc `corriges/architecture_civile_publique.ttl`
-
-===↓===
-
-## Logiciels
-
-OpenTheso https://github.com/miledrousset/opentheso
-
-Open Refine http://openrefine.org
-
-Karma http://usc-isi-i2.github.io/karma/
-
-Skosmos http://skosmos.org/
-
-???
-
-- 404 https://www.jlis.it/article/view/5471
-- 404 Ginco http://www.culture.gouv.fr/Divers/Harmonisation-des-donnees-culturelles/Referentiels/Les-vocabulaires-scientifiques-et-techniques/L-application-GINCO
-- ne répond pas linkedheritage.eu
-
 
 ===↓===
 
@@ -548,8 +456,6 @@ Ces formats peuvent contenir à la fois des définitions informelles sous la for
 
 Une ontologie peut, par exemple, définir des classes pour des livres, des peintures, des tableaux et des personnes, une propriété d’auteur, et déclarer formellement que toutes les ressources connectées aux livres par la propriété auteur sont de type personne.
 
-Elle peut aussi formellement définir une autre classe d’objet comme une superclasse des livres et des peintures. En employant un moteur d’inférence sur les données de la collections de peinture et de livres, et en cherchant tous les objets créés par une personne, on pourra retrouver tous ces objets, sans connaissance préalable de leur type spécifique ; une fonctionnalité cruciale dès lors que l’intégration d’information est requise.
-
 Pour en savoir plus sur les ontologies : https://fr.slideshare.net/SergeLinckels/semantic-web-ontologies-212812210
 
 ## RDFs
@@ -654,6 +560,13 @@ Type et liens entre les propriétés et des classes
 
 - `rdfs:domain` (dont les ressources peuvent être sujet)
 - `rdfs:range` (dont les ressource peuvent être objet)
+
+???
+
+- Lorsque définit une propriété, on indique un domaine pour cette propriété, cad la classe de ressource qui peut être sujet de la pripriété
+- même prinicipe pour le range
+
+Éviter des incohérences sémantique : Félix le chat ne peut pas enseigner HNU6054
 
 ===↓===
 
@@ -805,15 +718,19 @@ ex:johnSmithsCar
 
 ???
 
-Fin de l'analyse avec l'instanciation des propriétés et d'une ressource de la classe PassengerVehicle.
+- ici introduit une classe personne avec une série de propriétés
+- introduire la notation pour les datatypes ^^
+- Fin de l'analyse avec l'instanciation des propriétés et d'une ressource de la classe PassengerVehicle.
 
 ===↓===
 
 <!-- .slide: data-background="images/CBWC-RDF-Sp.png" data-background-size="contain" -->
 
+???
+
 http://www.iro.umontreal.ca/~lapalme/ForestInsteadOfTheTrees/HTML/ch07s01.html
 
-???
+Section RDFs, qui définit le schéma de données
 
 Le modèle s'articule autour de :
 
@@ -821,6 +738,8 @@ Le modèle s'articule autour de :
 - deux propriétés
   - domaines
   - portées
+
+Section RDF comme telle, qui formalise qui structure un ensemble de déclarations au sujet de ce cellier et de monsieur Jus de raisin
 
 ===↓===
 
@@ -1070,7 +989,7 @@ cf. [WebVOWL: Web-based Visualization of Ontologies](http://vowl.visualdataweb.o
 
 ===↓===
 
-<!-- .slide: data-background="images/images/foaf.jpg" data-background-size="contain" -->
+<!-- .slide: data-background="images/foaf.jpg" data-background-size="contain" -->
 
 ===↓===
 

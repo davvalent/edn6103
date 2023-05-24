@@ -1,12 +1,12 @@
 +++
 author = "Emmanuel"
 title = "Exercice 2 : Analyse d’un projet utilisant les technologies du web sémantique ou du Linked Open Data et production de requêtes SPARQL"
-date = "2022-03-11"
+date = "2023-05-24"
 description = "Exercice 2 : Le travail final porte sur l’analyse d’un projet utilisant les technologies du web sémantique ou du Linked Open Data et la production de requêtes SPARQL."
 seance = 2
 weight = 4
 +++
-Travail final, à rendre le **11 avril 2022** (60% de la note totale).
+Travail final, à rendre le **le dimanche 11 juin 2023** (50% de la note totale).
 
 Le travail final porte sur l’analyse d’un projet utilisant les technologies du web sémantique ou du Linked Open Data et la production de requêtes SPARQL. L’étudiante ou l’étudiant choisit une application de son choix qui dispose d’un SPARQL endpoint en fonction de ses centres d’intérêt.
 
@@ -17,7 +17,7 @@ Le travail final porte sur l’analyse d’un projet utilisant les technologies 
 
 Le rendu prend la forme d’un texte rédigé d’une longueur d’environ 500 mots (non compris les requêtes et leur description). Le dépôt se fait au format pdf par l’intermédiaire de Studium.
 
-L’idéal serait de présenter des requêtes fonctionnelles mais vous ne serez pas évalués sur les résultats. Pour certaines requêtes complexes, il est tout à fait possible de décrire la requête et les résultats attendus et d’essayer de la formuler en indiquant que vous n’êtes pas parvenu à obtenir le résultat attendu.
+L’idéal serait de présenter des requêtes fonctionnelles, mais vous ne serez pas évalués sur les résultats. Pour certaines requêtes complexes, il est tout à fait possible de décrire la requête et les résultats attendus et d’essayer de la formuler en indiquant que vous n’êtes pas parvenu à obtenir le résultat attendu.
 
 ## Où trouver des exemples ?
 

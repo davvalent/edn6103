@@ -10,7 +10,7 @@ Téléchargez (clic droit puis "Enregistrer la cible du lien sous" ou équivalen
 
 Modifier le fichier localement avec un éditeur de texte pour y ajouter les informations du tableau suivant associées à des vins qui sont déjà dans le fichier, mais sans autre information.
 
-- Il faut indiquer que le rdf:type de ces éléments est `cb:Bottle`.
+- Il faut indiquer que le rdf:type de ces éléments est `cb:Wine`.
 - Il faut aussi indiquer les types pour les prix (`xsd:decimal`) et les années (`xsd:gYear`).
 
 | uri          | nom                      | prix  | année |
