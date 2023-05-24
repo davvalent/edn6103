@@ -479,7 +479,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/> .
 
 INSERT DATA { <http://www.example.org/alice#me> 
               foaf:knows [ foaf:name "Dorothy" ]. } ;
-DELETE { ?person foaf:name ?mbox } 
+DELETE { ?person foaf:name ?name } 
 WHERE { <http://www.example.org/alice#me> foaf:knows ?person .
         ?person foaf:name ?name FILTER ( lang(?name) = "EN" ) .}
 ````
@@ -666,8 +666,8 @@ PREFIX purl:
 #### Patrons de triplets
 
 - Match complet 	`ex:machin ex:numero "45692"`
-- Match avec une variable 	`?machin ?ex:numero "?valeur`
-- Match complet 	`ex:truc ?propriete ?valeur`
+- Match avec une variable 	`?machin ex:numero "45692"`
+- Match complet avec deux varialbes 	`ex:machin ?propriete ?valeur`
 
 ===↓===
 
@@ -841,6 +841,10 @@ WHERE {
 L’ordre des OPTIONALs peut parfois être important.
 
 Tous les triplets s’électionnés peuvent ne pas avoir d’étiquette dans chacune des langues.
+
+???
+
+Si pas d'étiquette, les triplets sont retenus quand même.
 
 ===↓===
 
