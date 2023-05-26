@@ -1472,7 +1472,58 @@ WHERE {
 GROUP BY ?type
 ORDER BY DESC(?n)
 ```
+===↓===
 
+## Où s’amuser avec SPARQL ?
+
+- Wikidata https://query.wikidata.org
+- Europeana https://pro.europeana.eu/resources/apis/sparql
+- DataBnf http://data.bnf.fr/sparql/
+- Isidore Science https://isidore.science/sqe
+- OpenCitations https://opencitations.net/querying
+- idRef https://data.idref.fr/endpoint.html
+- DBPedia http://dbpedia.org/sparql
+- DBpedia (fr) http://fr.dbpedia.org/sparql
+- Persée http://data.persee.fr
+- SPARQL Playground http://sparql-playground.sib.swiss/
+
+===↓===
+
+## Où s’amuser avec SPARQL ? (Musées)
+
+- Rijksmuseum http://data.rijksmuseum.nl
+- Yale Center For British Art http://collection.britishart.yale.edu/sparql/
+- British museum (collections) http://collection.britishmuseum.org/sparql/ (Down voir http://kerameikos.iath.virginia.edu:8040/orbeon/sparql-ui/)
+- Doremus http://data.doremus.org/sparql/
+- Foko https://foko-project.eu/api/
+- dati.benicultaral https://dati.beniculturali.it
+- Fondazione Zeri http://data.fondazionezeri.unibo.it
+- The Smithsonian American Art Museum https://americanart.si.edu/about/lod cf. https://triplydb.com/smithsonian/american-art-museum/sparql/american-art-museum
+- Auckland Museum https://api.aucklandmuseum.com
+- Vocabulaires du Getty http://vocab.getty.edu/sparql
+
+Douglas McCarthy, Andrea Wallace. 2018. Survey of GLAM open access policy and practice. http://bit.ly/OpenGLAMsurvey
+
+???
+
+À explorer 
+
+https://periodicos.ufsm.br/coming/article/view/22984/pdf
+
+https://grp.swissartresearch.net/resource/sariApp:About
+
+https://github.com/ncarboni/awesome-GLAM-semweb
+
+===↓===
+
+## Archéo
+
+- Kerameikos http://kerameikos.org
+- Archaeology Data Service Linked Open Data http://data.archaeologydataservice.ac.uk/page/
+- Open Archaeo Fédération http://openarchaeo.huma-num.fr/federation
+- Nomisma http://nomisma.org
+- Pleiades https://pleiades.stoa.org
+- Pelagios https://pelagios.org/
 ===↓===
 
 ## Cours en ligne 
