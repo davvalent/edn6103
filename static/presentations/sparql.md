@@ -802,7 +802,7 @@ La clause `FILTER` utilise une condition booléenne pour filtrer les résultats 
 
 On peut associer deux expressions booléennes dans une parenthèse avec l’opérateur `&&`.
 
-Il existe plusieurs fonctions et opérateurs de filtres prédéfinies
+Il existe plusieurs fonctions et opérateurs de filtres prédéfinis
 
 - *logique :* `!`, `&&`, `||`
 - *arithmétique :* `+`, `-`, `*`, `/`
@@ -1065,6 +1065,10 @@ WHERE {
 }
 ```
 
+???
+
+Dans le modèle de triplets définit par la clause `WHERE`, il ne faut pas confondre la mise en relation du document et de la personne par la propriété `marcrel:aut` avec l'instanciation d'un personne en tant qu'auteur. Pour ce faire, il faudrait, dans les données RDF, mettre la personne en position de sujet et déclarer qu'elle est de type auteur.
+
 ===↓===
 
 ### Ajouter un concat
@@ -1072,25 +1076,26 @@ WHERE {
 ```SPARQL
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-SELECT (CONCAT(?forename, " ", ?surname) AS ?name) ?author ?namePropertyValue
+SELECT (CONCAT(?forename, " ", ?surname) AS ?name) ?author
 WHERE {
   ?doc marcrel:aut ?author .
   ?author foaf:familyName ?surname ;
-    foaf:givenName ?forename ;
-    foaf:name ?namePropertyValue .
+    foaf:givenName ?forename .
 }
 ```
+
+Doublons car le motif de graphe correspond à la relation document-auteur pour chaque document.
 
 ### Supprimer les doublons
 
 ```SPARQL
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-SELECT ?surname ?forename DISTINCT ?author
+SELECT DISTINCT ?surname ?forename ?author
 WHERE {
   ?doc marcrel:aut ?author .
   ?author foaf:familyName ?surname .
-  ?autor foaf:givenName ?forename .
+  ?author foaf:givenName ?forename .
 }
 ```
 
@@ -1139,9 +1144,20 @@ SELECT * {
 }
 ```
 
+On peut également préfixer l'URI qui identifie la ressource et utiliser le préfixe dans la requête, par exemple :
+
+```SPARQL
+PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX resource: <http://data.persee.fr/authority/393571#>
+SELECT * { 
+  ?s ?p resource:Person .
+}
+```
+
 ===↓===
 
-### Lister les documents avec des sujets en Français
+### Lister les documents avec des sujets en français
 
 ```SPARQL
 PREFIX bibo: <http://purl.org/ontology/bibo/>
@@ -1153,12 +1169,37 @@ WHERE {
   ?doc ?prop bibo:Document .
   ?doc dcterms:title ?titre .
   ?doc dcterms:subject ?sujet .
-  FILTER (lang(?sujet) = "" || langMatches(lang(?sujet), "fr"))
+  FILTER (lang(?sujet) = "fr")
 } 
 LIMIT 300
 ```
 
+===↓===
 
+### Lister les sujets en français par document
+
+```SPARQL
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT DISTINCT ?doc ?titre (GROUP_CONCAT(?sujet;separator=", ") AS ?sujets) (COUNT(?sujet) AS ?nbSujets)
+WHERE {
+  ?doc ?prop bibo:Document .
+  ?doc dcterms:title ?titre .
+  ?doc dcterms:subject ?sujet .
+  FILTER (lang(?sujet) = "fr")
+}
+GROUP BY ?doc ?titre
+ORDER BY DESC(?nbSujets)
+LIMIT 300
+```
+
+???
+
+Donc je dois concaténer toutes les valeurs de la variable sujet pour le document.
+
+===↓===
 
 ### Chercher l’auteur Bernard Lepetit
 
@@ -1181,6 +1222,35 @@ WHERE {
 
 ???
 
+Supposant que je ne connais pas l'identifiant.
+
+- Je cherche tous les triplets qui ont un sujet avec un nom de famille et un prénom.
+- Et filtre en cherchant Lepetit dans le nom de famille et lBernard dans le prénom.
+
+===↓===
+
+### Lister les publications de Bernard Lepetit
+
+```SPARQL
+PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?author ?doc {
+  ?doc marcrel:aut ?author .
+  ?author foaf:familyName ?surname .
+  ?author foaf:givenName ?forename .
+  FILTER ( REGEX(str(?surname), "Lepetit") && REGEX(str(?forename), "Bernard"))
+}
+```
+
+???
+
+Ajout :
+
+- je cherche tous les triplets dont le sujet a un ID (c'est pratique)
+- dont le sujet a un auteur, et dont l,auteur...
+
+===↓===
+
 ### Publication de Lepetit avec sujets
 
 ```SPARQL
@@ -1188,42 +1258,21 @@ PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX persee: <http://data.persee.fr/ontology/persee_ontology/>
-SELECT ?doc ?titre ?sujet
+SELECT ?doc ?titre (GROUP_CONCAT(?sujet;separator=", ") AS ?sujets)
 WHERE {
   ?doc a bibo:Document .
   ?doc dcterms:title ?titre .
   ?doc marcrel:aut ?author .
   ?author foaf:familyName ?surname .
   ?author foaf:givenName ?forename .
-  OPTIONAL { ?doc dcterms:subject ?sujet }
+  ?doc dcterms:subject ?sujet 
   FILTER ( REGEX(str(?surname), "Lepetit") && REGEX(str(?forename), "Bernard"))
 }
-GROUP BY ?doc
+GROUP BY ?doc ?titre
+ORDER BY DESC(?sujets)
 LIMIT 100
 ```
-
 ===↓===
-
-### Lister les publications de Bernard Lepetit
-
-```SPARQL
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-SELECT ?author ?id { 
-  ?doc dcterms:identifier ?id .
-  ?doc marcrel:aut ?author .
-  ?author foaf:familyName ?surname .
-  ?author foaf:givenName ?forename .
-  FILTER ( REGEX(str(?surname), "Lepetit") && REGEX(str(?forename), "Bernard"))
-}
-```
-
-===↓===
-
 
 ### Tous les documents qui ont pour auteur “Lepetit”, listés par date d’édition décroissante
 
@@ -1231,8 +1280,6 @@ SELECT ?author ?id {
 PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX purl: <http://purl.org/dc/terms/>
-PREFIX rdam: <http://rdaregistry.info/Elements/m/>
 PREFIX persee: <http://data.persee.fr/ontology/persee-ontology/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT ?author ?doc ?title ?date 
@@ -1245,7 +1292,7 @@ WHERE {
   OPTIONAL {?doc persee:dateOfPrintPublication ?date}
   FILTER ( REGEX(str(?surname), "Lepetit") && REGEX(str(?forename), "Bernard"))
 }
-ORDER BY $date
+ORDER BY DESC($date)
 ```
 
 ===↓===
@@ -1253,61 +1300,46 @@ ORDER BY $date
 ### Avant 1990
 
 ```SPARQL
-PREFIX bibo: <http://purl.org/ontology/bibo/>
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX rdam: <http://rdaregistry.info/Elements/m/>
 PREFIX persee: <http://data.persee.fr/ontology/persee-ontology/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-SELECT ?author ?doc ?title ?date { 
-  ?doc a dcterms:Document .
+SELECT ?author ?doc ?title ?date
+WHERE {
   ?doc marcrel:aut ?author .
   ?doc dcterms:title ?title .
   ?author foaf:familyName ?surname .
   ?author foaf:givenName ?forename .
-  OPTIONAL {?doc persee:dateOfPrintPublication ?date}
+  ?doc persee:dateOfPrintPublication ?date .
   FILTER ( REGEX(str(?surname), "Lepetit") && REGEX(str(?forename), "Bernard") )
-  FILTER ( str(?dateOfPrintPublication_70) <= "1990" )
+  FILTER ( str(?date) <= "1990" )
 }
-ORDER BY $date
+ORDER BY DESC($date)
 ```
 
 ===↓===
 
-### Celles entre 1970 et 1980 (nb chercher date dans le schema)
+### Celles entre 1970 et 1980
 
 ```SPARQL
-PREFIX purl: <http://purl.org/net/schemas/space/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-SELECT *
-{ ?launch purl:launched ?date
+PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX persee: <http://data.persee.fr/ontology/persee-ontology/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?author ?doc ?title ?date
+WHERE {
+  ?doc marcrel:aut ?author .
+  ?doc dcterms:title ?title .
+  ?author foaf:familyName ?surname .
+  ?author foaf:givenName ?forename .
+  ?doc persee:dateOfPrintPublication ?date .
+  FILTER ( REGEX(str(?surname), "Lepetit") && REGEX(str(?forename), "Bernard") )
   FILTER (
-    ?date > "1968-10-1"^^xsd:date &&
-    ?date < "1968-10-30"^^xsd:date
-  )
+    str(?date) <= "1980" &&
+    str(?date) >= "1970")
 }
+ORDER BY ASC($date)
 ```
-
-???
-
-@todo revoir ex
-
-@todo limiter quantité de résultats
-
-```SPARQL
-SELECT ?manifestation 
-WHERE { ?manifestation a <http://rdaregistry.info/Elements/c/Manifestation> }
-```
-
-
-
-### Quid des deux auteurs ?
-
-```SPARQL
-
-```
-
-@todo
 
 ===↓===
 
@@ -1316,31 +1348,49 @@ WHERE { ?manifestation a <http://rdaregistry.info/Elements/c/Manifestation> }
 ```SPARQL
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
-SELECT DISTINCT ?auteur ?nom
-WHERE { ?auteur a foaf:Person .
-        ?auteur foaf:name ?nom .
-        FILTER ( !( ?nom = "Bernard Lepetit" ) )
-        ?doc marcrel:aut ?auteur .
-        ?doc marcrel:aut ?coauteur .
-        ?coauteur foaf:name ?nom1 .
-        FILTER ( ?nom1 = "Bernard Lepetit" ) }
+SELECT DISTINCT ?auteur ?nom ?coauteur ?nomCoauteur
+WHERE {
+  # premièrement, les documents avec Lepetit pour auteur
+  ?doc marcrel:aut ?auteur .
+  ?auteur foaf:name ?nom .
+  FILTER ( ?nom = "Bernard Lepetit" )
+  
+  # deuxièmement, pour ces mêmes documents (même variable ?doc),
+  # on utilise une nouvelle variable pour tous les auteurs, en excluant
+  # finalement Lepetit
+  ?doc marcrel:aut ?coauteur .
+  ?coauteur foaf:name ?nomCoauteur .
+  FILTER ( !( ?nomCoauteur = "Bernard Lepetit" ) )
+}
 LIMIT 200
 ```
 
+???
+
+1. je ramène d'abord tous les documents qui ont pour auteur Lepetit
+2. ensuite, pour les mêmes sujets (documents), j'ajoute une variable pour les coauteurs, et donc tous les auteurs y compris Lepetit s'y retrouvent, et j'exclue Lepetit.
+
+Donc j'ai une variable dans laquelle se retrouvent tous les auteurs de ces documents, sauf Lepetit.
+
+Autrement dit, c'est de dupliquer une variable auteur pour le même document : pour une, je garde seulement Lepetit, pour l'autre j'exclus Lepetit.
+
+===↓===
 
 ### Le nombre de co-auteurs de Bernard Lepetit
 
 ```SPARQL
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX marcrel: <http://id.loc.gov/vocabulary/relators/>
-SELECT DISTINCT (COUNT(DISTINCT ?auteur) AS ?nb)
-WHERE { ?auteur a foaf:Person .
-        ?auteur foaf:name ?nom .
-        FILTER ( !( ?nom = "Bernard Lepetit" ) )
-        ?doc marcrel:aut ?auteur .
-        ?doc marcrel:aut ?coauteur .
-        ?coauteur foaf:name ?nom1 .
-        FILTER ( ?nom1 = "Bernard Lepetit" ) }
+SELECT ?nom (COUNT(?coauteur) AS ?nb_de_coauteurs)
+WHERE {
+  ?auteur foaf:name ?nom .
+  ?doc marcrel:aut ?auteur .
+  FILTER ( ( ?nom = "Bernard Lepetit" ) )
+
+  ?doc marcrel:aut ?coauteur .
+  ?coauteur foaf:name ?nom1 .
+  FILTER ( !( ?nom1 = "Bernard Lepetit" ) )
+}
 LIMIT 200
 ```
 
